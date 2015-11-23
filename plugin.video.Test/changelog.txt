@@ -1,0 +1,10 @@
+B]V6.0.13[/B]
+- All url M3u fix Dremfilm update all icon add
+http:halowtv.com
+http://streamax.tv/ 
+
+
+[B]V6.0.10[/B]
+- fixed m3u links & mor 
+
+
