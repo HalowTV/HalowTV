@@ -22,7 +22,7 @@
 	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
 
   </requires>
-  <extension point="xbmc.python.pluginsource" library="HALOWTV.py">
+  <extension point="xbmc.python.pluginsource" library="HalowTV.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
