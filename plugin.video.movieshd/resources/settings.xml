@@ -1,0 +1,7 @@
+<settings>
+<category label="Settings">
+	<setting id="enable_meta" type="bool" label="Enable Metadata" default="true"/>
+	<setting id="auto-view" type="bool" label="Enable Auto View" default="true" enable="!eq(-1,false)"/>
+	<setting id="MAIN" type="number" label="Auto View Default" default="515" enable="!eq(-1,false)+!eq(-2,false)"/>
+</category>
+</settings>
