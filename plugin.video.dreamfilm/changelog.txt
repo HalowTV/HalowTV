@@ -1,0 +1,103 @@
+version 0.0.1
+=============
+Initial version
+
+version 0.0.3
+=============
+Dependecy free
+
+version 0.0.4
+=============
+Thumbnails
+
+version 0.0.5
+=============
+Fix to bypass cloudflare ddos protection
+Some videos are not hosted on vk.com, these still not work
+
+version 0.0.6
+=============
+Add latest movies
+
+version 0.0.7
+=============
+Two-part movies
+
+version 0.0.8
+=============
+Genre list, Gotham compatibility
+
+version 0.0.9
+=============
+Refactor for better testability
+Resolve leanback-player-streams
+Improved search
+Paging
+
+version 0.0.10
+=============
+Browse movies and series
+
+version 0.0.11
+=============
+Bug fix for updated serie page
+
+version 0.0.12
+=============
+Update for new vk-hosting
+
+version 0.0.13
+=============
+Fix for new video hosting
+
+version 0.0.14
+=============
+Working version with the new API. Still missing some resolvers.
+
+version 0.1.0
+=============
+Added mail.ru-resolver and updated logo
+
+version 0.1.1
+=============
+Removed debug code that caused crash
+
+version 0.1.2
+=============
+Update for new mail.ru
+
+version 0.1.3
+=============
+Add genre listing for movies and series
+
+version 0.1.4
+=============
+Update url and set proper user-agent
+
+version 0.1.5
+=============
+Update url (again) and added vkpass resolver
+
+version 0.1.6
+=============
+Fix next page bug
+
+version 0.1.8
+=============
+Added ok.ru resolver
+Add subtitles
+Fix vkpass resolver
+
+version 0.1.9
+=============
+Added ok.ru resolver
+Add subtitles
+Fix vkpass resolver
+
+version 0.1.10
+=============
+Fix vkpass resolver
+
+version 0.1.11
+=============
+Fix vkpass resolver
