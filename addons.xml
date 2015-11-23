@@ -1,0 +1,1278 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.video.LIVEFOTBOLLSTREAM"
+       name="LIVE FOOTBALL STREAMS"
+       version="6.0.6"
+       provider-name="quincyvontsteen">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="LIVEFOTBOLLSTREAM.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+    <description lang="en">Only LIVE STREAM</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.beautifulsoup"
+       name="BeautifulSoup"
+       version="3.2.1"
+       provider-name="Leonard Richardson (leonardr@segfault.org)">
+  <requires>
+    <import addon="xbmc.python" 
+    		version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>HTML/XML parser for quick-turnaround applications like screen-scraping</summary>
+    <description>Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.</description>
+    <license>BSD</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.p2psport"
+	name="P2P Sport"
+	version="0.0.5"
+	provider-name="natko1412">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="program.plexus" />
+    <import addon="script.module.addon.common" version="2.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.mechanize" version="0.2.6"/>
+
+    
+    
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch p2p sports in Kodi</summary>
+    
+    <platform>all</platform>
+    <forum>forums.tvaddons.ag</forum>
+    
+  </extension>
+</addon>
+
+<addon id="plugin.video.live.streamspro"
+       name="LiveStreamsPro"
+       version="1.8.5"
+       provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />    
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>livestreamspro- shamelessly forked from livestreams but added many thinks</summary>
+    <description>
+        In addition to what livestreams allowed you to do, you can now,
+        1. call regex in regex,
+        2. multiple regex in page, regex in session, also htmlunescape responses
+        3. create session from one regex and pass onto next in line
+        4. save sessions to a file and open again later
+        5. write python code in .py file, put in the profile directory and then call from your regex.
+        6. use epoctime, guid and unpack as functions already defined.
+        7. Use it to post values to the pages to get the proper responses
+        8. support many headers, like origin, X-Requested-With
+        9. you can now append cookies in response and then read in regex using includeheaders
+        10. You can now link to another web url via your xml using externallink
+        11. support for google captcha, now you can show and then post the text
+        
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.footballreplays" name="Football Replays" version="1.2.7" provider-name=".[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Football Replays</summary>
+    <description lang="en">Football Replays</description>
+    <disclaimer lang="en">By using This Plugin You will receive sometimes an advert which helps funds the developers developing.....we all thank you!!</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.filmontv" name="FilmOn" version="1.4" provider-name="FilmOn.TV Networks Inc">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.t0mm0.common" version="1.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">FilmOn</summary>
+    <language>en de fr es it ru</language>
+    <description lang="en">FilmOn.com is an internet based television provider owned by FilmOn.TV Networks Inc. FilmOn.TV Networks was founded by Alki David in 2006.FilmOn.com subscription packages include access to over 120 streaming TV channels (mostly in English language) in addition to premium FilmOn.com Movie channels and pay-per-view channels. Please visit www.xbmchub.com for assistance with this add-on.</description>
+    <platform>all</platform>
+    <forum>http://www.xbmchub.com/forums/eleazars-xbmc-add-repository/</forum>
+    <website>http://www.xbmchub.com/</website>
+  </extension>
+</addon>
+
+<addon id="script.module.urlresolver" 
+     name="URLResolver" 
+     version="2.10.0" 
+     provider-name="Eldorado">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="plugin.video.youtube" version="4.4.7"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+    <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>    
+  </extension>
+</addon>
+
+<addon id="plugin.video.Test"
+       name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
+       version="6.0.18"
+       provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="HalowTV.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"> http://halowtv.com/</summary>
+    <description lang="en">All channels from around the world/Movie/Child Movie/Streamax.tv/ YouTube/Sports Replays/Filmon.TV/Radio/Ace Stream/Music/Live Sport/LiveStream/follow me on FB/Twitter
+Halow TV Add-on
+http://halowtv.com/</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="201520152015.11.22.1NL"
+  name="SportsDevil"
+  provider-name="MaxMustermann,Al101,Hubbab3,Sattekop">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.requests" />
+  </requires>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos of different sports streaming sites</summary>
+    <description>Play videos of different sports streaming sites</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="program.plexus"
+       name="Plexus"
+       version="0.1.3"
+       provider-name="enen92">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.repository" name="Plexus Repository">
+        <info compressed="false">https://plexus.svn.codeplex.com/svn/trunk/Addon/addons.xml</info>
+        <checksum>https://plexus.svn.codeplex.com/svn/trunk/Addon/addons.xml.md5</checksum>
+        <datadir zip="true">https://plexus.svn.codeplex.com/svn/trunk/Addon/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>SopCast and AceStream for Kodi</summary>
+    <description lang="en">Plexus - Any complex structure containing an intricate network of parts. Plexus brings native peer-to-peer support (AceStream and SopCast) for Kodi Entertainment Center for several platforms.[CR][CR]Documentation: (missing)</description>
+    <description lang="pt">Plexus - Uma estrutura complexa constituída por uma rede de partes. O Plexus adiciona suporte peer-to-peer nativo (AceStream e Sopcast) ao Kodi Entertainment Center para várias plataformas.[CR][CR]Documentação: (em falta)</description>
+    <disclaimer lang="en">The author does not host nor distribute any of the content you may watch using this addon. The author has no part in the development of any included technologies. When seeking help in Kodi's forum please respect rules (http://kodi.wiki/view/Forum_rules).</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo que poderá ser reproduzido a partir deste addon. Os autores não têm qualquer parte no desenvolvimento de qualquer uma das tecnologias. Se procurar ajuda no fórum oficial do Kodi por favor respeite as regras do fórum (http://kodi.wiki/view/Forum_rules).</disclaimer>
+    <forum>http://forum.kodi.tv/showthread.php?tid=201894</forum>
+    <source>https://github.com/enen92/P2P-Streams-Kodi | https://github.com/enen92/P2P-Streams-Kodi--Modules-</source>
+    <website>https://code.google.com/p/p2p-strm/</website>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.p2p-streams"
+       name="p2p-streams"
+       version="1.2.0"
+       provider-name="enen92,fightnight">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.pytz" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.mechanize" version="0.2.6"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>SopCast and AceStream</summary>
+    <description lang="en">AceStream and Sopcast in your favourite media center! Watch peer-to-peer streams in Kodi without the need for external players. Project page: https://github.com/enen92/P2P-Streams-Kodi</description>
+    <description lang="pt">AceStream e Sopcast no seu Media-Center de eleição! Assista a streams peer-to-peer no Kodi sem a necessidade de players externos. Página do projecto: https://github.com/enen92/P2P-Streams-Kodi</description>
+    <description lang="nl">Acestream en Sopcast in jouw favoriete media center. Kijk peer-to-peer streams in Kodi zonder de noodzaak voor externe spelers. Project pagina: https://github.com/enen92/P2P-Streams-Kodi/</description>
+    <description lang="it">AceStream e SopCast nel tuo Media Center preferito! Guarda i canali peer-to-peer in Kodi senza la necessità di player esterni. Pagina del progetto: https://github.com/enen92/P2P-Streams-Kodi/</description>
+    <disclaimer lang="en">The authors does not host nor distribute any of the content you may watch using this addon. The authors have no affiliation with any of the content providers. This addon does not track its users.</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo acessível a partir deste addon. Os autores não têm qualquer afiliação com nenhum dos sites utilizados por este addon. O addon não contem nenhuma ferramenta de tracking.</disclaimer>
+    <disclaimer lang="nl">De auteurs houden of delen niets van de inhoud die u kunt bekijken met behulp van deze addon. De auteurs hebben geen banden met welke leverancier van inhoud dan ook. Deze addon houdt geen gegevens bij van zijn gebruikers.</disclaimer>
+    <disclaimer lang="it">L'autore non detiene o distribuisce alcun contenuto fruibile tramite l'utilizzo di questo addon. L'autore non è affiliato con nessun fornitore dei contenuti. Questo addon non traccia i suoi utenti.</disclaimer>
+    <forum>http://forum.kodi.tv/showthread.php?tid=201894</forum>
+    <source>https://github.com/enen92/P2P-Streams-Kodi | https://github.com/enen92/P2P-Streams-Kodi--Modules-</source>
+    <website>https://code.google.com/p/p2p-strm/</website>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.gul" name="Gul LIVE" version="5.80" provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver"  version="2.1.2"/>
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+	<import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Halow TV</summary>
+    <description lang="en">Halow Add-ons</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.veetle" version="0.3.3" name="Veetle" provider-name="fightnight (creator: t0mm0)">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simplejson" version="2.0.10"/>
+        <import addon="script.common.plugin.cache" version="1.3.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point= "xbmc.addon.metadata">
+	<summary lang="en">Browse and stream from veetle.com</summary>
+	<description lang="en">Enables watching streams on veetle.com that are flash enabled.</description>
+        <disclaimer lang="en">Does not work for 'HD' streams which require a software download.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.kmediatorrent" name="KMediaTorrent" version="2.3.7" provider-name="jmarth">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+        <import addon="script.module.requests" version="2.3.5"/>    
+        <import addon="script.module.html5lib" version="0.999.0" optional="false"/>
+        <import addon="script.module.beautifulsoup4" version="4.3.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary><![CDATA[Torrent streaming 
+        for KODI/XBMC.]]></summary>
+        <description><![CDATA[Watch torrents directly from KODI/XBMC, without waiting.]]></description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.HALOWTV" name="[COLOR red]HALOW [COLOR green] LIVE[/COLOR]" version="6.0.5" provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="1.1.2"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="1.9.5"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="1.9.5"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="cloudtv.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">www.facebook.com/Halow Tv add-ons</summary>
+    <description lang="en">www.halowtv.com</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="2.1.3" provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>FB Halow Tv add ons</summary>
+    <description>Kurdistan Livestreams
+
+ http://karwan.tv</description>
+  </extension>
+</addon>
+
+<addon id="service.subtitles.undertexter" name="Undertexter.se" version="2.0.1" provider-name="xit">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.subtitle.module" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Undertexter.se</summary>
+		<description lang="en">Search and download Swedish and English subtitles from Undertexter.se.[CR][CR][B]Note:[/B] Make sure you add desired languages to your subtitle settings (Languages to download subtitles for).</description>
+		<description lang="sv">Sök och ladda ner svenska och engelska undertexter från Undertexter.se.[CR][CR][B]Notis:[/B] Se till att lägga till önskade språk i dina undertextsinställningar (Språk att ladda ner undertexter för).</description>
+		<disclaimer lang="en"></disclaimer>
+		<disclaimer lang="sv"></disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=201638</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/xit/service.subtitles.undertexter</source>   
+	</extension>
+</addon>
+
+<addon id="script.simpleplaylists"
+       name="SimplePlaylists"
+       version="1.1.1"
+       provider-name="AddonScriptorDE">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+    <provides>video audio image</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+      <summary lang="en">Add local media (video/audio/images) and add-on content to playlists while browsing/watching your media. To use this addon you have to map the following command to a key: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". More Info: forum.xbmc.org</summary>
+      <summary lang="de">Lokale Medien (Videos/Musik/Bilder) und Add-on Inhalte beim Durchsuchen/Abspielen zu Playlisten hinzufügen. Um das Addon nutzen zu können muss folgender Befehl einer Taste zugewiesen werden: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". Mehr Infos: xbmcnerds.com, forum.xbmc.org</summary>
+      <language></language>
+      <description lang="en">Add local media (video/audio/images) and add-on content to playlists while browsing/watching your media. To use this addon you have to map the following command to a key: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". More Info: forum.xbmc.org</description>
+      <description lang="de">Lokale Medien (Videos/Musik/Bilder) und Add-on Inhalte beim Durchsuchen/Abspielen zu Playlisten hinzufügen. Um das Addon nutzen zu können muss folgender Befehl einer Taste zugewiesen werden: "RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)". Mehr Infos: xbmcnerds.com, forum.xbmc.org</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.navi-x"
+       name="Navi-X"
+       version="4.0"
+       provider-name="Team Navi-X and TVADDONS.ag">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.urlresolver"  />
+    <import addon="script.module.t0mm0.common"  />
+    <import addon="script.module.addon.common" optional="false" />
+    <import addon="repository.xbmchub" optional="true" />
+    <import addon="plugin.video.youtube" optional="false" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py" >
+    <provides>executable video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <minversion>28764</minversion>
+    <summary>Media Browser Addon for Kodi</summary>
+    <description>Navi-X is the oldest and most trusted add-on for Kodi, used by millions of people worldwide. You'll find everything from live television to your favourite movies and television shows, easily accessible.</description>
+    <disclaimer>http://www.navixtreme.com/terms/</disclaimer>
+    <forum>http://forums.tvaddons.ag/forums/38-NAVI-X-MEDIA-BROWSER-FOR-KODI</forum>
+    <website>http://www.navixtreme.com/</website>
+    <source></source>
+    <email></email>
+  </extension>
+</addon>
+
+<addon id="plugin.video.dreamfilm" name="Dreamfilm" provider-name="Daniel Lundin" version="0.1.11">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Stream from http://dreamfilmhd.org</summary>
+    <description>Stream from http://dreamfilmhd.org</description>
+  </extension>
+</addon>
+
+<addon id="plugin.audio.radio_de" name="Radio" version="2.3.1" provider-name="Tristan Fischer (sphere@dersphere.de)">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.xbmcswift2" version="2.4.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <language></language>
+        <platform>all</platform>
+        <website>http://www.radio.de</website>
+        <source>https://github.com/dersphere/plugin.audio.radio_de</source>
+        <forum>http://forum.xbmc.org/showthread.php?tid=119362</forum>
+        <email>sphere@dersphere.de</email>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <summary lang="be">Access &gt;7000 radio broadcasts</summary>
+        <summary lang="ca">accedeix a mes de 7000 emissores de radio</summary>
+        <summary lang="da">Få adgang til &gt;7000 radioudsendelser</summary>
+        <summary lang="de">Zugriff auf &gt;7000 Radiosender</summary>
+        <summary lang="el">Πρόσβαση σε πάνω από 7000 εκπομπές</summary>
+        <summary lang="en">Access &gt;7000 radio broadcasts</summary>
+        <summary lang="en_NZ">Access &gt;7000 radio broadcasts</summary>
+        <summary lang="en_US">Access &gt;7000 radio broadcasts</summary>
+        <summary lang="es">Escuche más de 7.000 emisoras de radio</summary>
+        <summary lang="fr">Ecoutez plus de 7000 stations de radio</summary>
+        <summary lang="fr_CA">Accéder à &gt; 7 000 radiodiffusions</summary>
+        <summary lang="gl">Escoite máis de 7000 emisoras de radio</summary>
+        <summary lang="he">גישה ליותר מ־7000 שידורי רדיו</summary>
+        <summary lang="hr">Pristup &gt;7000 radio emitiranja</summary>
+        <summary lang="hu">Hozzáférés 7000-nél is több rádióadáshoz</summary>
+        <summary lang="id">Akses &gt;7000 siaran radio</summary>
+        <summary lang="it">Accedi a più di 7000 trasmissioni radio</summary>
+        <summary lang="lt">Prieiga&gt; 7000 radijo transliacijų</summary>
+        <summary lang="nl">Toegang tot &gt;7000 radio uitzendingen</summary>
+        <summary lang="pl">Dostęp do ponad 7000 stacji radiowych</summary>
+        <summary lang="pt">Aceder a mais de 7000 transmissões de rádio</summary>
+        <summary lang="pt_BR">Acesse&gt;7000 broadcasts rádios</summary>
+        <summary lang="sk">Pristupujte k vyše 7000 vysielaniam</summary>
+        <summary lang="sv">Access &gt;7000 radiosändningar</summary>
+        <summary lang="ta_IN">7000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுகவும்</summary>
+        <summary lang="zh">访问大于7000个电台广播</summary>
+        <description lang="be">Music plugin to access over 7000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
+        <description lang="ca">Plugin de música per escoltar més de 7000 emissores de ràdio internacionals des rad.io, radio.de i radio.fr. [CR] Característiques: [CR]- Traduccions a l'anglès, alemany, francès i espanyol. [CR]- Cercador de emissores per ubicació, gènere, tema, país, ciutat o idioma. [CR]- Cercador d'emissores. [CR]- 115 gèneres, 59 temes, 94 països, 1010 ciutats, 63 idiomes.</description>
+        <description lang="da">Musikplugin som giver adgang til over 7000 internationale radioudsendelser fra rad.io, radio.de og radio.fr[CR]Nuværende funktioner[CR]- Oversat til engelsk, tysk og fransk[CR]- Gennemse stationer efter lokalitet, genre, emne, land, by og sprog[CR]- Søg efter stationer[CR]- 115 genrer, 59 emner, 94 lande, 1010 byer og 63 sprog</description>
+        <description lang="de">Das Radio im Internet mit über 7000 Radiosendern, Internetradio Stationen, gratis Streams und Podcasts live von rad.io, radio.de und radio.fr.[CR]Features[CR]- Auf deutsch, englisch und französisch übersetzt[CR]- Sortiert nach: in der Nähe, Genre, Thema, Land und Sprache[CR]- nach Sendern suchen[CR]- 115 Genre, 59 Themen, 94 Länder, 1010 Städte, 63 Sprachen</description>
+        <description lang="el">Μουσικό plugin για πρόσβαση σε περισσότερους από 7000 διεθνείς ραδιοφωνικές εκπομπές από τα rad.io, radio.de και radio.fr[CR]Υποστηρίζονται[CR]- Μεταφράσεις σε Αγγλικά, Γερμανικά και Γαλλικά[CR]- Περιήγηση σταθμών ανά τοποθεσία, είδος, θέμα, χώρα, πόλη και γλώσσα[CR]- Αναζήτηση σταθμών[CR]- 115 είδη, 59 θέματα, 94 χώρες, 1010 πόλεις, 63 γλώσσες</description>
+        <description lang="en">Music plugin to access over 7000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
+        <description lang="en_NZ">Music plugin to access over 7000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
+        <description lang="en_US">Music plugin to access over 7000 international radio broadcasts from rad.io, radio.de and radio.fr[CR]Currently features[CR]- English, german and french translated[CR]- Browse stations by location, genre, topic, country, city and language[CR]- Search for stations[CR]- 115 genres, 59 topics, 94 countrys, 1010 citys, 63 languages</description>
+        <description lang="es">Plugin de música para escuchar más de 7.000 emisoras de radio internacionales desde rad.io, radio.de y radio.fr.[CR]Características:[CR]- Traducciones al inglés, alemán, francés y español.[CR]- Buscador de emisoras por ubicación, género, tema, país, ciudad o idioma.[CR]- Buscador de emisoras.[CR]- 115 géneros, 59 temas, 94 países, 1.010 ciudades, 63 idiomas.</description>
+        <description lang="fr">Plugin musical pour écouter plus de 7000 stations de radio internationales de rad.io, radio.de et radio.fr[CR]Fonctionnalités[CR]- Traduit en Anglais, Allemand et Français[CR]- Parcourir les stations par genre, thème, pays, ville et langue[CR]- Recherche de stations[CR]- 115 genres, 59 thèmes, 94 pays, 1010 villes, 63 langues</description>
+        <description lang="fr_CA">Plugiciel de musique pour accéder à plus de 7 000 radiodiffusions internationales de rad.io, radio.de et radio.fr[CR]Offre présentement [CR]- Traductions en anglais, allemand et français[CR]- Parcourir des stations par lieux, genres, sujets, pays, villes et langues[CR]- Rechercher des stations[CR]- 115 genres, 59 sujets, 94 pays, 1 010 villes, 63 langues.</description>
+        <description lang="gl">Engadido de música para escoitar máis de 7000 emisoras de radio internacionais de rad.io, radio.de e radio.fr.[CR]Características:[CR]- Traducións ao inglés, alemán, francés e castelán.[CR]- Busca de emisoras por localización, xénero, tema, país, cidade ou idioma.[CR]- Busca de emisoras.[CR]- 115 xéneros, 59 temas, 94 países, 1010 cidades, 63 idiomas.</description>
+        <description lang="he">הרחבת מוזיקה המספקת גישה ליותר מ־7000 שידורי רדיו בינלאומים מ־rad.io, radio.de ו־radio.fr[CR]מאפיינים נוכחיים[CR]- שפות אנגלית, גרמנית וצרפתית[CR]- עיון לפי מיקום, סגנון, נושא, מדינה, עיר ושפה[CR]- חיפוש תחנות[CR]- 115 סגנונות, 59 נושאים, 94 מדינות 1010 ערים, 63 שפות</description>
+        <description lang="hr">Glazbeni dodatak za pristup 7000 međunarodnih radio stanica na rad.io, radio.de i radio.fr[CR]Trenutne značajke[CR]- engleski, njemački i francuski prijevodi[CR]- Pregledavajte stanice prema lokaciji, žanru, temi, zemlji, gradu i jeziku[CR]- Pretraživanje stanica[CR]- 115 žanrova, 59 tema, 94 zemalja, 1010 gradova, 63 jezika</description>
+        <description lang="hu">Beépülő modul több, mint 7000 nemzetközi rádióadás eléréséhez a rad.io, radio.de és radio.fr oldalakról[CR]Jelenlegi tulajdonságok[CR]- Angol, német, francia és magyar nyelv[CR]- Állomások böngészése hely, műfaj, téma, ország, város és nyelv szerint[CR]- Állomások keresése[CR]- 115 műfaj, 59 téma, 94 ország, 1010 város, 63 nyelv</description>
+        <description lang="id">Plugin musik untuk mengakses lebih dari 7000 siaran radio internasional dari rad.io, radio.de dan radio.fr[CR]Fitur saat ini[CR]- Terjemahan Inggris, Jerman dan Perancis[CR]- Jelajah stasiun berdasarkan lokasi, tema, topik, negara, kota dan bahasa[CR]- Cari stasiun[CR]- 115 tema, 59 topik, 94 negara, 1010 kota, 63 bahasa</description>
+        <description lang="it">Plugin per accedere a oltre 7000 trasmissioni internazionali radiofoniche da rad.io, radio.de e radio.fr[CR]Caratteristiche[CR]- Supporta inglese, tedesco e francese[CR]- Sfoglia le stazioni per località, genere, argomento, paese, citta e lingua[CR]- Ricerca delle stazioni[CR]- 115 generi, 59 argomenti, 94 paesi, 1010 città e 63 lingue</description>
+        <description lang="lt">Muzikos įskiepio prieiga prie daugiau nei 7000 tarptautinių radijo transliacijų iš rad.io, radio.de ir radio.fr [CR] Šiuo metu programoja išversta į [Cr] - anglų, vokiečių ir prancūzų kalbas [CR] - Naršyti stotis pagal: vietovę, žanrą, temą, šalį, miestą ir/ar kalbą [CR] - Ieškoti radio stočių pagal:[Cr] - 115 žanrai, 59 temos, 94 šalys, 1010 miestų, 63 kalbos</description>
+        <description lang="nl">muziek plug-in om toegang te krijgen tot over 7000 internationale radiouitzendingen van rad.io, radio.de en radio.fr[CR]Huidige functies[CR]- engels, duits en frans vertaalt[CR]- Zoek naar stations vanuit locatie, genre, onderwerp, land, plaats en taal[CR]- zoek voor stations[CR]- 115 genres. 59 onderwerpen, 94 landen. 1010 plaatsen, 63 talen</description>
+        <description lang="pl">Wtyczka muzyczna dająca dostęp do ponad 7000 międzynarodowych stacji radiowych z[CR]rad.io, radio.de, daio.fr[CR]Obecnie w językach[CR]- Angielski, Niemiecki i Francuski[CR]- Szukaj stacji według lokacji, gatunku, tematu, kraju, miasta czy języka[CR]- 115 gatunków, 59 tematów, 94 kraje, 1010 miasta, 63 języki</description>
+        <description lang="pt">Plugin de música para aceder a mais de 7000 transmissões de rádio internacionais de rad.io, radio.de e radio.fr[CR]Actualmente, disponibiliza:[CR]- Traduções em vários idiomas[CR]- Navegar estações por localização, género, tópico, país, cidade e idioma[CR]- Procurar por estações[CR]- 115 géneros, 59 tópicos, 94 países, 1010 cidades, 63 idiomas</description>
+        <description lang="pt_BR">Plugin de música para acessar mais de 7000 emissoras de rádio internacionais de rad.io, radio.de e radio.fr [CR] Principais características [CR] - Inglês, Alemão e Francês traduzido [CR] - Procure estações por localização, gênero, tópico, país , cidade e  linguagem [CR] - Procure estações [CR] - 115 gêneros, 59 temas, 94 países, 1010 cidades, 63 idiomas</description>
+        <description lang="sk">Hudobný doplnok na prístup k vyše 7000 medzinárodným rádio vysielaniam z rad.io, radio.de a radio.fr&#10;Momentálne podporuje:&#10;- anglické, nemecké a francúzske preklady&#10;- prehliadanie staníc podľa umiestnenia, žánru, témy, krajiny, mesta a jazyka&#10;- vyhľadávanie staníc&#10;- 115 žánrov, 59 tém, 94 krajín, 1010 miest, 63 jazykov</description>
+        <description lang="sv">Musiktillägg som ger åtkomst till över 7000 internationella radiosändningar från rad.io, radio.de och radio.fr[CR]Nuvarande funktioner[CR]- Engelsk, tysk, svensk och fransk översättning[]- Bläddra efter stationer baserat på genre, ämne, land, stad och språk[CR]- Sök efter stationer[CR]-115 genres, 59 ämnen, 94 länder, 1010 städer, 63 språk</description>
+        <description lang="ta_IN">இசை துணை பயன் rad.io, radio.de மற்றும் radio.fr இருந்து 7000 க்கும் மேல் வானொலி ஒளிபரப்புகளை அணுக உதவி செய்யும்[CR]தற்போதைய அம்சங்கள்[CR]- ஆங்கிலம், ஜெர்மன் மற்றும் பிரெஞ்சு மொழியாக்கம்[CR]- இருப்பிடம், வகை, தலைப்பு, நாடு, நகரம் மற்றும் மொழி கொண்டு நிலையங்களை உலாவ முடியும்[CR]- நிலையங்களை தேடுதல்[CR]- 115 வகைகள், 59 தலைப்புகள், 94 நாடுகள், 1010 நகரங்கள், 63 மொழிகள்</description>
+        <description lang="zh">访问rad.io、radio.de和radio.fr上超过7000个国际电台广播的音频插件[CR]现有功能[CR]- 英语、德语和法语支持[CR]- 按地点、类别、主题、国家、城市和语言浏览站点[CR]- 搜索站点[CR]- 115个类别、59个主题、94个国家、1010城市、63种语言</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.IRAN" name="[COLOR red]IRAN LIVE[COLOR green] TV[/COLOR]" version="2.12" provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Halow TV</summary>
+    <description>Livestreams FOR IRAN TV FREE</description>
+  </extension>
+</addon>
+
+<addon id="skin.sio2" version="3.1.0" name="SiO2" provider-name="FastColors">
+  <requires>
+    <import addon="xbmc.gui" version="5.3.0"/>
+    <import addon="script.favourites" version="3.2.5"/>
+    <import addon="service.skin.widgets" version="0.0.13"/>
+    <import addon="script.cinema.experience" version="3.0.3"/>
+  </requires>
+  <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1" debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+	<summary lang="ar">A simple and handy Skin visually based on AppleTv</summary>
+    <summary lang="be">A simple and handy Skin visually based on AppleTv</summary>
+    <summary lang="bg">A simple and handy Skin visually based on AppleTv</summary>
+    <summary lang="ca">Una Skin simple i pràctic basat en AppleTV</summary>
+    <summary lang="cs">Jednoduchý a praktický kůže na základě AppleTV</summary>
+    <summary lang="da">En enkel og handy Skin baseret på AppleTV</summary>
+    <summary lang="de">Eine einfache und handliche Skin on AppleTv Basis</summary>
+    <summary lang="el">Ένα απλό και εύχρηστο δέρματος με βάση AppleTV</summary>
+    <summary lang="en">A simple and handy visually Skin based on AppleTv</summary>
+    <summary lang="es">Una Skin simple y práctica basada en AppleTv</summary>
+    <summary lang="et">Lihtne ja mugav Naha põhineb AppleTV</summary>
+    <summary lang="fi">Yksinkertainen ja kätevä Skin perustuvat AppleTV</summary>
+    <summary lang="fr">Une Skin simple et pratique basée sur AppleTv</summary>
+    <summary lang="gl">A pel simple e accesible con base na AppleTV</summary>
+    <summary lang="he">עור פשוט ושימושי המבוסס על AppleTV</summary>
+    <summary lang="hr">Jednostavan i praktičan Skin temelji se na AppleTV</summary>
+    <summary lang="hu">Egy egyszerű és praktikus Skin alapuló AppleTV</summary>
+    <summary lang="is">A einfaldur og vel Skin byggir á AppleTv</summary>
+    <summary lang="it">Una Skin semplice e pratica basata su AppleTV</summary>
+    <summary lang="ja">AppleTVのに基づいて、シンプルかつ便利なスキン</summary>
+    <summary lang="km">A simple and handy Skin visually based on AppleTv</summary>
+    <summary lang="ko">AppleTV에서 기반 간단하고 편리 스킨</summary>
+    <summary lang="lt">Paprasta ir patogu Skin remiantis AppleTV</summary>
+    <summary lang="mk">A simple and handy Skin visually based on AppleTv</summary>
+    <summary lang="nl">Een eenvoudige en handige Skin op basis van AppleTV</summary>
+    <summary lang="no">En enkel og praktisk Skin basert på AppleTV</summary>
+    <summary lang="pl">Proste i wygodne skóry oparta na AppleTV</summary>
+    <summary lang="pt">A Skin simples e acessível com base na AppleTV</summary>
+    <summary lang="ro">O piele simplă și la îndemână pe AppleTV</summary>
+    <summary lang="ru">Простая и удобная кожи основана на AppleTV</summary>
+    <summary lang="sk">Jednoduchý a praktický kože na základe AppleTV</summary>
+    <summary lang="sl">Preprost in priročen kože temelji na AppleTV</summary>
+    <summary lang="sv">En enkel och praktisk hud baserad på AppleTV</summary>
+    <summary lang="th">ผิวที่เรียบง่ายและมีประโยชน์จาก AppleTV</summary>
+    <summary lang="tr">AppleTV dayanan basit ve kullanışlı Cilt</summary>
+    <summary lang="uk">Проста і зручна шкіри заснована на AppleTV</summary>
+    <summary lang="vi">Giao diện đơn giản và tiện dụng dựa trên AppleTV</summary>
+    <summary lang="zh">一个简单和方便的皮肤上的AppleTV</summary>
+    
+
+    <description lang="en">If you like Apple "everything at hand" policy for interfaces, You might want to give this Skin a try. I designed it trying to put as few clicks as possible between You and what You're trying to do (or watch ;) ).[CR]Thanks to Pecinko for Quartz as a solid base to build on.[CR] Thanks to testers and Inspirers: Toiva, Scrolling, Abrasher, Lucanoid, Relyter.</description>
+    <description lang="it">Se ti piace la politica di Apple per le interfacce grafiche "tutto a portata di mano", allora dovresti provare questa Skin. L'ho progettata cercando di mettere il minor numero di click tra te e quello che stai cercando di fare (o di guardare ;) ).[CR]Grazie a Pecinko per Quartz come solida base di partenza.[CR] Grazie ai testers e agli ispiratori:.. Toiva, Scrolling, Abrasher, Lucanoid, Relyter.</description>
+
+    <disclaimer>SiO2 - Enjoy</disclaimer>
+  </extension>
+</addon>
+
+<addon id="skin.apptv" version="1.0.1" name="AppTV"	provider-name="Wyrm|SamFisher">
+	<requires>
+		<import addon="xbmc.gui" version="5.3.0"/>
+		<import addon="script.xbmc.debug.log" version="14.0.0"/>
+		<import addon="script.favourites" version="6.0.1"/>
+		<import addon="script.globalsearch" version="3.0.4"/>
+		<import addon="service.library.data.provider" version="0.0.7"/>
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="1" debugging="false">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de">Ein vom Apple TV inspiriertes Skin für Kodi</summary>
+		<summary lang="el">Ένα κέλυφος για το Kodi, εμπνευσμένο από το Apple TV</summary>
+		<summary lang="en">A AppleTV inspired skin for Kodi</summary>
+		<summary lang="en_NZ">A AppleTV inspired skin for Kodi</summary>
+		<summary lang="en_US">A AppleTV inspired skin for Kodi</summary>
+		<summary lang="fr_CA">Un habillage pour Kodi inspiré d'AppleTV</summary>
+		<summary lang="gl">Un tema para Kodi inspirado no AppleTV</summary>
+		<summary lang="he">מעטפת עבור Kodi בהשראת AppleTV</summary>
+		<summary lang="ko">애플 TV에 영감을 받은 Kodi용 스킨</summary>
+		<summary lang="lt">AppleTV įkvėpta Kodi teminė išvaizda</summary>
+		<summary lang="ms">Kulit yang diilham dari AppleTV untuk Kodi</summary>
+		<summary lang="nl">Een op AppleTV geïnspireerde skin voor Kodi</summary>
+		<summary lang="pl">Skóra inspirowana interfejsem AppleTV</summary>
+		<summary lang="pt_BR">Uma Skin inspirada na Apple TV</summary>
+		<description lang="de">AppTV ist ein vom Apple TV inspiriertes Skin für Kodi. Es bietet eine sehr ressourcensparende, minimalistische Benutzeroberfläche und gleichzeitig Zugang zu den erweiterten Kodi-Funktionen, die nicht in der originalen Apple TV-Oberfläche vorhanden sind.</description>
+		<description lang="el">Το AppTV είναι ένα κέλυφος για το Kodi, εμπνευσμένο από το AppleTV. Διαθέτει ένα ιδιαίτερα ελαφρύ, μινιμαλιστικό περιβάλλον εργασίας, ενώ παρέχει πρόσβαση σε ένα πλήθος προχωρημένων λειτουργιών του Kodi που δεν είναι διαθέσιμες στο πρωτότυπο περιβάλλον του AppleTV.</description>
+		<description lang="en">AppTV is a AppleTV inspired skin for Kodi. It provides a very light weight minimalist gui while also allowing access to a number of advanced Kodi features not available in the original AppleTV interface.</description>
+		<description lang="en_NZ">AppTV is a AppleTV inspired skin for Kodi. It provides a very light weight minimalist gui while also allowing access to a number of advanced Kodi features not available in the original AppleTV interface.</description>
+		<description lang="en_US">AppTV is a AppleTV inspired skin for Kodi. It provides a very light weight minimalist gui while also allowing access to a number of advanced Kodi features not available in the original AppleTV interface.</description>
+		<description lang="fr_CA">AppTV est un habillage pour Kodi inspiré d'AppleTV. Il propose une IUG très légère et minimaliste tout en permettant l'accès à plusieurs fonctions avancées de Kodi qui ne sont pas proposées dans l'interface originale d'AppleTV.</description>
+		<description lang="ko">AppTV는 애플TV에서 영감을 받아 만든 Kodi용 스킨입니다. GUI를 최소화하여 가벼우면서도 애플TV 인터페이스에서는 사용할 수 없는 Kodi의 여러가지 고급 기능을 사용할 수 있습니다.</description>
+		<description lang="lt">AppTV yra AppleTV įkvėpta teminė išvaizda, skirta Kodi. Ji suteikia labai lengvą, minimalistinę grafinę vartotojo sąsają, tuo pačiu suteikiant galimybę naudoti daugelį pažangių Kdi funkcijų, kurių nėra originalioje AppleTV sąsajoje.</description>
+		<description lang="ms">AppTV adalah kulit yang diilham dari AppleTV untuk Kodi. Ia menyediakan gui minimalis yang sangat ringkas juga membolehkan capaian ke beberapa fitur lanjutan Kodi yang tidak tersedia dalam antaramuka AppleTV yang asal.</description>
+		<description lang="nl">AppTV is een op AppleTV geïnspireerde skin voor Kodi. het voorziet in een zeer lichtgewichte minimalistische gui terwijl eveneens toegang is tot een aantal geavanceerde Kodi features die niet beschikbaar zijn in de orginele AppleTV interface.</description>
+		<description lang="pl">ApplTV jest skórą inspirowaną wyglądem interfejsu AppleTV. Dostarcza wyjątkowo lekki i minimalistyczny interfejs użytkownika umożliwiający dostęp do wielu zaawansowanych funkcji Kodi, niedostępnych w oryginalnym interfejsie AppleTV.</description>
+		<description lang="pt_BR">AppTV é uma skin inspirada na AppleTV para Kodi. Fornece uma GUI bem leve e minimalista  ao mesmo empo que permite acesso a inúmeras funções avançadas do Kodinão disponíveis na interface original da AppleTV.</description>
+		<disclaimer lang="de">Poste Funktionswünsche, Fragen und Fehler in [CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="el">Για βοήθεια, αιτήματα και αναφορές προβλημάτων, μεταβείτε στο [CR]http://forum.kodi.tv/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="en">Post help and feature/bug requests to [CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="en_US">Post help and feature/bug requests to [CR]http://forum.kodi.tv/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="fr_CA">Publier les demandes d'aide, de fonction, de bogue sur [CR]http://forum.kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="hu">Hiba és fejlesztési javaslatot jelezd az alábbi oldalon:[CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="ko">도움 요청, 기능 제안, 버그 보고[CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="lt">Paprašykite pagalbos ar paskelbkite funkcijos/klaidos užklausą čia: [CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="ms">Poskan bantuan dan permintaan fitur/pepijat ke [CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="nl">Stuur help en functie/fout vragen naar [CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="pl">Prośby o pomoc, zgłoszenia błędów oraz prośby o nowej funkcje zamieść na forum[CR]http://forum.kodi.tv/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="pt_BR">Postar pedidos de ajuda/funcionalidades e bugs em  [CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<disclaimer lang="zh">请在论坛发布求助及功能需求/报告错误 [CR]http://forum.Kodi.org/forumdisplay.php?fid=76</disclaimer>
+		<platform>all</platform>
+		<license>Licensed under the Apache License, Version 2.0</license>
+		<forum>http://forum.Kodi.org/forumdisplay.php?fid=76</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/wyrm65/skin.apptv</source>
+	</extension>
+</addon>
+
+<addon id="weather.yahoo" name="Yahoo! Weather" version="3.0.6" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+	</requires>
+	<extension point="xbmc.python.weather" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af">Weervoorspelling van yahoo.com</summary>
+		<summary lang="am">የ አየር ንብረት ከ ያሁ.ኮም</summary>
+		<summary lang="ar">تنبؤات الطقس من موقع yahoo.com</summary>
+		<summary lang="bg">Синоптична прогноза от www.yahoo.com</summary>
+		<summary lang="ca">Previsió del temps des de yahoo.com</summary>
+		<summary lang="cs">Předpověď počasí z yahoo.com</summary>
+		<summary lang="da">Vejrudsigt fra yahoo.com</summary>
+		<summary lang="de">Wettervorhersage von yahoo.com</summary>
+		<summary lang="el">Πρόγνωση καιρού από το yahoo.com</summary>
+		<summary lang="en">Weather forecast from yahoo.com</summary>
+		<summary lang="en_NZ">Weather forecast from yahoo.com</summary>
+		<summary lang="en_US">Weather forecast from yahoo.com</summary>
+		<summary lang="es">Predicción meteorológica de yahoo.com</summary>
+		<summary lang="et">yahoo.com ilmaennustus</summary>
+		<summary lang="fi">Yahoo.com sääennuste</summary>
+		<summary lang="fr">Prévisions météo fournies par yahoo.com</summary>
+		<summary lang="fr_CA">Prévisions météorologiques de yahoo.com</summary>
+		<summary lang="gl">Predición meteorolóxica de yahoo.com</summary>
+		<summary lang="he">תחזית מזג אוויר מ-yahoo.com</summary>
+		<summary lang="hr">Prognoza vremena sa yahoo.com</summary>
+		<summary lang="hu">Időjárás előrejelzés a yahoo.com oldalról</summary>
+		<summary lang="id">Ramalan Cuaca dari yahoo.com</summary>
+		<summary lang="is">Veðurspá frá yahoo.com</summary>
+		<summary lang="it">Servizio meteo di yahoo.com</summary>
+		<summary lang="ja">yahoo.com 天気予報</summary>
+		<summary lang="ko">yahoo.com 일기예보</summary>
+		<summary lang="lt">Orų prognozė iš yahoo.com</summary>
+		<summary lang="lv">Laikapstākļu prognoze no yahoo.com</summary>
+		<summary lang="nl">Weerbericht van yahoo.com</summary>
+		<summary lang="no">Værvarsel fra yahoo.com</summary>
+		<summary lang="pl">Prognoza pogody z serwisu yahoo.com</summary>
+		<summary lang="pt">Previsão do tempo a partir de yahoo.com</summary>
+		<summary lang="pt_BR">Previsão Climática de yahoo.com</summary>
+		<summary lang="ro">Previziuni meteo de la yahoo.com</summary>
+		<summary lang="ru">Прогноз погоды от yahoo.com</summary>
+		<summary lang="sk">Predpoveď počasia z yahoo.com</summary>
+		<summary lang="sl">Vremenska napoved iz yahoo.com</summary>
+		<summary lang="sr_RS">Прогноза времена са yahoo.com</summary>
+		<summary lang="sv">Väderprognos från yahoo.com</summary>
+		<summary lang="tr">Hava durumu - yahoo.com</summary>
+		<summary lang="uk">Прогноз погоди з </summary>
+		<summary lang="zh">来源于 yahoo.com 的天气预报</summary>
+		<description lang="af">Weervoorspelling verskaf deur Yahoo! Weer (http://weather.yahoo.com/)</description>
+		<description lang="ar">خدمه تنبؤات الطقس تأتيكم برعايه ياهوو الطقس (http://weather.yahoo.com/)</description>
+		<description lang="bg">Синоптична прогноза, предоставена от Yahoo! Weather (http://www.yahoo.com/)</description>
+		<description lang="ca">Previsió del temps proporcionada per Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="cs">Předpověď počasí poskytnuta stránkou Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="da">Vejrudsigten leveret af Yahoo! vejr (http://weather.com/)</description>
+		<description lang="de">Wettervorhersage bereitgestellt durch Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="el">Η πρόγνωση καιρού παρέχεται από το Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="en">Weather forecast provided by Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="en_NZ">Weather forecast provided by Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="en_US">Weather forecast provided by Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="es">Predicción meteorológica facilitada por Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="et">Ilmaennustuse toob teieni Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="fi">Sääennusteen tarjoaa Yahoo! Weather (http://weather.yahoo.com)</description>
+		<description lang="fr">Prévisions météo fournies par Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="fr_CA">Prévisions météorologiques fournies par Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="gl">Predición meteorolóxica fornecida por Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="he">תחזית מזג אוויר מסופקת ע"י Yahoo! Weather (בכתובת http://weather.yahoo.com)</description>
+		<description lang="hr">Prognoza vremena koju pruža Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="hu">Az időjárás előrejelzést biztosítja a Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="is">Veðurspá frá Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="it">Servizio meteo fornito da Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="ja">Yahoo! Weather (http://weather.yahoo.com/) 提供の天気予報</description>
+		<description lang="ko">Yahoo! Weather (http://weather.yahoo.com/) 에서 제공하는 일기예보</description>
+		<description lang="lt">Yahoo! Weather pateikta orų prognozė (http://weather.yahoo.com/)</description>
+		<description lang="lv">Laikapstākļu prognoze pēc Yahoo! laika ar nosacījumu (http://weather.yahoo.com/)</description>
+		<description lang="nl">Weersverwachting geleverd door Yahoo! (http://weather/yahoo.com)</description>
+		<description lang="no">Værvarsel levert av Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="pl">Prognoza pogody jest dostarczona dzięki uprzejmości serwisu Yahoo! (http://weather.yahoo.com/)</description>
+		<description lang="pt">Previsão metereológica fornecida por Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="pt_BR">Previsão climática fornecida por Yahoo! Weather (http://weather.yahoo.com)</description>
+		<description lang="ro">Previziune meteo oferite de Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="ru">Прогноз погоды предоставлен Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sk">Predpoveď počasia poskytovaná službou Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sl">Vremenska napoved od Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sr_RS">Прогноза времена коју је омогућио Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sv">Väderprognos tillhandahållen av Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="tr">Hava Durumu Yahoo! Weather tarafından sağlanır (http://weather.yahoo.com/)</description>
+		<description lang="uk">Прогноз погоди надано Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="zh">由雅虎天气提供的天气预报（http://weather.yahoo.com/）</description>
+		<disclaimer lang="af">Die gebruik van hierdie byvoeging beteken dat jy ooreengekom met die diensvoorwaardes wat op geleë is http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ar">إستخدامك لهذه اﻹضافه يعنى موافقتك على شروط الخدمه التى يمكن اﻹطلاع عليها من خلال http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="bg">Употребявайки добавката Вие се съгласявате с условията за ползване на услугата, които се намират на http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ca">L'ús d'aquest complement implica que vostè ha acceptat els termes de servei ubicats a http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="cs">Používáním tohoto rozšíření schvalujete podmínky užívání umístěné na http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="da">Brug af denne add-on betyder at du har accepteret betingelserne for brug som du finder på http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="de">Die Benutzung der Erweiterung impliziert, das sie den Nutzungsbedingungen unter http://developer.yahoo.com/weather/#terms zugestimmt haben</disclaimer>
+		<disclaimer lang="el">Χρήση αυτού του πρόσθετου συνεπάγεται την αποδοχή των Όρων Χρήσης της Υπηρεσίας (Terms of Service) οι οποίοι βρίσκονται στο http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="en">Use of this add-on implies that you have agreed to the Terms of Service located at http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="en_NZ">Use of this add-on implies that you have agreed to the Terms of Service located at http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="en_US">Use of this add-on implies that you have agreed to the Terms of Service located at http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="es">El uso de este add-on implica la aceptación de los Términos de Servicio recogidos en http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="et">Selle lisa kasutamine tähendab nõustumist Kasutustingimustega aadressilt http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="fi">Tämän lisäosan käyttäminen tarkoittaa että hyväksyt käyttäehdot, jotka ovat osoitteessa http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="fr">Par l'utilisation de ce module, vous attestez accepter les Conditions Générales d'Utilisation disponibles sur http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="fr_CA">L'utilisation de cet addiciel implique que vous avez accepté les conditions générales d'utilisation situées à http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="gl">Empregar este complemento implica que vostede acepta os termos do servizo localizados en http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="he">מהשימוש בהרחבה זו משתמע כי הסכמת לתנאי השירות המפורטים ב-http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="hr">Korištenje ovog dodatka podrazumijeva da se slažete sa Pravilima korištenja koji se nalaze na: http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="hu">Ennek a kiegészínőnek a használatával elfogadja a Felhasználói Feltételeket amik megtalálhatóak a http://developer.yahoo.com/weather/#terms oldalon</disclaimer>
+		<disclaimer lang="is">Notkun á þessarri viðbót gefur til kynna að þú hafir samþykkt skilmálana sem finna má á http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="it">L'uso di questo add-on implica l'accettazione delle Condizioni di Servizio che trovi su http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ja">このアドオンを使うことにより、http://developer.yahoo.com/weather/#terms にある利用規約に同意したとみなされます。</disclaimer>
+		<disclaimer lang="ko">이 애드온을 사용하는 것은 http://developer.yahoo.com/weather/#terms 에 있는 서비스 이용 약관에 동의함을 의미합니다.</disclaimer>
+		<disclaimer lang="lt">Naudodami šį priedą, jūs sutinkate su paslaugos sąlygomis, esančiomis http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="lv">Lietojot šo spraudni nozīmē, ka jūs esat piekrituši pakalpojumu sniegšanas noteikumiem, kas atrodas http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="nl">Het gebruik van deze add-on impliceert dat je akkoord gaat met de service-voorwaarden op http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="no">Bruken av dette tillegget betinger at du har godkjent brukervilkårene på http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="pl">Korzystanie z tego dodatku jest równoznaczne z akceptacją regulaminu dostępnego pod adresem: http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="pt">O uso deste add-on implica o seu acordo com os Termos de Serviço disponíveis em http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="pt_BR">O uso deste complemento implica em aceitar os Termos de Serviço localizado em http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ru">Используя это дополнение, вы соглашаетесь с условиями предоставления услуг, &#10;доступными по адресу: http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sk">Používaním tohto doplnku súhlasíte s podmienkami používania služby umiestnenými na http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sl">Uporaba tega dodatka pomeni, da ste se strinjali s pogoji storitve, ki se nahajajo na http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sr_RS">Употреба овог додатка подразумева да сте сагласни са Условима Коришћења који се налазе на http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sv">Användning av detta tillägg innebär att du har accepterat användarvillkoren som hittas på http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="tr">Bu eklentinin kullanımı aynı zamanda http://developer.yahoo.com/weather/#terms adresindeki Kullanım Koşullarını da kabul ettiğiniz anlamına gelir.</disclaimer>
+		<disclaimer lang="uk">Скориставшись цією надбудовою, ви тим самим погоджуєтеся з умовами використання: </disclaimer>
+		<disclaimer lang="zh">使用此插件表示你已同意此服务条款：http://developer.yahoo.com/weather/#terms</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=169410</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/ronie/weather.yahoo</source>
+	</extension>
+</addon>
+
+<addon id="plugin.video.viaplay"
+       name="Viaplay"
+       version="2.0.9"
+       provider-name="dsd">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>sv</language>
+    <summary lang="en">Watch content from Viaplay.</summary>
+    <summary lang="sv">Titta på innehåll från Viaplay.</summary>
+	<summary lang="dk">Se indhold fra Viaplay.</summary>
+    <description lang="en">With this addon you can stream content from Viaplay.</description>
+    <description lang="sv">Med denna addon kan du strömma innehåll från Viaplay.</description>
+	<description lang="dk">Med denne addon du kan streame indhold fra Viaplay.</description>
+	<description lang="no">Med denne addon kan du streame innhold fra Viaplay.</description>
+	<description lang="fi">Tämän addon voit suoratoistaa sisältöä Viaplay.</description>
+    <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <platform>windx wingl osx linux</platform>
+  </extension>
+</addon>
+
+<addon
+  id="script.games.rom.collection.browser"
+  version="2.1.2"
+  name="Rom Collection Browser"
+  provider-name="malte">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.rom.collection.browser" version="1.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>game</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="be">Import, browse and launch games in XBMC</summary>
+    <summary lang="ca">Importa, cerca i arranca jocs en l'XBMC</summary>
+    <summary lang="da">Importere, gennemse og starte spil i XBMC</summary>
+    <summary lang="de">Importiert, verwaltet und startet Spiele in XBMC</summary>
+    <summary lang="el">Εισαγάγετε, αναζητήστε και εκτελέστε παιχνίδια στο XBMC.</summary>
+    <summary lang="en">Import, browse and launch games in XBMC</summary>
+    <summary lang="en_NZ">Import, browse and launch games in XBMC</summary>
+    <summary lang="es">Importa, explora y ejecuta juegos en XBMC</summary>
+    <summary lang="fr">Importez, parcourez et lancez vos jeux depuis XBMC</summary>
+    <summary lang="fr_CA">Importer, parcourir et lancer des jeux dans XBMC</summary>
+    <summary lang="gl">Importar, buscar e executar xogos no XBMC</summary>
+    <summary lang="hu">Konzol játék ROM-ok böngészése</summary>
+    <summary lang="id">Impor, telusuri dan mainkan permainan di XMBC</summary>
+    <summary lang="it">Importa, sfoglia e lancia i giochi da XBMC</summary>
+    <summary lang="nl">Importeer, doorzoek en start spellen in XBMC</summary>
+    <summary lang="pl">Importowanie, przeglądanie i uruchamianie gier w XBMC</summary>
+    <summary lang="pt">Importe, navegue e execute jogos no XBMC</summary>
+    <summary lang="pt_BR">Importe, navegue e execute jogos no XBMC</summary>
+    <summary lang="ru">Импорт, обзор и запуск игр в XBMC</summary>
+    <summary lang="sv">Importera, bläddra och starta spel i XBMC</summary>
+    <summary lang="zh">在 XBMC 中导入、浏览和运行游戏</summary>
+    <description lang="be">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;First Use:&#10;  * On first launch RCB will start a simple configuration wizard&#10;  * After the wizard is completed RCB will ask you to import your games&#10;  * If needed you can launch the wizard anytime via context menu&#10;  * Just press "C" on your keyboard or "Menu" on your remote&#10;&#10;Features:&#10;  * scan your rom folders and import games to local database&#10;  * scrape artwork and meta data from various online sources&#10;  * import local available descriptions, artwork and videos&#10;  * filter games by console, genre, year and publisher&#10;  * favorites function&#10;  * automatic video playback in video window&#10;  * fullscreen video browser&#10;  * game details page&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * launch roms and standalone games in solo or non-solo mode&#10;  * detect games in zip and 7z archives and ask user which game to load&#10;  * direct launching of savestate files&#10;  * ...&#10;</description>
+    <description lang="de">Mit diesem Addon können Roms und PC-Spiele verwaltet und gestartet werden. Mehr Informationen im RCB wiki: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Erste Schritte:&#10;  * Beim ersten Aufruf startet RCB einen Konfigurations-Assistenten&#10;  * Nach der Konfiguration importiert RCB die Spiele in seine Datenbank&#10;  * Der Assistent kann auch jederzeit aus RCB heraus gestartet werden&#10;  * Drücke dazu "C" auf der Tastatur oder "Menu" auf der Fernbedienung&#10;&#10;Features:&#10;  * Scannt Verzeichnisse rekursiv und importiert Spiele in die Datenbank&#10;  * Liest Artwork und Metadaten aus verschiedenen Online-Quellen&#10;  * Importiert lokal verfügbare Infos, Artwork und Videos&#10;  * Filtert Spiele nach Konsole, Genre, Jahr und Herausgeber&#10;  * Favoriten-Funktion&#10;  * Automatisches Abspielen von Videos&#10;  * Fullscreen Video Browser&#10;  * Detailseite mit weiteren Spiele-Infos&#10;  * spezielle MAME Sichten für Cabinets und Banner&#10;  * Startet Spiele im Solo-Modus (beendet XBMC vor dem Start des Spiels)&#10;  * Erkennt Spiele in zip und 7z Archiven&#10;  * Savestates können direkt gestartet werden (Emulator-abhängig)&#10;  * ...&#10;</description>
+    <description lang="el">Με αυτό το Πρόσθετο μπορείτε να βρείτε και να παίξετε παιχνίδια εξομοιωτών (Rom) καθώς και αυτόνομα παιχνίδια στο XBMC. Δείτε τη σελίδα του wiki για περισσότερες πληροφορίες: http://code.google.com/p/romcollectionbrowser/wiki/Welcome&#10;&#10;Πρώτη Χρήση:&#10;  * Κατά την πρώτη εκτέλεση του RCB θα ξεκινήσει ένας οδηγός εγκατάστασης&#10;  * Μετά την ολοκλήρωση του οδηγού το RCB θα σας ζητήσει να εισάγετε τα παιχνίδια σας&#10;  * Αν χρειαστεί, μπορείτε να εκτελέσετε τον οδηγό ανά πάσα στιγμή από το μενού επιλογών&#10;  * Απλά πιέστε το "C" στο πληκτρολόγιό σας ή το "Μενού" στο τηλεχειριστήριό σας&#10;&#10;Χαρακτηριστικά:&#10;  * σαρώστε τους φακέλους των rom σας και εισάγετε παιχνίδια στην τοπική βάση δεδομένων&#10;  * λήψη εικόνων και μετα-δεδομένων μέσω της διαδικασίας του scrape από διάφορες διαδικτυακές πηγές&#10;  * εισαγωγή διαθέσιμων τοπικών περιγραφών, εικόνων και βίντεο&#10;  * φιλτράρισμα παιχνιδιών ανά παιχνιδομηχανή, είδος, έτος και εταιρεία&#10;  * λειτουργία αγαπημένων&#10;  * αυτόματη αναπαραγωγή βίντεο σε παράθυρο&#10;  * προβολή βίντεο πλήρους οθόνης&#10;  * σελίδα πληροφοριών παιχνιδιών&#10;  * εξειδικευμένες προβολές MAME για εμφάνιση cabinet και marquee&#10;  * έναρξη rom και παιχνιδιών σε λειτουργία solo και μη&#10;  * εντοπισμός παιχνιδιών σε αρχεία zip και 7z και ερώτηση χρήστη σχετικά με το ποιο παιχνίδι να φορτωθεί&#10;  * άμεση έναρξη των αποθηκευμένων αρχείων&#10;  * ...&#10;</description>
+    <description lang="en">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;First Use:&#10;  * On first launch RCB will start a simple configuration wizard&#10;  * After the wizard is completed RCB will ask you to import your games&#10;  * If needed you can launch the wizard anytime via context menu&#10;  * Just press "C" on your keyboard or "Menu" on your remote&#10;&#10;Features:&#10;  * scan your rom folders and import games to local database&#10;  * scrape artwork and meta data from various online sources&#10;  * import local available descriptions, artwork and videos&#10;  * filter games by console, genre, year and publisher&#10;  * favorites function&#10;  * automatic video playback in video window&#10;  * fullscreen video browser&#10;  * game details page&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * launch roms and standalone games in solo or non-solo mode&#10;  * detect games in zip and 7z archives and ask user which game to load&#10;  * direct launching of savestate files&#10;  * ...&#10;</description>
+    <description lang="en_NZ">With this Addon you can browse and launch emulator roms and standalone games in XBMC. See the wiki page for more information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;First Use:&#10;  * On first launch RCB will start a simple configuration wizard&#10;  * After the wizard is completed RCB will ask you to import your games&#10;  * If needed you can launch the wizard anytime via context menu&#10;  * Just press "C" on your keyboard or "Menu" on your remote&#10;&#10;Features:&#10;  * scan your rom folders and import games to local database&#10;  * scrape artwork and meta data from various online sources&#10;  * import local available descriptions, artwork and videos&#10;  * filter games by console, genre, year and publisher&#10;  * favourites function&#10;  * automatic video playback in video window&#10;  * fullscreen video browser&#10;  * game details page&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * launch roms and standalone games in solo or non-solo mode&#10;  * detect games in zip and 7z archives and ask user which game to load&#10;  * direct launching of savestate files&#10;  * ...&#10;</description>
+    <description lang="es">Con este complemento puedes explorar y ejecutar ROMs de emulador y juegos independientes en XBMC. Visita la página wiki para más información: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Primer Uso:&#10;  * Al ejecutarse por primera vez, RCB mostrará un sencillo asistente de configuración&#10;  * Una vez completado el asistente, RCB te solicitará importar tus juegos&#10;  * Si lo necesitas, puedes ejecutar el asistente en cualquier momento a través del menú contextual&#10;  * Tan solo tienes que pulsar "C" en el teclado o "Menú" en el mando a distancia&#10;&#10;Características:&#10;  * escanea tus carpetas con ROMs e importa los juegos a una base de datos local&#10;  * descarga imágenes y metadatos desde varias fuentes online&#10;  * importa descripciones, imágenes y videos disponibles localmente&#10;  * filtra los juegos por consola, género, año y editor&#10;  * función de favoritos&#10;  * reproducción automática de videos en ventana de video&#10;  * navegador de videos a pantalla completa&#10;  * página de detalles del juego&#10;  * vistas de MAME dedicadas, mostrando máquinas y marcos&#10;  * ejecuta ROMs y juegos independiente en modo solo o no-solo&#10;  * detecta juegos en archivos zip y 7z y pregunta al usuario qué juego desea cargar&#10;  * ejecución directa de archivos de partidas guardadas&#10;  * ...&#10;</description>
+    <description lang="fr">Avec cette extension, vous pouvez parcourir et lancer des roms d'émulateur ainsi que des jeux autonomes. Visitez le wiki pour plus d'informations : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;Première utilisation :&#10;* Au premier démarrage RCB lancera un assistant de configuration simplifié.&#10;* Une fois cette configuration terminée RCB vous proposera d'importer vos jeux.&#10;* Au besoin, vous pouvez relancer l'assistant de configuration à tout moment depuis le menu contextuel.&#10;* Appuyez sur la touche "C" de votre clavier ou sur "Menu" de votre télécommande.&#10;&#10;Caractéristiques :&#10;* Analyse votre dossier de roms et importe les jeux dans une base de données locale&#10;* Récupère les illustrations et métadonnées depuis différentes sources en ligne&#10;* Importe vos descriptifs, illustrations et vidéos stockés localement&#10;* Filtre vos jeux par console, genre, année et éditeur&#10;* Gestion des favoris&#10;* lecture automatique des vidéos dans une fenêtre&#10;* Navigation parmi les vidéos en plein écran&#10;* Fiche de jeux détaillée&#10;* Vues dédiées pour MAME affichant cabinets et marquees&#10;* Lancement des roms et jeux en mode solo ou non&#10;* Détecte les jeux dans les fichiers zip et 7z et demande à l'utilisateur quel jeux lancer&#10;* lance directement une sauvegarde&#10;&#10;</description>
+    <description lang="fr_CA">Avec cet addiciel vous pouvez parcourir et lancer des roms d'émulateurs et des jeux autonomes dans XBMC. Consulter le wiki pour plus d'informations : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Première utilisation :&#10;* au premier lancement RCB lancera un assistant simple de configuration&#10;* un fois l'assistant terminé RCB vous demandera d'importer vos jeux&#10;* au besoin vous pouvez lancer l'assistant à tout moment avec le menu contextuel&#10;* pesez juste sur « C » sur votre clavier, ou « Menu » sur votre télécommande&#10;&#10;Caractéristiques :&#10;* balayer votre dossier de ROM et importer les jeux dans la base de données locale&#10;* extraire les illustrations et les métadonnées de diverses sources en ligne&#10;* importer les descriptions, les illustrations et les vidéos locales disponibles&#10;* filtrer les jeux par console, genre, année et éditeur&#10;* fonction favoris&#10;* lecture vidéo automatique dans la fenêtre vidéo&#10;* navigateur vidéo en plein écran&#10;* page de détails des jeux&#10;* vues MAME dédiées pour afficher les cabinets et les marquises&#10;* lancer les ROM et les jeux autonomes en mode solo ou non&#10;* détecter les jeux dans les archives zip et 7z et demander à l'utilisateur quel jeu charger&#10;* lancement direct des fichiers de sauvegarde d'état&#10;* ... &#10;</description>
+    <description lang="hu">Jelenlegi funkciók:&#10;  * játékok szűrése konzoltípus, műfaj, év és kiadó alapján&#10;  * rom-ok indítása külső emulátorral&#10;  * a program beállítása egy xml fájl segítségével&#10;  * egyszerű de testreszabható leírófájl-feldolgozó&#10;  * játékonként különböző képek és videók megjelenítése&#10;  * játéktartalom és kiegészítő információk megjelenítése&#10;</description>
+    <description lang="id">Dengan Addon ini Anda dapat menelusuri dan menjalankan rom emulator dan program permainan di XBMC. Lihat halaman wiki untuk informasi lebih lanjut: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Pemakaian Pertama:&#10;* Saat pertama kali menjalankan RCB akan memulai penuntun konfigurasi sederhana&#10;* Setelah tuntunan selesai RCB akan menanyakan Anda untuk mengimpor permainan&#10;* Jika diperlukan Anda dapat menjalankan tuntunan kapan saja melalui menu konteks&#10;* Tekan "C" pada papan ketik atau "Menu" pada remote Anda&#10;&#10;Fitur:&#10;* pindai folder rom Anda dan impor permainan ke basis data lokal&#10;* salin karya seni dan meta data dari berbagai sumber daring&#10;* impor deskripsi, karya seni dan video yang tersedia lokal&#10;* filter permainan berdasarkan konsol, tema, tahun dan penerbit&#10;* fungsi favorit&#10;* pemaran video otomatis di jendela video&#10;* Penelusuran video layar penuh&#10;* halaman rincian permainan&#10;* tampilan MAME dedikasi untuk menampilkan kabinet dan marquee&#10;* deteksi permainan dalam arsip zip dan 7z serta menanyakan pengguna permainan mana yang akan dimuat&#10;* menjalankan langsung dari berkas savestate&#10;* ...&#10;</description>
+    <description lang="it">Con questo addon puoi sfogliare e lanciare le rom degli emulatori o giochi standalone in XBMC. Consulta la pagina wiki per maggiori informazioni : http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Prima uso:&#10;  * Al primo avvio, RCB avvia una semplice procedura di configurazione&#10;  * Al termine, RCB ti chiederà di importare i tuoi giochi&#10;  * Se necessario, puoi avviare la procedura di configurazione in qualsiasi momento tramite il menu contestuale&#10;  * Premi semplicemente "C" sulla tua tastiera o il tasto "Menu" del tuo telecomando&#10;&#10;Caratteristiche:&#10;  * Scansiona le tue cartelle contenenti rom e importa i giochi in un database locale&#10;  * Esegui lo scraping degli artwork e dei metadati da varie sorgenti online&#10;  * Importa descrizioni, artwork e video già disponibili in locale&#10;  * Filtra i giochi per console, genere, anno e editore&#10;  * Funzione preferiti &#10;  * Esecuzione automatica dei video nella finestra video&#10;  * Sfoglia video a schermo intero&#10;  * Pagina dettagli del gioco&#10;  * Viste specifiche per MAME per visualizzare i cabinet e i marquee&#10;  * Lancia rom e giochi standalone in modalità "Solo" e "Non solo"&#10;  * Rileva giochi in archivi .zip e .7z, e chiede all'utente quale gioco eseguire&#10;  * Lancio diretto da file di salvataggio del gioco&#10;  * ...&#10;</description>
+    <description lang="nl">Met deze Add-on kan je zoeken en starten van emulator roms en alleenstaande Spellen in XBMC. Zie de wikipagina voor meer informatie:&#10;http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Bij eerste keer:&#10;* Bij de eerste keer Starten zal RCB een gemakkelijke configuratie wizard starten&#10;* Nadat de wizard gereed is zal RCB jou vragen jouw spellen te importeren&#10;* wanneer nodig kan je de wizard elke keer starten via het context menu&#10;* Druk alleen "C" op je toetsenbord of "menu"op jouw afstandsbediening&#10;&#10;Functies:&#10;* Scan jouw rom folders en importeer spellen naar jou lokale database&#10;* scrape Artwork en Meta data van uit verschillende online bronnen&#10;* importeer lokaal beschikbare omschrijvingen, artwork en video`s&#10;* Filter spellen op Console, genre, jaar en uitgever&#10;* Favorieten functie&#10;* Automatisch film terugspelen optie in videoscherm&#10;* Volledig scherm Video browser&#10;* Spel details pagina&#10;* Toegewijde MAME weergaven om Cabinets en marquees*&#10;* Start Roms en Alleenstaande spellen in Solo of niet-solo modus&#10;* detecteer spellen in zip en 7z archieven en vraag gebruiker welk spel te laden&#10;* direct starten van opgeslagen bestanden&#10;* ...&#10;&#10;</description>
+    <description lang="pt">Com este Addon pode navegar e jogar roms de emuladores e jogos individuais no seu XBMC. Veja a página de wiki para mais informação: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Primeiro uso:&#10;  * Na primeira execução, RCB iniciará um assistente de configuração&#10;  * Após a configuraçã estar completa, o RCB irá importar os seus jogos&#10;  * Se precisar, pode iniciar o assistente através do menu de contexto&#10;  * Basta premir "C" no seu teclado ou "Menu" no seu remoto&#10;&#10;Funcionalidades:&#10;  * analisar as suas pastas de roms e importar jogos para a base de dados local&#10;  * obter artwork e metadados de várias fontes online&#10;  * importar descrições, artwork e vídeos disponíveis localmente&#10;  * filtrar jogos por consola, género, ano e editora&#10;  * função de favoritos&#10;  * reprodução de vídeo automática na janela de vídeo&#10;  * navegador de vídeos em ecrã cheio&#10;  * página de detalhes do jogo&#10;  * vistas especiais de MAME para exibir cabinets e marquees&#10;  * iniciar roms e jogos autónomos em modo solo ou não-solo&#10;  * detectar jogos em ficheiros zip e 7z e perguntar ao utilizador qual é o jogo a iniciar&#10;  * iniciar directamente ficheiros de savestate&#10;  * ...&#10;</description>
+    <description lang="pt_BR">Com esse addon você pode navegar e lançar roms de emuladores e jogos através do xbmc. Veja a pagina de wiki para mais informações:&#10;http://code.google.com/p/romcollectionbrowser/wiki/Welcome.(\n)(\n)&#10;Primeiro Uso:&#10; No primeiro lançamento o RCB irá iniciar um assistente de configuração simples(&#10;*Depois de concluir o assistente RCB irá pedir para importar seus jogos&#10;*Se necessário, você pode iniciar o assistente a qualquer momento através do menu de contexto&#10;* Basta pressionar "C" no seu teclado ou "Menu" em seu controle remoto&#10;&#10;Características:&#10;* varredura de suas pastas com roms e importação de jogos para um banco de dados local&#10;* procura arte e meta-dados de várias fontes on-line&#10;* importação local para descrições e obras de arte e vídeos se disponíveis&#10;* filtrar jogos por console, gênero, ano e editor&#10;* função favoritos&#10;* reprodução automática de videos na janela do navegador(\n)&#10;*vídeo em tela cheia no navegador&#10;* pagina de detalhes do jogo&#10;* vistas dedicadas a MAME para exibir cabines e letreiros(\n)&#10;* lançamento de roms e jogos independentes no modo sozinho ou não sozinho&#10;* detectar jogos em arquivos ZIP e 7z e perguntar ao usuário qual jogo carregar&#10;* lançamento direto de arquivos de savestate&#10;.&#10;</description>
+    <description lang="ru">С помощью этого дополнения можно просматривать и запускать ROM эмуляторы и игры XBMC. Дополнительную информацию можно увидеть на странице Wiki по адресу: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Первый запуск:&#10;  * При первом запуске RCB будет запущен простой мастер конфигураций&#10;  * После завершения мастера RCB спросит Вас, какие игры импортировать&#10;  * Если нужно, вы можете запустить мастер повторно в контекстном меню&#10;  * Нажмите "C" на клавиатуре или "Menu" на пульте управления&#10;&#10;Возможности:&#10;  * Сканирование папок с образами игр и добавление их в вашу базу данных&#10;  * Искать обложки и мета данные  с различных онлайн источников&#10;  * загружать доступные локальные описания, обложки и видео&#10;  * фильтровать игры по типу консоли, жанру, году, издателю&#10;  * избранное&#10;  * автоматическое воспроизведение видео в окне&#10;  * полноэкранный видео браузер&#10;  * страница описаний игр&#10;  * dedicated MAME views to display cabinets and marquees&#10;  * Запускать образы и игры в одно и многопользовательском режимах&#10;  * определять игры в архивах zip и 7z и затем спрашивать пользователя, что загружать&#10;  * Прямой запуск по файлам сохранений&#10;  * ...&#10;</description>
+    <description lang="sv">Med detta tillägg kan du bläddra och starta emulatorbaserade ROMS och spel i XBMC.&#10;Se wiki för mer information: http://code.google.com/p/romcollectionbrowser/wiki/Welcome.&#10;&#10;Första start:&#10;  * Vid första start kommer RCB starta en enkel inställningsguide&#10;  * När guiden är klar kommer RCB be dig importera dina spel&#10;  * Om du behöver, kan du starta guiden när som helst via undermenyn&#10;  * Tryck "C" på ditt tangentbord eller "Meny" på din fjärrkontroll&#10;&#10;Egenskaper:&#10;  * sök igenom mappar med roms och importera spel till lokal databas&#10;  * skrapa bilder och metadata från olika onlinekällor&#10;  * importera lokala beskrivningar, bilder och filmer&#10;  * filtrera spel efter konsol, genre, år och utgivare&#10;  * favoriter&#10;  * automatisk filmuppspelning i videofönster&#10;  * fullskärmsbläddrare för film&#10;  * sida med detaljerad spelinformation&#10;  * dedikerade MAME-vyer för att visa spelkabinett&#10;  * starta roms och spel i solo eller non-solo läge&#10;  * hitta spel i zip och 7z arkiv och fråga användaren vilket spel att ladda&#10;  * direktstart av savestate fier&#10;  * ...&#10;</description>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=70115</forum>
+    <website>https://code.google.com/p/romcollectionbrowser/</website>
+    <source>https://romcollectionbrowser.googlecode.com/svn/trunk/</source>
+  </extension>
+</addon>
+
+<addon id="script.screensaver.logoff" name="Logoff" version="1.1.0" provider-name="elmerohueso">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.ui.screensaver" library="addon.py">
+	<provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+	<language></language>
+	<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+	<forum>http://forum.kodi.tv/showthread.php?tid=198405></forum>
+	<website>none</website>
+	<email>elmerohueso@gmail.com</email>
+	<source>https://github.com/elmerohueso/script.screensaver.logoff</source>
+    <summary>"Screensaver" that will log off your XBMC/Kodi profile</summary>
+    <description>Not really a screensaver, but makes your system automatically log off the active XBMC/Kodi profile according to your "Screensaver time".</description>
+  </extension>
+</addon>
+
+<addon id="script.tv.show.next.aired" name="TV Show - Next Aired" version="6.0.13" provider-name="Ppic|Frost|ronie|`Black|phil65|WayneD">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.simplejson" version="2.0.10"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg">Информация за предстоящите ТВ сериали.</summary>
+		<summary lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament.</summary>
+		<summary lang="de">Erhalten Sie Infos über die nächsten Ausstrahlungstermine Ihrer Serien.</summary>
+		<summary lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών</summary>
+		<summary lang="en">Get info for TV Shows Next Aired.</summary>
+		<summary lang="en_NZ">Get info for TV Shows Next Aired.</summary>
+		<summary lang="en_US">Get info for TV Shows Next Aired.</summary>
+		<summary lang="es">Obtener información de las siguientes emisiones de series.</summary>
+		<summary lang="es_MX">Obtener información de las siguientes emisiones de series.</summary>
+		<summary lang="fr">Récupère les dates de diffusions de vos séries</summary>
+		<summary lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé.</summary>
+		<summary lang="gl">Obter a info. das Seguintes Emisións das Series de TV.</summary>
+		<summary lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה.</summary>
+		<summary lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju.</summary>
+		<summary lang="hu">Információ a sorozatok következő vetítési idejéről.</summary>
+		<summary lang="it">Ottieni info per le Serie TV trasmesse prossimamente</summary>
+		<summary lang="ko">TV 쇼 방송 일정을 가져옵니다.</summary>
+		<summary lang="lt">Gauti TV laidos kitos transliacijos informaciją.</summary>
+		<summary lang="nl">Ophalen info voor komende TV shows.</summary>
+		<summary lang="no">Hent informasjon om kommende TV-programmer.</summary>
+		<summary lang="pl">Pobieraj informacje o</summary>
+		<summary lang="pt">Obter info para Próximas Exibições de Séries TV.</summary>
+		<summary lang="pt_BR">Saiba sobre próximas exibições de séries de TV.</summary>
+		<summary lang="ro">Află despre emisiuni care urmează să fie difuzate</summary>
+		<summary lang="ru">Информация о следующих ТВ передачах.</summary>
+		<summary lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale.</summary>
+		<summary lang="sv">Hämta info för nästa sändning av TV-serier.</summary>
+		<summary lang="zh">获取即将播出的剧集的信息。</summary>
+		<description lang="bg">Сваля информация за предстоящите ТВ сериали. Вече никога няма да пропускате епизод от ТВ сериали, които следите.</description>
+		<description lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament. No te'n perdràs cap mai més.</description>
+		<description lang="de">TV Show Next Aired liefert Termin-Informationen über die anstehenden Episoden der Serien aus der Datenbank. Dazu gibt es eine Wochenansicht mit allen in der nächsten Woche laufenden Episoden sowie (bei vorhandenem Skin Support) die direkte Integration der Informationen in die Ansichten des jeweiligen Skins. Sie werden nie wieder eine Folge verpassen.</description>
+		<description lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών. Δε θα ξαναχάσετε επεισόδιο ποτέ.</description>
+		<description lang="en">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="en_NZ">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="en_US">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+		<description lang="es">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+		<description lang="es_MX">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+		<description lang="fr">Ce script interroge votre médiathèque puis vas récupérer les infos sur les prochaines diffusions de vos séries. vous n'en manquerez plus aucune.</description>
+		<description lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé. Vous n'en manquerez plus jamais une.</description>
+		<description lang="gl">Obter a info. das Seguintes Emisións das Series de TV. Non esquecerá ningunha.</description>
+		<description lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה. לעולם לא תחמיץ שוב פרק.</description>
+		<description lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju. Nikada nećete propustiti nijednu.</description>
+		<description lang="hu">Információ a sorozatok következő vetítési idejéről. Soha nem marad le mégegyszer semmiről.</description>
+		<description lang="it">Ottieni info per le Serie TV trasmesse prossimamente. Non ne perderai più una.</description>
+		<description lang="ko">TV 쇼 방송 일정을 가져옵니다. 놓치는 일은 절대 없을 것입니다.</description>
+		<description lang="lt">Gauti TV laidos kitos transliacijos informaciją. Jūs niekada daugiau jos nepraleisite.</description>
+		<description lang="nl">Ophalen info voor komende TV shows. Je zult ze nooit meer missen.</description>
+		<description lang="no">Få informasjon om neste TV-sending. Du vil aldri gå glipp av en episode igjen.</description>
+		<description lang="pl">Informacje o Premierach Programów Telewizyjnych. Nigdy już żadnego nie przegapisz.</description>
+		<description lang="pt">Obter info para Próximas Exibições de Séries TV. Nunca mais vai perder uma.</description>
+		<description lang="pt_BR">Saiba sobre próximas exibições de séries de TV. Você nunca perderá um episódio.</description>
+		<description lang="ro">Află despre emisiuni care urmează să fie difuzate. Nu vei mai rata nici una.</description>
+		<description lang="ru">Получает информацию о следующих ТВ передачах. Теперь Вы никогда не пропустите ни одну ТВ передачу.</description>
+		<description lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale. Nikoli več ne boste zamudili nobene epizode.</description>
+		<description lang="sv">Hämta info för nästa sändning av TV-Serie. Du kommer inte att missa en igen.</description>
+		<description lang="zh">获取即将播出的剧集的信息。你不会再错过好节目了。</description>
+		<language></language>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=186090</forum>
+		<website>http://github.com/WayneD/script.tv.show.next.aired</website>
+		<source>https://github.com/WayneD/script.tv.show.next.aired.git</source>
+	</extension>
+</addon>
+
+<addon id="plugin.video.AKO" name="KarwanTV" version="2.8" provider-name="HALOW">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>HALOW</summary>
+    <description>Kurdistan Livestreams
+
+        http://karwan.tv
+
+for this addon you need to register under
+http://reg.iptvxtra.net/register_kd.php
+
+Multiple registrations are not allowed and will be rewarded with an immediate lock
+The offer, sell and apply for example, Auction portals is prohibited and will be reported immediately to the operator, on Ebay can draw an immediate exclusion for itself.
+
+Please keep in mind you
+
+</description>
+  </extension>
+</addon>
+
+<addon id="script.xbmcbackup"
+    name="Backup" version="1.0.2" provider-name="robweber">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py"> 
+     <provides>executable</provides> 
+  </extension> 
+  <extension point="xbmc.service" library="scheduler.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="ar">إنسخ إحتياطياً قاعده بيانات إكس بى إم سى وملفات اﻹعدادات فى حاله وقوع إنهيار مع إمكانيه اﻹسترجاع</summary>
+    <summary lang="be">Backup and restore your XBMC database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="bg">Добавката може да създава резервно копие на XBMC и възстановява (след това) Вашата база от данни и настройки, в случай на необходимост.</summary>
+    <summary lang="ca">Feu còpies de seguretat i restaureu la vostra base de dades de l'XBMC i dels fitxers de configuració en el cas de fallada o corrupció dels fitxers.</summary>
+    <summary lang="cs">Zálohování a obnovení XBMC databáze a konfiguračních souborů v případě chyby nebo poškození souborů.</summary>
+    <summary lang="da">Sikkerhedskopiér og genskab din XBMC database og konfigurationsfiler i tilfælde af et nedbrud eller en ødelagt fil.</summary>
+    <summary lang="de">Die XBMC Datenbank sichern und bei Dateiverlust oder Beschädigung wiederherstellen.</summary>
+    <summary lang="el">Δημιουργήστε αντίγραφα ασφαλείας της βάσης δεδομένων και των ρυθμίσεων του XBMC για την πιθανότητα σφαλμάτων ή καταστροφής αρχείων.</summary>
+    <summary lang="en">Backup and restore your Kodi database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="en_NZ">Backup and restore your XBMC database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="en_US">Backup and restore your XBMC database and configuration files in the event of a crash or file corruption.</summary>
+    <summary lang="es">Haz copia de seguridad de tu base de datos y configuración y recupera todo en caso de fallo.</summary>
+    <summary lang="es_MX">Respalda y restaura tu base de datos y archivos de configuración de XBMC dado el evento de un cuelgue o corrupción de archivos. </summary>
+    <summary lang="eu">XBMC datu-basea eta konfigurazio fitxategien babes-kopia egin kraskatze edo fitxategi hondamena saihesteko</summary>
+    <summary lang="fr">Sauvegarder et restaurer vos bases de données XBMC et vos fichiers de configuration en cas de crash ou de fichiers corrompus.</summary>
+    <summary lang="fr_CA">Sauvegarder et restaurer votre base de données et vos fichiers de configuration XBMC dans le cas d'un plantage ou d'une corruption de fichier.</summary>
+    <summary lang="gl">Crear copia de seguranza e restaurar a base de datos e ficheiros de configuración de XBMC no caso dun fallo ou corrupción de ficheiros.</summary>
+    <summary lang="he">גיבוי ושחזור מסד הנתונים וקבצי ההגדרות של XBMC במקרה של קריסה או קבצים פגומים.</summary>
+    <summary lang="hr">Sigurnosno kopirajte i obnovite vašu XBMC bazu podataka i datoteke podešavanja prilikom rušenja ili oštećenja datoteka.</summary>
+    <summary lang="hu">Biztonsági mentés készítése az XBMC adatbázisról és a beállítófájlokról vagy állítsa helyre azokat egy rendszerösszeomlás vagy adatvesztés után.</summary>
+    <summary lang="id">Cadangkan dan kembalikan basis data XBMC Anda beserta berkas konfigurasi apabila terjadi kerusakan atau korupsi berkas.</summary>
+    <summary lang="it">Effettua il backup o ripristina il tuo database di XBMC e i file di configurazione qualora si verifichi una chiusura imprevista o un danneggiamento dei file.</summary>
+    <summary lang="ja">システムのクラッシュやファイル破損に備えて、XBMC のデータベースや設定ファイルをバックアップ・リストアできます。</summary>
+    <summary lang="ko">XBMC 데이터베이스와 설정 파일을 백업하고 복구합니다.</summary>
+    <summary lang="lt">Atsarginė kopija katra atkuria jūsų XBMC duomenų bazę ir konfigūracijos failus avarijos ar failo sugadinimo metu.</summary>
+    <summary lang="nl">Back-up en herstel je XBMC database en configuratiebestanden in geval van een crash of bestandscorruptie.</summary>
+    <summary lang="no">Sikkerhetskopier og gjenopprett dine XBMC-databaser og -konfigurasjonsfiler i tilfelle et krasj eller filkorrupsjon.</summary>
+    <summary lang="pl">Stwórz kopię bezpieczeństwa oraz przywróć twoją bazę danych XBMC łącznie z plikami konfiguracyjnymi, w przypadku awarii lub uszkodzenia plików.</summary>
+    <summary lang="pt">Crie cópias de segurança da base de dados do XBMC e dos ficheiros de configuração. Pode restaurar o conteúdo se ocorrer um crash ou corrupção de ficheiros.</summary>
+    <summary lang="pt_BR">Faça backup e restaure o banco de dados do XBMC e seus arquivos de configuração, no caso de falha ou corrupção de arquivo.</summary>
+    <summary lang="ru">Сохраняйте и восстанавливайте базу данных и конфигурационные файлы XBMC, чтоб не допустить потерю данных в случае аварии или повреждений файлов.</summary>
+    <summary lang="sk">Zálohovanie a obnova XBMC databázy a konfiguračných súborov pre prípad havárie alebo poškodenia súboru.</summary>
+    <summary lang="sv">Ta backupp av eller återställ din XBMC-databas och konfigurationsfiler i händelse av en krash eller filkorruption.</summary>
+    <summary lang="zh">备份和恢复 XBMC 数据库和配置文件，以防范系统崩溃或文件损坏问题。</summary>
+    <description lang="ar">أسبق لك ان أضعت تخصيصاتك المفضله ورغبت لو كان بإمكانك نسخهم إحتياطياً ؟ اﻷن بات بإمكانك ذلك. يمكنك إستخراج قاعده بياناتك وقوائم التشغيل والملحقات وتخصيصاتك المفضله وغيره الى اى مصدر خارجى قابل للكتابه من قِبَل إكس بى إم سى او مباشرتاً الى نظام تخزين سحابى. يمكنك تفعيل النسخ اﻹحتياطى عند الحاجه او جدولته مُسبقاً</description>
+    <description lang="be">Ever hosed your XBMC configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by XBMC or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="bg">Някога да сте губили всички настройки, които сте правили по XBMC? А разполагахте ли с резервно копие? Е сега можете да създавате резервни копия само с едно кликване. Можете да изнасяте базата от данни, плейлистите, миниатюрите, добавките и други, на всяко място до което XBMC има права за писане или директно в Dropbox. Можете да настроите и автоматично създаване на копия през определен интервал от време.</description>
+    <description lang="ca">Alguna vegada s'ha carregat la seva configuració de l'XBMC i ha desitjat tenir una còpia de seguretat? Ara pot fer-ho amb un simple clic. Pot exportar la seva base de dades, llista de reproducció, miniatures, complements i altres detalls de la configuració a qualsevol font que pugui ser escrita per l'XBMC o directament a l'emmagatzematge en el núvol Dropbox. Les còpies de seguretat es poden executar sota demanda o per mitjà d'un planificador.</description>
+    <description lang="da">Har du prøvet at slette din XBMC opsætning, og ønsket at du havde haft sikkerhedskopi? Nu kan du få det med et enkelt klik. Du kan eksportere din database, afspilninglister, miniaturebilleder, addons og andre opsætningsdetaljer til enhver kilde, som er skrivbar for XBMC eller direkt til Dropbox cloud lager. Sikkerhedskopier kan køres manuelt eller via en tidsplan.</description>
+    <description lang="de">Jemals deine XBMC Konfiguration zerschossen und dir dann gewünscht, dass ein Backup existiert? Jetzt kannst du eine Sicherung mit nur einem Klick erzeugen. Du kannst deine Datenbanen, Playlisten, Thumbnails, Addons und andere Details zu einem Ort deiner Wahl sichern.</description>
+    <description lang="el">Σας έτυχε ποτέ να χάσετε τις ρυθμίσεις του XBMC και να εύχεστε να είχατε αντίγραφο ασφαλείας; Πλέον μπορείτε με ένα απλό κλικ. Μπορείτε να εξάγετε τη βάση δεδομένων, τις λίστες αναπαραγωγής, τις μικρογραφίες, τα πρόσθετα και άλλες λεπτομέρειες της εγκατάστασης σε οποιαδήποτε πηγή στην οποία μπορεί να γράψει το XBMC, ή απευθείας στο λογαριασμό σας στο Dropbox. Τα αντίγραφα μπορούν να γίνονται κατ' επιλογή ή μέσω προγραμματισμού.</description>
+    <description lang="en">Ever hosed your Kodi configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by XBMC or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="en_NZ">Ever hosed your XBMC configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by XBMC or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="en_US">Ever hosed your XBMC configuration and wished you'd had a backup? Now you can with one easy click. You can export your database, playlist, thumbnails, addons and other configuration details to any source writeable by Kodi or directly to Dropbox cloud storage. Backups can be run on demand or via a scheduler. </description>
+    <description lang="es">¿Alguna vez te has cargado la configuración de XBMC y habrías deseado tener una copia de seguridad? Ahora puedes tenerla con un único click. Exporta tus base de datos, listas de reproducción, miniaturas, addons y resto de configuraciones a cualquier fuente accesible por XBMC o a tu almacenamiento en Dropbox. Las copias de seguridad pueden programarse o realizarse bajo demanda.</description>
+    <description lang="es_MX">¿Alguna vez haz echado a perder tu configuración de XBMC y haz deseado tener un respaldo? Ahora puedes tenerlo con un simple click. Puedes exportar tu base de datos, listas de reproducción, miniaturas, addons y otros detalles de configuración correspondientes a cualquier fuente que pueda escribir XBMC. Los respaldos pueden ser efectuados a pedido o mediante una programación temporal</description>
+    <description lang="fr">Avez-vous déjà perdu votre configuration XBMC et espéré avoir fait une sauvegarde ? Maintenant, vous pouvez le faire en un simple click. Vous pouvez exporter vos bases de données, playlists, miniatures, addons et autres fichiers de configuration vers n'importe quel endroit accessible depuis XBMC.</description>
+    <description lang="fr_CA">Avez-vous déjà ruiné votre configuration XBMC et souhaité avoir une sauvegarde? Vous le pouvez maintenant en un seul clic. Vous pouvez exporter vos base de données, liste de lecture, imagettes, addiciels et autres détails de configurations vers n'importe quelle source inscriptible depuis XBMC ou directement vers le stockage en nuage Dropbox. Les sauvegardes peuvent être exécutées sur demande ou à l'aide d'un ordonnanceur.</description>
+    <description lang="gl">De seguro que algunha vez eliminou a configuración do XBMC e desexou ter unha copia de seguranza?. Agora pode cun só clic. Pode exportar a súa base de datos, listaxes de reprodución, miniaturas, complementos e outros detalles da configuración a calquera medio escribíbel ou directamente ao Dropbox. As copias de seguranza pódense executar baixo demanda ou programadas.</description>
+    <description lang="he">האם אי פעם נפגמו הגדרות XBMC וייחלת שהיה לך גיבוי ? כעת אתה יכול ליצור כזה בלחיצת כפתור קלילה. ניתן לייצא את בסיס הנתונים, רשימות ההשמעה, התמונות הממוזערות, הרחבות והגדרות נוספות לכל יעד שיש ל-XBMC הרשאת כתיבה לו או ישירות לשירות אחסון הענן דרופבוקס. ניתן לתזמן מראש גיבויים או להריצם ידנית.</description>
+    <description lang="hr">Jeste li ikada oštetili vaša XBMC podešavanja i poželjeli ste ih obnoviti iz sigurnosne kopije? Sada to možete jednim klikom. Možete izvesti vašu bazu podataka, popis izvođenja, minijature, dodatke i ostale pojedinosti podešavanja na svaki izvor dostupan XBMC-u ili izravno na Dropbox oblak pohrane. Sigurnosno kopiranje se može pokrenuti na zahtjev ili u planiranom vremenu.</description>
+    <description lang="hu">Sikerült már összekutyulni az XBMC beállításait és jó lett volna egy biztonsági mentés? Most megteheti egy kattintással. Exportálhatja az adatbázisait, lejátszáslistáit, könyvjelzőit, kiegészítőit és egyéb beállításokat bármely, az XBMC által írható tárhelyre vagy közvetlenül a Dropbox felhő tárolóba. A mentések kézzel vagy időzítetten indíthatóak.</description>
+    <description lang="id">Pernah membuat berantakan konfigurasi XBMC Anda dan berharap Anda punya cadangannya? Sekarang Anda dapat melakukannya dengan klik mudah. Anda dapat mengekspor basis data, daftar putar, gambar kecil, addon dan rincian konfigurasi lainnya ke sumber mana saja yang dapat ditulis oleh XBMC atau langsung ke penyimpanan awan Dropbox. Pencadangan dapat dijalankan sesuai permintaan atau terjadwal.</description>
+    <description lang="it">Hai mai distrutto la tua configurazione di XBMC ma non ne avevi una copia di backup? Ora puoi farlo con un semplice click. Puoi esportare il tuo database, le playlist, le anteprime, gli add-on ed altre configurazioni su ogni percorso accessibile da XBMC o direttamente su Dropbox. I backup si possono fare a richiesta o possono essere pianificati.</description>
+    <description lang="ja">XBMCの設定が消えてしまい、バックアップをとっておけば... と思ったことはありますか？これからは1クリックで簡単にバックアップできます。データベース、プレイリスト、サムネール、アドオン、その他設定項目を、XBMC が書き込み可能なメディアに書き出せます。Dropbox クラウドストレージにも直接書き出せます。スケジューラによる自動バックアップと、オンデマンドでのバックアップの両方が使えます。</description>
+    <description lang="ko">XBMC 설정 백업본이 있었으면 하고 원했던 적이 있습니까? 이제 한 번의 클릭으로 가능합니다. 데이터베이스, 재생목록, 썸네일, 애드온과 기타  세부 설정을 어디에나 내보내거나 직접 Dropbox 에  저장할 수 있습니다. 백업은 수동 또는 예약으로 실행할 수 있습니다.</description>
+    <description lang="lt">Kada naujinate ir konfiguruojate savo XBMC ar susimastėte, kad jums reikalinga atsarginė kopija? Dabar galite tai atlikti vienu spustelėjimu. Savo duomenų bazes, atkūrimą, miniatiūras, priedus ir kitas konfigūracijos failus galite eksportuoti iš bet kokio šaltinio. Atsarginė(-ės) kopija(-os) gali būti paleistos pareikalavus arba per tvarkaraštį.</description>
+    <description lang="nl">Ooit je XBMC configuratie verknalt en gewenst dat je een backup had? Nu kan dat met een simpele klik. Je kunt je bibliotheek, afspeellijsten, miniaturen, addons en andere configuratie optes exporteren naar elke bron die door XBMC beschrijfbaar is of direct naar een Dropbox cloud opslag. Backups kunnen op verzoek of via een rooster gedraaid worden.</description>
+    <description lang="no">Har du noen gang ødelagt XBMC-installasjonen din og ønsket at du hadde en sikkerhetskopi? Det kan du nå med et enkelt trykk. Du kan eksportere din database, spillelister, miniatyrer, utvidelser og andre konfigurasjonsdetaljer til enhver kilde som er tilgjengelig for XBMC eller til Dropbox. Du kan lage sikkerhetskopier ved behov eller med en timeplan.</description>
+    <description lang="pl">Straciłeś kiedyś swoją konfigurację XBMC i marzyłeś o kopii zapasowej? Teraz już możesz i to w prosty sposób. Możesz eksportować swoją bazę, listy odtwarzania, miniatury, wtyczki oraz wiele więcej do dowolnego źródła bezpośrednio z XBMC. Kopia bezpieczeństwa może być uruchomiona na żądanie lub wg harmonogramu.</description>
+    <description lang="pt">Já arruinou a sua configuração do XBMC e desejou ter feito uma cópia de segurança? Agora pode, com apenas um clique. Exporte a base de dados, listas de reprodução, miniaturas, add-ons e outras configurações para qualquer fonte acedível pelo XBMC. As cópias de segurança podem ser executadas manualmente ou por temporizador.</description>
+    <description lang="pt_BR">Sempre se preocupou com sua configuração do XBMC e desejou ter um backup? Agora você pode com um simples clique. Você pode exportar seu banco de dados, listas de reprodução, miniaturas, addons e outros detalhes de configuração para qualquer fonte gravável pelo XBMC ou diretamente ao armazenamento na nuvem Dropbox. Os backups podem ser executados sob demanda ou por agendamento.</description>
+    <description lang="ru">Хотите получить резервную копию настроек XBMC? Теперь можете это сделать одним щелчком мыши. Вы можете выгрузить вашу базу данных, плейлисты, эскизы, дополнения и другую нужную Вам информацию и сохранить её с помощью XBMC или выгрузить в облачное хранилище Dropbox. Резервную копию можно сделать по требованию или запускать по расписанию.</description>
+    <description lang="sk">Už ste niekedy poškodili konfiguráciu XBMC a priali si mať zálohu? Teraz môžete - na jeden klik. Môžete exportovať Vašu databázu, playlist, náhľady, doplnky a konfigurácie na ktorýkoľvek zdroj zapisovateľný XBMC. Zálohy môžu byť púšťané na požiadanie alebo plánovačom. </description>
+    <description lang="sv">Har du någonsin tappat bort din XBMC konfiguration och önskat att du hade en backup? Nu kan du enkelt med ett klick. Du kan exportera din databas, spellista, minityrer, tillägg och andra konfigurationsdetaljer till valfri källa som är skrivbar för XBMC. Backupper kan köras på begäran eller via scheman.</description>
+    <description lang="zh">你是否经常折腾你的 XBMC，因而希望能够有个备份？你可以把资料库、播放列表、缩略图、插件和其他配置细节导出到 XBMC 可以写入的任意位置。备份可以按需运行或通过计划任务执行。</description>
+    <language></language>
+    <platform>all</platform>
+    <license>The MIT License</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=129499</forum>
+    <source>https://github.com/robweber/xbmcbackup</source>
+  </extension>
+</addon>
+
+<addon id="plugin.video.freshstart" name="Fresh Start"
+	version="1.0.5" provider-name="tvaddons.ag">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Factory Restore Functionality for Kodi</summary>
+    <description lang="en">Easily Factory Restore your Kodi Configuration in One Simple Click! This tool will bring your Kodi back to its original installation state, deleting all customizations and add-ons you may have previously enabled, giving you a fresh start!</description>
+    <platform>all</platform>
+    <forum>http://forums.tvaddons.ag/forums/141-FRESH-START</forum>
+    <website>http://www.tvaddons.ag/</website>
+  </extension>
+</addon>
+
+<addon id="script.tvguide" name="TV Guide" version="2.1.1" provider-name="twinther">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simplejson" version="2.0.10"/>
+        <import addon="script.module.buggalo" version="1.1.2"/>
+    </requires>
+    <extension point="xbmc.python.script" library="addon.py"/>
+    <extension point="xbmc.service" library="service.py" start="login" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="be">TV Guide with XMLTV and streaming support</summary>
+        <summary lang="ca">Guia de TV amb suport de XMLTV i flux de dades</summary>
+        <summary lang="da">TV Guide med XMLTV og streaming support</summary>
+        <summary lang="de">TV Guide mit XMLTV und Streamingunterstützung</summary>
+        <summary lang="el">Οδηγός Τηλεόρασης με XMLTV και υποστήριξη ροών</summary>
+        <summary lang="en">TV Guide with XMLTV and streaming support</summary>
+        <summary lang="en_US">TV Guide with XMLTV and streaming support</summary>
+        <summary lang="es">TV Guide con XMLTV y soporte para streaming</summary>
+        <summary lang="fr">Guide TV avec support du XMLTV et du streaming</summary>
+        <summary lang="fr_CA">Guide télé avec prise en charge de XMLTV et de la lecture en transit</summary>
+        <summary lang="gl">Guía de TV con soporte XMLTV e transmisións</summary>
+        <summary lang="he">מדריך תכניות עם תמיכה ב-XMLTV והזרמה</summary>
+        <summary lang="hr">TV vodič sa XMLTV podrškom i podrškom streamanja</summary>
+        <summary lang="id">Panduan Siaran TV dengan dukungan XMLTV dan streaming</summary>
+        <summary lang="it">Guida TV con supporto XMLTV e streaming</summary>
+        <summary lang="ko">XMLTV와 스트리밍을 지원하는 TV Guide</summary>
+        <summary lang="nl">TVgids met XMLTV en streaming ondersteuning</summary>
+        <summary lang="pl">TV Guide obsługujący XMLTV oraz transmisję strumieniową</summary>
+        <summary lang="pt">Guia TV com suporte XMLTV e transmissões</summary>
+        <summary lang="pt_BR">Guia de TV com XMLTV e suporte para transmissão online</summary>
+        <summary lang="sk">TV Program s podporou XMLTV a streamovania</summary>
+        <summary lang="sv">TV-guide med XML-TV och strömningsstöd</summary>
+        <summary lang="zh">支持XMLTV和流的电视指南</summary>
+        <description lang="be">The TV guide gives you an overview on whats on TV right now, so you don't have to change the channel away from XBMC![CR]EPG data can be retrieved from YouSee.tv, DR.dk, TvTid.dk, XMLTV file or remote JSON source.[CR][CR]Navigate using the arrow keys and change page using channel + / -.[CR][CR]If you have comments or suggestions for this addon, please feel free to participate in the debate on my blog at http://tommy.winther.nu</description>
+        <description lang="ca">La guia de TV li dóna una visió general del que s'esta emitint a la televisió ara mateix, pel que no ha de sortir for de XBMC![CR]Les dades EPG es poden recuperar de YouSee.tv, DR.dk, TvTid.dk, un fitxer XMLTV o una font JSON remota[CR][CR]Navegar amb el cursor i canvia de pàgina amb + / -.[CR][CR]Si té algun comentari o suggeriment sobre aquest complement, no dubti a participar en el debat en el meu bloc en http://tommy.winther.nu</description>
+        <description lang="da">TV guiden giver dig et overblik over hvad der er på TV lige nu, så slipper du for at zappe væk fra XBMC![CR]EPG data kan indlæses fra YouSee.tv, DR.dk, TvTid.dk, XMLTV fil,  eller en ekstern JSON kilde.[CR][CR]Naviger med piletasterne og skift side med kanal + og -.[CR][CR]Har du kommentarer, ris eller ros til denne addon er du velkommen til at delta    ge i debatten på min blog på http://tommy.winther.nu</description>
+        <description lang="de">Der TV-Guide gibt Dir einen Überblick, was gerade im TV läuft, so dass man nicht von XBMC wegschalten muss! [CR]EPG-Daten können von YouSee.tv, DR.dk, TvTid.dk, XMLTV-Dateien oder über eine woanders abgelegte JSON-Quelle eingebunden werden.[CR][CR] Navigiere mit den Pfeiltasten und wechsle die Seite mittels der Kanalwahltasten +/-. [CR][CR]Wenn Du Kommentare oder Vorschläge zu diesem addon hast, fühl Dich eingeladen, in der Debatte auf meinem Blog unter http://tommy.winther.nu teilzunehmen.</description>
+        <description lang="el">Ο Οδηγός TV σας δίνει μια περίληψη του τι παίζει στην τηλεόραση αυτή τη στιγμή, ούτως ώστε να μη χρειαστεί να κλείσετε το XBMC![CR]Δεδομένα EPG μπορούν να ληφθούν μέσω των YouSee.tv, DR.dk, TvTid.dk, αρχείων XMLTV ή απομακρυσμένες πηγές JSON.[CR][CR]Περιηγηθείτε χρησιμοποιώντας τα βέλη κατεύθυνσης και αλλάξτε σελίδα μέσω των πλήκτρων Κανάλι + / -.[CR][CR]Αν έχετε σχόλια ή προτάσεις για αυτό το πρόσθετο μπορείτε να συμμετάσχετε ελεύθερα στη συζήτηση στο blog μου στο http://tommy.winther.nu</description>
+        <description lang="en">The TV guide gives you an overview on whats on TV right now, so you don't have to change the channel away from XBMC![CR]EPG data can be retrieved from YouSee.tv and XMLTV file or URL.[CR][CR]Navigate using the arrow keys and change page using channel + / -.[CR][CR]If you have comments or suggestions for this addon, please feel free to participate in the debate on my blog at http://tommy.winther.nu</description>
+        <description lang="en_US">The TV guide gives you an overview on whats on TV right now, so you don't have to change the channel away from XBMC![CR]EPG data can be retrieved from YouSee.tv and XMLTV file or URL.[CR][CR]Navigate using the arrow keys and change page using channel + / -.[CR][CR]If you have comments or suggestions for this addon, please feel free to participate in the debate on my blog at http://tommy.winther.nu</description>
+        <description lang="es">TV Guide ofrece una visión general de lo que hay en la televisión ahora mismo, así no tienes que cambiar el canal en XBMC![CR]Los datos EPG pueden ser obtenidos de YouSee.tv, DR.dk, TvTid.dk, archivo XMLTV o de una fuente remota de JSON.[CR][CR]Navegue usando las teclas de flecha y cambie de página mediante canal + / -.[CR][CR]Si usted tiene comentarios o sugerencias para este complemente, no dude en participar en el debate de mi blog en http://tommy.winther.nu</description>
+        <description lang="fr">Le guide TV vous donne un aperçu de ce qui passe à la TV en ce moment, pour que vous n'ayez pas besoin de zapper! Les données [CR]EPG peuvent être récupérées depuis YouSee.tv, DR.dk, TvTid.dk, d'un fichier XMLTV ou d'une source JSON distante.[CR][CR]Naviguez en utilisant les flèches et changez de page en utilisant les touches + /-.[CR][CR]Si vous avez des suggestions et commentaires, n'hésitez pas à venir débattre sur mon blog http://tommy.winther.nu</description>
+        <description lang="fr_CA">Le guide télé vous donne un aperçu de ce qu'il y a à la télé présentement afin de ne pas à avoir à changer les chaînes![CR]Les données du GÉP peuvent être récupérées de YouSee.tv, DR.dk, TvTid.dk, un fichier XMLTV ou une source JSON distante.[CR][CR]Naviguez en utilisant les flèches et changez de chaîne avec + / -.[CR][CR]Si vous avez des commentaires ou des suggestions sur cet addiciel, soyez libre de participer au débat sur mon blogue http://tommy.winther.nu</description>
+        <description lang="gl">A Guía de TV fornece dunha visión xeral do que está a acontecer na TV nestes intres, para que non teña que trocar de canle fóra do XBMC![CR]Os datos da Guía pódense obter de YouSee.tv, DR.dk, TvTid.dk, do ficheiro de XMLTV ou dunha fonte JSON remota.[CR][CR]Navegue usando as frechas e troque a página usando canle + / -.[CR][CR]Se ten comentarios ou suxestións, pode facelos no meu blogue en http://tommy.winther.nu</description>
+        <description lang="he">TV guide מוסיפה סקירה על מה שמשודר כעת בטלוויזיה, כך שאינך חייב לעזוב את XBMC.[CR]נתוני מדריך התכניות יכולים להתקבל מ-YouSee.tv, DR.dk, TvTid.dk, קובץ XMLTV או מקור JSON מרוחק.[CR][CR]נווט בעזרת מקשי החיצים והחלף עמוד באמצעות מקשי + / - Channel.[CR][CR]אם יש לך הערות או הצעות להרחבה זו, אנא הרגש חופשי להשתתף בדיון שבבלוג שלי בכתובת http://tommy.winther.nu</description>
+        <description lang="hr">TV vodič omogućuje vam pregled trenutnog emitiranja na televiziji, stoga ne morate promijeniti program na XBMC-u![CR]EPG podaci se mogu preuzeti sa YouSee.tv, DR.dk, TvTid.dk, XMLTV datoteke ili udaljenog JSON izvora.[CR][CR]Upravljajte koristeći tipke strelica i mijenjajte stranicu koristeći program + / -.[CR][CR]Ako imate komentare ili prijedloge za ovaj dodatak, slobodno se uključite u raspravu na mojem blogu http://tommy.winther.nu</description>
+        <description lang="id">Panduan Siaran TV memberikan Anda gambaran apa saja yang sedang disiarkan TV saat ini, sehingga Anda tak perlu lagi mengganti kanal dari XBMC![CR]Data EPG bisa diperoleh dari YouSee.tv, DR.dk, TvTid.dk, berkas XMLTV atau sumber JSON lainnya.[CR][CR]Navigasi mengunakan tombol panah dan berpindah halaman menggunakan kanal + / -.[CR][CR]Untuk komentar atau saran akan add-on ini, silakan berpartisipasi dalam debat di blog saya di http://tommy.winther.nu</description>
+        <description lang="it">La guida TV ti da un'idea di cosa c'è in TV ora, così non dovrai cambiare canale in XBMC![CR]I dati EPG possono essere recuperati da YouSee.tv, DR.dk, TvTid.dk, da file XMLTV o sorgenti JSON remote.[CR][CR]Naviga usando le freccie e cambia pagina usando Canale +/-.[CR][CR]Se hai commenti o suggerimenti per questo addon, sei libero di partecipare alla discussione sul mio blog su http://tommy.winther.nu</description>
+        <description lang="nl">De TVgids geeft je een overzicht van wat er nu op TV is, dus je hoeft XBMC niet weg te klikken![CR]Gidsgegevens kunnen opgehaald worden bij YouSee.tv, DR.dk, TvTid.dk, via XMLTV bestanden of externe JSON bronnen.[CR][CR]Navigeer met de cursortoetsen en verander het kanaal met  + / -.[CR][CR]Indien je commentaar op of suggesties hebt voor deze addon, schroom dan niet om mee te discussieren op mijn blog op http://tommy.winther.nu</description>
+        <description lang="pl">Program TV Guide pokazuje Ci co jest nadawane w telewizji, więc teraz już nie musisz zmieniać kanału z XBMC![CR]Dane EPG mogą być pobierane z YouSee.tv, DR.dk, TvTid.dk, pliku XMLTV lub zewnętrznego źródła JSON.[CR][CR]Aby poruszać się po interfejsie użyj klawiszy strzałek, możesz także zmieniać strony za pomocą klawiszy Program + / -.[CR][CR]Jeśli masz komentarz lub sugestie dotyczące tego dodatku będę wdzięczny jeśli podzielisz się nimi ze mną na blogu http://tommy.winther.nu</description>
+        <description lang="pt">O Guia TV dá-lhe uma visão geral do que está a passar na TV neste momento, para que não tenha de sair do XBMC![CR]Os dados de EPG podem ser obtidos de YouSee.tv, DR.dk, TvTid.dk, ficheiro XMLTV ou fonte remota JSON.[CR][CR]Navegue utilizando as setas e mude a página com as teclas de canal + / -.[CR][CR]Se tiver comentários ou sugestões para este addon, esteja à vontade para participar no debate acedendo ao blog http://tommy.winther.nu</description>
+        <description lang="pt_BR">O TV Guide dá uma prévia do que está passando na TV, para que você não precise mudar de canal no XBMC![CR]Dados de EPG podem ser obtidos do YouSee.tv, DR.dk, TVTid.dk, arquivo XML ou fonte JSON remota.[CR][CR]Navegue usando as setas e mude de página usando canal +/-.[CR][CR]Se você tiver algum comentário ou sugestões para este addon, sinta-se livre para participar do debate no meu blog em http://tommy.winther.nu.</description>
+        <description lang="sk">TV Program Vám dá prehľad čo sa práve v TV vysiela, aby ste nemuseli prepnúť preč z XBMC!&#10;EPG dáta sa môžu načítavať z YouSee.tv, DR.dk, TvTid.dk, XMLTV súboru alebo vzdialeného JSON zdroja.&#10;&#10;Navigujete šípkami a stránku zmeníte pomocou Kanál + / -.&#10;&#10;Ak máte poznámky či pripomienky k tomuto doplnku, prosím prispejte do diskusie na blogu http://tommy.winther.nu.</description>
+        <description lang="sv">TV-Guide ger dig en överblick av vad som visas på TV just nu, så du inte behöver ändra kanal från XBMC![CR]EPG-data kan hämtas från YouSee.tv, DR.dk, TvTid.dk, XMLTV-fil eller JSON fjärrkälla.[CR][CR]Navigera med hjälp av piltangenterna och ändra kanaler +/-.[CR][CR]Om du har kommentarer eller förslag för det här tillägget, var god och delta i debatten på min blogg http://tommy.winther.nu</description>
+        <description lang="zh">电视指南让你不用退出XBMC频道就能知道电视台正播出什么节目！[CR]电子节目单数据获取于YouSee.tv、DR.dk、TvTid.dk、XMLTV文件或远程JSON源。[CR][CR]用方向键导航，用频道+/-换页。[CR][CR]对本插件有何意见或建议，请到我的博客讨论http://tommy.winther.nu</description>
+        <language></language>
+        <platform>all</platform>
+        <license>GPLv2</license>
+        <forum>http://forum.xbmc.org/showthread.php?tid=120377</forum>
+        <website>http://tommy.winther.nu</website>
+        <email>tommy@winther.nu</email>
+        <source>https://github.com/twinther/script.tvguide</source>
+    </extension>
+</addon>
+
+<addon id="plugin.video.svtplay"
+       name="SVT Play"
+       version="4.0.17"
+       provider-name="nilzen">
+  <requires>
+    <import addon="script.module.parsedom" version="1.2.0"/>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <language>sv</language>
+    <summary lang="en">Watch content from SVT Play.</summary>
+    <summary lang="sv">Titta på innehåll från SVT Play.</summary>
+    <description lang="en">With this addon you can stream content from SVT Play (svtplay.se).</description>
+    <description lang="sv">Med denna addon kan du strömma innehåll från SVT Play (svtplay.se).</description>
+    <disclaimer>This is an unofficial addon and it is not supported or maintained by SVT. Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <platform>all</platform>
+    <license> GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <website>https://github.com/nilzen/xbmc-svtplay</website>
+    <source>https://github.com/nilzen/xbmc-svtplay</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=67110</forum>
+  </extension>
+</addon>
+
+<addon id="plugin.video.hubwizard" version="1.1.9"
+	name="Config Wizard" provider-name="tvaddons.ag">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.addon.common" optional="true" />
+		<import addon="script.module.t0mm0.common" optional="true" />
+		<import addon="script.module.urlresolver" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Config Wizard</summary>
+		<description>Instantly configure your Kodi experience with all the best add-ons and goodies from the TVADDONS.AG community!  </description>
+		<platform>all</platform>
+		<forum>http://forums.tvaddons.ag/forums/106-CONFIG-WIZARD</forum>
+		<website>http://www.tvaddons.ag/</website>
+	</extension>
+</addon>
+
+<addon id="plugin.audio.sverigesradio"
+       name="Sveriges Radio"
+       version="1.0.4"
+       provider-name="Daniel">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Sveriges Radio</summary>
+        <description lang="en">Listen to Sveriges Radio</description>
+        <description lang="sv">Lyssna på Sveriges Radio</description>
+        <disclaimer lang="en">This addon uses Sveriges Radio's official API. It may or may not work outside of Sweden, and there is mainly content in Swedish.</disclaimer>
+        <language>sv</language>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <forum>http://forum.kodi.tv/showthread.php?tid=116735</forum>
+        <website>https://github.com/dodoadoodoo/kodi-sverigesradio</website>
+        <source>https://github.com/dodoadoodoo/kodi-sverigesradio</source>
+        <email></email>
+    </extension>
+</addon>
+
+<addon id="repository.Halowrepo" name="  [COLOR lime][B]HALOW [/COLOR][COLOR white]Repository[/B][/COLOR]" version="2.2.6" provider-name="HalowRepo">
+	<extension point="xbmc.addon.repository" name="  [COLOR lime][B]Halow[/COLOR][COLOR white]Repository[/B][/COLOR]">
+        <info compressed="false">https://raw.githubusercontent.com/HalowTV/Halowrepo/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/HalowTV/Halowrepo/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/HalowTV/Halowrepo/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install my Addons</summary>
+		<description>Download and install addons from Halow Repo</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+</addons>
