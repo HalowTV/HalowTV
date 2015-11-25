@@ -143,6 +143,27 @@
   </extension>
 </addon>
 
+<addon
+  id="plugin.video.SportsDevil"
+  version="201520152015.11.22.1NL"
+  name="SportsDevil"
+  provider-name="MaxMustermann,Al101,Hubbab3,Sattekop">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.requests" />
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos of different sports streaming sites</summary>
+    <description>Play videos of different sports streaming sites</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
        version="6.0.18"
