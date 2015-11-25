@@ -77,7 +77,7 @@ if  not (os.path.isfile(favoritesFile)):
 def Categories():
     Version = '[COLOR yellow][B]*FAILED TO CONNECT*[/B][/COLOR]'
     try: Version = net.http_GET(Raw+'1FkZ9aMD').content
-    except: AddDir("[COLOR red][B] BAD CONNECTION [/B][/COLOR]", "Update" ,98, "http://s5.postimg.org/rru49d087/appgraphic.png")
+    except: AddDir("[COLOR red][B]Halow LIVE TV[/B][/COLOR]", "Update" ,98, "http://s5.postimg.org/rru49d087/appgraphic.png")
 
     if Version != aaastreamdate and Version != '[COLOR yellow][B]*FAILED TO CONNECT*[/B][/COLOR]':
            UpdateMe()
@@ -85,13 +85,7 @@ def Categories():
 
            
     AddDir("[COLOR orange][B]Coutry Channels[/B][/COLOR]",'movies',44 ,"http://www.addresslibrary.com/images/country.jpg")
-    AddDir("[COLOR Pink][B]Live Football today[/B][/COLOR]", Raw+"CzHx9fYM" ,4 ,"http://www.bestappspoint.com/wp-content/uploads/2012/02/epl-live.jpg")
-    AddDir("[COLOR green][B]SPORT  LIVE TV[/B][/COLOR]", Raw+"MqqxxXaT" ,4 ,"http://themetoday.com/wp-content/uploads/2010/01/Various-Sport_Icons.jpg")
-    AddDir("[COLOR blue][B]Football Replays[/B][/COLOR]", "REPLAYS" ,150 ,"http://3.bp.blogspot.com/-a3BcIcfxTTw/VO7-K7t9tgI/AAAAAAAAKdA/_yDy5iOo7sE/s1600/FOOTBALL%2BREPLAYS.PNG")    
-    AddDir("[COLOR yellow][B]BIG FIGHT HD[/B][/COLOR]", Raw+"UDsVvUV4" ,4 ,"http://cdnimages2.abs-cbnnews.com/microsites/pacquiao-punch/041015-shareable.jpg")
-    AddDir("[COLOR red][B]TV Series[/B][/COLOR]",'TV',45 ,"http://fc09.deviantart.net/fs70/i/2013/002/d/a/tv_series_folder_icons_pack_2_by_atti12-d5q5h7z.png") 	
-    AddDir("[COLOR yellow][B]Cartoon [/B][/COLOR]", Raw+"a44ww8ni" ,4 ,"http://forums.windowscentral.com/attachments/app-spotlight/61347d1396600938t-tomjerry_icon.png")
-
+    
     xbmc.executebuiltin("Container.SetViewMode(50)") 
    
 
@@ -99,7 +93,7 @@ def MOVIES():
         AddDir("[COLOR green][B]KURDISH LIVE TV[/B][/COLOR]", Raw+"aUP8WWAd" ,4 ,"https://lh3.googleusercontent.com/-Frj2oKQyGVk/AAAAAAAAAAI/AAAAAAAAABI/A4ILF4cV2x0/photo.jpg")
         AddDir("[COLOR green][B]Arabic LIVE TV[/B][/COLOR]", Raw+"AH2EUHYY" ,4 ,"http://www.tamddon.com/wp-content/uploads/2014/02/%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86.jpg")
         AddDir("[COLOR green][B]TURKISH LIVE TV[/B][/COLOR]", Raw+"8skLzEsU" ,4 ,"http://img.freeflagicons.com/thumb/football_icon/turkey/turkey_640.png")
-        AddDir("[COLOR green][B]IRAN LIVE TV[/B][/COLOR]", Raw+"53bw3hGb" ,4 ,"http://icons.iconarchive.com/icons/hopstarter/flag-borderless/256/Iran-icon.png")
+        AddDir("[COLOR green][B]IRAN LIVE TV[/B][/COLOR]", Raw+"53bw3hGb" ,4 ,"http://forumbilder.se/EBJ4Q/kmfuhn2a.png")
         AddDir("[COLOR green][B]Afghanistan LIVE TV[/B][/COLOR]", Raw+"P9HK1Ynp" ,4 ,"http://icons.iconarchive.com/icons/hopstarter/flag-borderless/256/Afghanistan-icon.png")
         AddDir("[COLOR green][B]SWEDISH LIVE TV[/B][/COLOR]", Raw+"kbxNEVpZ" ,4 ,"http://www.iconarchive.com/download/i65935/hopstarter/flag-borderless/Sweden.ico")
         AddDir("[COLOR green][B]Norway LIVE TV[/B][/COLOR]", Raw+"LHbyudcT" ,4 ,"http://icons.iconarchive.com/icons/custom-icon-design/flag/256/Norway-Flag-icon.png")
@@ -144,6 +138,14 @@ def MOVIES():
         AddDir("[COLOR green][B]Canada LIVE TV[/B][/COLOR]", Raw+"H48aVN7Z" ,4 ,"http://icons.iconarchive.com/icons/custom-icon-design/flag-2/256/Canada-Flag-icon.png")
         AddDir("[COLOR green][B]Chinia LIVE TV[/B][/COLOR]", Raw+"yw4yLJMm" ,4 ,"http://icons.iconarchive.com/icons/custom-icon-design/flag-2/256/China-Flag-icon.png")
         AddDir("[COLOR green][B]Webcams  LIVE TV[/B][/COLOR]", Raw+"3QsyXVHa" ,4 ,"http://www.mhub.tv/wp-content/uploads/2013/12/webcam.png")
+        AddDir("[COLOR green][B]Africa LIVE TV[/B][/COLOR]", Raw+"2aYeNhfC" ,4 ,"http://www.freeiptvlinks.com/wp-content/uploads/2015/04/Flag_of_South_Africa.svg_-304x200.png")
+        AddDir("[COLOR green][B]Macedonia LIVE TV[/B][/COLOR]", Raw+"v1mxrzHF" ,4 ,"http://img.freeflagicons.com/thumb/glossy_square_icon/macedonia/macedonia_640.png")
+        AddDir("[COLOR green][B]Bangladesh LIVE TV[/B][/COLOR]", Raw+"dH2PZY5B" ,4 ,"http://www.fancyicons.com/free-icons/103/flags/png/256/bangladesh_flag_256.png")
+        AddDir("[COLOR green][B]Czech LIVE TV[/B][/COLOR]", Raw+"M84yYRHe" ,4 ,"http://img.freeflagicons.com/thumb/square_icon/czech_republic/czech_republic_640.png")
+        AddDir("[COLOR green][B]Slovakien LIVE TV[/B][/COLOR]", Raw+"Mnhiv1Tf" ,4 ,"http://static4.depositphotos.com/1003329/334/i/950/depositphotos_3349502-Icon-with-flag-of-Slovakia-isolated.jpg")
+        AddDir("[COLOR green][B]Indonesian LIVE TV[/B][/COLOR]", Raw+"H2tigGCQ" ,4 ,"http://www.country-dialing-codes.net/img/png-country-4x2-fancy-res-1280x960/id.png")
+        AddDir("[COLOR green][B]Philippine LIVE TV[/B][/COLOR]", Raw+"gqd5pSZM" ,4 ,"http://png-5.findicons.com/files/icons/656/rounded_world_flags/256/philippines.png")
+        AddDir("[COLOR green][B]Romania  LIVE TV[/B][/COLOR]", Raw+"x5NqzmwS" ,4 ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/1280px-Flag_of_Romania.svg.png")
 
         xbmc.executebuiltin("Container.SetViewMode(500)") 
         
