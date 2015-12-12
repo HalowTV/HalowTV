@@ -51,7 +51,7 @@ def main():
     add_video_item('http://198.100.158.231:1935/kanal2/_definst_/livestream/playlist.m3u8'					,{ 'title': 'WAAR TV'}, icons + 'waar-tv.png')
     add_video_item(''		,{ 'title': 'WAAR Sport TV'}, icons + 'waar-sport-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal16/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Ronahi TV'}, icons + 'ronahi-tv.png')
-    add_video_item('http://kurd-live.com:1935/live/speda/chunklist_w557275510.m3u8'					,{ 'title': 'Speda TV'}, icons + 'speda-tv.png')
+    add_video_item('rtmp://198.143.185.178:1935/live//speda'					,{ 'title': 'Speda TV'}, icons + 'speda-tv.png')
     add_video_item('http://cofafrw181.glwiz.com:7777/Cira.m3u8'					,{ 'title': 'Cira TV'}, icons + 'cira-tv.png')
     add_video_item('rtmp://payamlive.nanocdn.com/live/payam256'					,{ 'title': 'Payam TV'}, icons + 'payam-tv.png')
     add_video_item('http://cofafrw181.glwiz.com:7777/KurdChannel.m3u8'						,{ 'title': 'KM TV'}, icons + 'kmtv.png')
