@@ -30,7 +30,6 @@ def iptvxtra_play():
     sys.exit(0)
 
 def main():
-
     add_video_item('http://wpc.C1A9.edgecastcdn.net/hls-live/20C1A9/kurdsat/ls_satlink/b_528.m3u8'				,{ 'title': 'KurdSat TV'}, icons + 'kurdsat-tv.png')
     add_video_item('rtmp://68.168.105.117/live//livestream'	,{ 'title': 'KurdSat News'}, icons + 'kurdsat-news-tv.png')
     add_video_item('rtmp://84.244.187.12/live/livestream'			,{ 'title': 'Kurdistan TV'}, icons + 'kurdistan-tv.png')
@@ -40,10 +39,11 @@ def main():
     add_video_item('rtsp://livestreaming.itworkscdn.net/rudawlive/rudawtv'					,{ 'title': 'Rudaw TV'}, icons + 'rudaw.png')
     add_video_item('rtmp://51.254.209.160/live/livestream'						,{ 'title': 'KNN TV'}, icons + 'knn-tv.png')
     add_video_item('rtmp://64.150.177.45/live//mp4:myStream',{ 'title': 'Geli Kurdistan'}, icons + 'geli-kurdistan-tv.png')
+    add_video_item('http://198.100.158.231:1935/kanal30/_definst_/livestream/chunklist_w1012777298.m3u8'						,{ 'title': 'kurdistan24 TV'}, icons + 'kurdistan24-tv.png')
     add_video_item('http://live.kurdstream.net:1935/liveTrans//myStream_360p/playlist.m3u8'				,{ 'title': 'Kurd MAX TV'}, icons + 'kurdmax-tv.png')
     add_video_item('http://63.237.48.23/ios/GEM_KURD/GEM_KURD.m3u8'			,{ 'title': 'GEM Kurd TV'}, icons + 'gem-kurd-tv.png')
     add_video_item('http://38.99.146.181:7777/KorekTV.m3u8'					,{ 'title': 'Korek TV'}, icons + 'korek-tv.png')
-    add_video_item('http://38.99.146.181:7777/Kanal4.m3u8'						,{ 'title': 'Kanal 4'}, icons + 'kanal4.png')
+    add_video_item('http://198.100.158.231:1935/kanal12/_definst_/livestream/playlist.m3u8'						,{ 'title': 'Kanal 4'}, icons + 'kanal4.png')
     add_video_item('http://162.244.81.103:1935/RegaTV/myStream/playlist.m3u8'					,{ 'title': 'REGA TV'}, icons + 'rega-tv.png')
     add_video_item('http://38.99.146.181:7777/VINTV.m3u8'						,{ 'title': 'Vin TV'}, icons + 'vin-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal3/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Newroz TV'}, icons + 'newroz-tv.png')
