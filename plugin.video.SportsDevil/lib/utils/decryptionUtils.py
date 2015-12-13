@@ -3,7 +3,7 @@ import pyDes
 import urllib
 import re
 from regexUtils import parseTextToGroups
-from javascriptUtils import JsFunctions, JsUnpacker, JsUnpackerV2, JsUnpacker95High, JsUnwiser, JsUnIonCube, JsUnFunc, JsUnPP, JsUnPush
+from javascriptUtils import JsFunctions, JsUnpacker, JsUnpacker95High, JsUnwiser, JsUnIonCube, JsUnFunc, JsUnPP, JsUnPush
 
 def encryptDES_ECB(data, key):
     data = data.encode()
@@ -79,7 +79,6 @@ def doDemystify(data):
     #init jsFunctions and jsUnpacker
     jsF = JsFunctions()
     jsU = JsUnpacker()
-    jsUV2 =JsUnpackerV2()
     jsUW = JsUnwiser()
     jsUI = JsUnIonCube()
     jsUF = JsUnFunc()
@@ -88,7 +87,7 @@ def doDemystify(data):
     JsPush = JsUnPush()
 
     # replace NUL
-    data = data.replace('\0','')
+    #data = data.replace('\0','')
 
 
     # unescape
@@ -127,6 +126,13 @@ def doDemystify(data):
             r2 = re.compile('eval\(decodeURIComponent\(atob\([\'"]([^\'"]+)[\'"]\)\)\);')
             for base64_data in r2.findall(g):
                 data = data.replace(g, urllib.unquote(base64_data.decode('base-64')))
+                
+    r = re.compile('(<script.*?str=\'@.*?str.replace)')
+    while r.findall(data):
+        for g in r.findall(data):
+            r2 = re.compile('.*?str=\'([^\']+)')
+            for escape_data in r2.findall(g):
+                data = data.replace(g, urllib.unquote(escape_data.replace('@','%')))
        
     r = re.compile('(base\([\'"]*[^\'"\)]+[\'"]*\))')
     while r.findall(data):
@@ -210,11 +216,6 @@ def doDemystify(data):
         data = jsU.unpackAll(data)
         escape_again=True
 
-    #if still exists then apply v2
-    if jsUV2.containsPacked(data):
-        data = jsUV2.unpackAll(data)
-        escape_again=True
-        
     if jsU95.containsPacked(data):
         data = jsU95.unpackAll(data)
         escape_again=True
