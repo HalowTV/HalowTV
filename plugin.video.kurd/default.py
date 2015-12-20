@@ -57,6 +57,7 @@ def main():
     add_video_item('rtmp://kurd-live.com/live/cihan'                                                    ,{ 'title': 'Cihan TV'}, icons + 'cihan-tv')
     add_video_item('http://www.iptvlinks.tk/ct2/live.m3u8?id=halk-tv&auth=46392dc9d6ce8ee4aeafaf2f4cf221bf843d07fdf9b63828f99f0b966f5e9d4d1174d4d2067151ecd20e1b8d94bf2232'							,{ 'title': 'Halk TV'}, icons + 'halk-tv.png')
     add_video_item('http://origin.live.web.tv.streamprovider.net/streams/e3490d55c5dfc38e758ade69815cd9ef_live_0_0/index.m3u8'						,{ 'title': 'JIYAN TV'}, icons + 'Jiyan-T.png')
+    add_video_item('http://wpc.1830A.phicdn.net/hls-live/201830A/kurdishInstance/kurdishEvent/KurdishHLS.m3u8'                       ,{ 'title': 'Sahar TV'}, icons + 'sahar-tv')
     add_video_item(''					,{ 'title': 'Tishk TV'}, icons + 'tishk-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal16/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Ronahi TV'}, icons + 'ronahi-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal16/_definst_/livestream/playlist.m3u8'			,{ 'title': 'Rojhelat TV'}, icons + 'rojhelat.png')
@@ -79,6 +80,7 @@ def main():
     add_video_item('http://origin.live.web.tv.streamprovider.net//streams//04c042818579efb61acf6a75e6a02774//index.m3u8'                    ,{ 'title': 'Govend TV '}, icons + 'govend-tv')
     add_video_item('rtmp://si.trtcdn.com/tv/trt6/mp4:trt6_3'                                                    ,{ 'title': 'TRT 6'}, icons + 'trt6-tv')
     
+
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
