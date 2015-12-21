@@ -78,7 +78,6 @@ def categorie():
     addDir('[COLOR yellow]Political[/COLOR]', 'plugin://plugin.video.IRAN/?xcat4x', "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/State_flag_of_Iran_1964-1980.svg/120px-State_flag_of_Iran_1964-1980.svg.png")
     addDir('[COLOR yellow]IRIB[/COLOR]', 'plugin://plugin.video.IRAN/?xcat5x', "http://pounezar.ir/uploads/2015/02/IRIB-_-4.jpg")
     addDir('[COLOR yellow]GEM TVS[/COLOR]', 'plugin://plugin.video.IRAN/?xcat6x', "http://gemgroup.tv/wordpress/wp-content/uploads/2012/06/GEM-TV.png")
-    addDir('[COLOR blue]www.streamaxit.tv[/COLOR]', 'plugin://plugin.video.IRAN/?xcat7x', "http://streamaxit.tv/portals/1/images/slider15.jpg")
 
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 	
@@ -116,8 +115,6 @@ def main():
         url = "http://pastebin.com/raw.php?i=muKxz417"
     elif 'xcat6' in mode: 
         url = "http://pastebin.com/raw.php?i=9zxGjSDH"
-    elif 'xcat7' in mode: 
-        url = "http://pastebin.com/raw.php?i=wDphWaFz"
     else:
         categorie()
         sys.exit(0)
