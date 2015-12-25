@@ -68,7 +68,7 @@ def main():
     add_video_item('http://198.100.158.231:1935/kanal14/_definst_/livestream/playlist.m3u8'			,{ 'title': 'MED Muzik TV'}, icons + 'med-muzik-tv.png')
     add_video_item('http://origin.live.web.tv.streamprovider.net/streams/8c4a5bd6d3c5d3c21c11deb333bd4b7d/index.m3u8'					,{ 'title': 'Damla TV'}, icons + 'damla-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal1/_definst_/livestream/playlist.m3u8'						,{ 'title': 'TV 10'}, icons + 'tv-10.png')
-    add_video_item('http://cofafrw181.glwiz.com:7777/KurdChannel.m3u8'						,{ 'title': 'KM TV'}, icons + 'kmtv.png')
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/komala-tv.stream/chunks.m3u8'						,{ 'title': 'KM TV'}, icons + 'kmtv.png')
     add_video_item('rtmp://178.254.20.205:2100/yol//yolstream'						,{ 'title': 'Yol TV'}, icons + 'yol-tv.png')
     add_video_item('rtmp://yayin3.canlitv.com/live/dengetv'					,{ 'title': 'Denge TV'}, icons + 'denge-tv.png')
     add_video_item('http://guntv.mediatriple.net/guntv/guntv2/Playlist.m3u8'								,{ 'title': 'Özgür Gün Tv'}, icons + 'ozgur-gun-tv-canli.png')
@@ -82,6 +82,15 @@ def main():
     add_video_item('rtmp://fms.1830A.phicdn.net/201830A/kurdishInstance/KurdishHLS'                       ,{ 'title': 'Sahar TV'}, icons + 'sahar-tv')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/qellat-tv/chunks.m3u8'                       ,{ 'title': 'QELLAT TV'}, icons + 'qellat-tv')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/badinan-sat-tv/chunks.m3u8'                       ,{ 'title': 'Badinan Sat TV'}, icons + 'badinan-sat-tv')
+    add_video_item('http://live4.karwan.tv:8081/sardam-tv/sardam-tv/chunks.m3u8'       ,{ 'title': 'Sardam TV'}, icons + 'sardam-tv')
+    add_video_item('http://kurd-live.com:1935/live/new/chunklist_w1304379760.m3u8'       ,{ 'title': 'New HD TV'}, icons + 'new-tv')
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/mgc-tv/chunks.m3u8'       ,{ 'title': 'MGC TV'}, icons + 'mgc-tv')
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/farkli-tv/chunks.m3u8'       ,{ 'title': 'FARKLI TV'}, icons + 'farkli-tv')
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/tiviti-tv/chunks.m3u8'       ,{ 'title': 'TİVİTİ TV'}, icons + 'tiviti-tv')
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/abn-sat-tv-kurdish/chunks.m3u8'       ,{ 'title': 'ABN Sat TV '}, icons + 'abn-sat-tv')
+    add_video_item('rtmp://87.81.198.172:12345/hls/mystream'       ,{ 'title': 'ROJIKurd'}, icons + 'rojava-tv')
+
+    
 
 
 
