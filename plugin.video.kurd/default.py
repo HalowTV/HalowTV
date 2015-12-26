@@ -30,7 +30,7 @@ def iptvxtra_play():
     sys.exit(0)
 
 def main():
-    add_video_item('http://wpc.C1A9.edgecastcdn.net/hls-live/20C1A9/kurdsat/ls_satlink/b_528.m3u8'				,{ 'title': 'KurdSat TV'}, icons + 'kurdsat-tv.png')
+    add_video_item('http://62.210.100.139:1935/kurdsattv/smil:kurdsat.smil/chunklist_w198010984_b886000_slen.m3u8'				,{ 'title': 'KurdSat TV'}, icons + 'kurdsat-tv.png')
     add_video_item('rtmp://68.168.105.117/live//livestream'	,{ 'title': 'KurdSat News'}, icons + 'kurdsat-news-tv.png')
     add_video_item('rtmp://84.244.187.12/live/livestream'			,{ 'title': 'Kurdistan TV'}, icons + 'kurdistan-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal10/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Zagros TV'}, icons + 'zagros-tv.png')
