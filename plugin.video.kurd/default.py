@@ -89,9 +89,9 @@ def main():
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/tiviti-tv/chunks.m3u8'       ,{ 'title': 'TİVİTİ TV'}, icons + 'tiviti-tv')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/abn-sat-tv-kurdish/chunks.m3u8'       ,{ 'title': 'ABN Sat TV '}, icons + 'abn-sat-tv')
     add_video_item('rtmp://87.81.198.172:12345/hls/mystream'       ,{ 'title': 'ROJIKurd'}, icons + 'rojava-tv')
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/super-tv/chunks.m3u8'       ,{ 'title': 'Super TV'}, icons + 'super-tv')
 
     
-
 
 
     # add_video_item(''				,{ 'title': ''}, icons + '')
