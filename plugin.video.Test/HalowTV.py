@@ -176,7 +176,7 @@ def makeRequest(url, headers=None):
 				
 def HALOWTVIndex():
     addon_log("HALOWTVIndex")
-    addDir('[[COLOR royalblue][B]@HalowTV --> Twitter[/B][/COLOR]','Twitter',45,'http://www.frihetssmedjan.se/wp-content/uploads/2015/09/Twitter1.png' ,  FANART,'','','','')
+    addDir('[COLOR royalblue][B]@HalowTV  Twitter[/B][/COLOR]','Twitter',45,'http://www.frihetssmedjan.se/wp-content/uploads/2015/09/Twitter1.png' ,  FANART,'','','','')
     getData(base64.b64decode(HALOWTVBase),'')
 
     addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
