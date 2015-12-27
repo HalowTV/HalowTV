@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.amanda" name="GUL LIVE TV" version="6.4" provider-name="Halow">
+<addon id="plugin.video.amanda" name="GUL LIVE TV" version="6.5" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -105,7 +105,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="4.2" provider-name="Halow">
+<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="4.3" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
