@@ -4,7 +4,7 @@ item_info_build=pushpublish - %s
 
 item_info_name=pageUrl
 item_info_from=@PARAM1@
-item_info_build=http://www.pushpublish.tv/player.php?channel=%s&vw=650&vh=400&domain=max-deportv.co.in
+item_info_build=http://www.pushpublish.tv/vip.php?channel=%s&vw=700&vh=480&domain=vipracing.biz
 
 item_info_name=file
 item_info_from=pageUrl

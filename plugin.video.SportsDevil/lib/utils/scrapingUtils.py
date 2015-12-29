@@ -178,7 +178,7 @@ def findVideoFrameLink(page, data):
     if not frames:
         return None
     
-    iframes = regexUtils.findall(data, "(frame(?![^>]*cbox\.ws)(?![^>]*Publi)(?![^>]*chat\d*\.\w+)(?![^>]*ad122m)(?![^>]*adshell)(?![^>]*capacanal)(?![^>]*blacktvlive\.com)[^>]*\sheight\s*=\s*[\"']*([\%\d]+)(?:px)?[\"']*[^>]*>)")
+    iframes = regexUtils.findall(data, "(frame(?![^>]*cbox\.ws)(?![^>]*Publi)(?![^>]*dailymotion)(?![^>]*blacktvlive\.)(?![^>]*chat\d*\.\w+)(?![^>]*ad122m)(?![^>]*adshell)(?![^>]*capacanal)(?![^>]*blacktvlive\.com)[^>]*\sheight\s*=\s*[\"']*([\%\d]+)(?:px)?[\"']*[^>]*>)")
 
     if iframes:
         for iframe in iframes:
@@ -194,7 +194,7 @@ def findVideoFrameLink(page, data):
                     else:
                         width = int(m[0])
                     if width > minwidth:
-                        m = regexUtils.findall(iframe[0], '[\'"\s]+src\s*=\s*["\']*\s*([^>"\' ]+)\s*[>"\']*')
+                        m = regexUtils.findall(iframe[0], '[\'"\s]+(?:src|SRC)\s*=\s*["\']*\s*([^>"\' ]+)\s*[>"\']*')
                         if m:
                             if 'premiertv' in page:
                                 page = page+'/'
@@ -202,7 +202,7 @@ def findVideoFrameLink(page, data):
 
 
     # Alternative 1
-    iframes = regexUtils.findall(data, "(frame(?![^>]*cbox\.ws)(?![^>]*capacanal)(?![^>]*blacktvlive\.com)[^>]*[\"; ]height:\s*(\d+)[^>]*>)")
+    iframes = regexUtils.findall(data, "(frame(?![^>]*cbox\.ws)(?![^>]*capacanal)(?![^>]*dailymotion)[^>]*[\"; ]height:\s*(\d+)[^>]*>)")
     if iframes:
         for iframe in iframes:
             height = int(iframe[1])
@@ -211,7 +211,7 @@ def findVideoFrameLink(page, data):
                 if m:
                     width = int(m[0])
                     if width > minwidth:
-                        m = regexUtils.findall(iframe[0], '[\"; ]src=["\']*\s*([^>"\' ]+)\s*[>"\']*')
+                        m = regexUtils.findall(iframe[0], '[\"; ](?:src|SRC)=["\']*\s*([^>"\' ]+)\s*[>"\']*')
                         if m:
                             return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.SportsDevil"
-  version="201520152015.12.13.2NL"
+  version="201520152015.12.27.1NL"
   name="SportsDevil"
-  provider-name="MaxMustermann,Al101,Hubbab3,Sattekop">
+  provider-name="MaxMustermann">
   <requires>
    <import addon="xbmc.python" version="2.14.0"/>
    <import addon="script.module.requests" />

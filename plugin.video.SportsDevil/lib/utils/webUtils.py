@@ -34,7 +34,7 @@ class BaseRequest(object):
         self.s = requests.Session()
         if fileExists(self.cookie_file):
             self.s.cookies = self.load_cookies_from_lwp(self.cookie_file)
-        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'})
+        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'})
         self.s.headers.update({'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'})
         self.s.headers.update({'Accept-Language' : 'en-US,en;q=0.5'})
         self.s.keep_alive = False
@@ -71,9 +71,6 @@ class BaseRequest(object):
     def getSource(self, url, form_data, referer, xml=False, mobile=False):
         url = self.fixurl(url)
 
-        if 'pushpublish' in urlparse.urlsplit(url).netloc:
-            del self.s.headers['Accept-Encoding']
-            
         if not referer:
             referer = url
         else:
@@ -81,10 +78,15 @@ class BaseRequest(object):
         
         headers = {'Referer': referer}
         if mobile:
-            self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36'})
+            self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'})
             
         if xml:
             headers['X-Requested-With'] = 'XMLHttpRequest'
+            
+        if 'dinozap.info' in urlparse.urlsplit(url).netloc:
+            headers['X-Forwarded-For'] = '178.162.222.111'
+        if 'playerhd2.pw' in urlparse.urlsplit(url).netloc:
+            headers['X-Forwarded-For'] = '178.162.222.121'
         
         if form_data:
             #ca**on.tv/key.php
