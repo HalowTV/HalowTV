@@ -26,6 +26,22 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.swefilm" name="swefilm.tv" version="0.1" provider-name="Daniel Lundin">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary>Stream from swefilm.tv</summary>
+    <description>Stream from swefilm.tv</description>
+  </extension>
+</addon>
+
 <addon
   id="plugin.video.SportsDevil"
   version="201520152015.12.27.1NL"
