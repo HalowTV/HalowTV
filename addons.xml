@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.swefilm" name="swefilm.tv" version="0.1" provider-name="Daniel Lundin">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary>Stream from swefilm.tv</summary>
+    <description>Stream from swefilm.tv</description>
+  </extension>
+</addon>
+
 <addon id="plugin.video.amanda" name="GUL LIVE TV" version="6.5" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -23,22 +39,6 @@
     <summary lang="en">Halow TV Free</summary>
     <description lang="en">[COLOR red]Free Halow TV Live is free for all containing different live channels from different countries free for the whole world FB_> IPTV Halow TV Xbmc twitter_> @HalowTV.[/COLOR]</description>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.swefilm" name="swefilm.tv" version="0.1" provider-name="Daniel Lundin">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.xbmcswift2" version="2.4.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <language></language>
-    <summary>Stream from swefilm.tv</summary>
-    <description>Stream from swefilm.tv</description>
   </extension>
 </addon>
 
