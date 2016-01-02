@@ -12,7 +12,7 @@ item_info_convert=getInfo('%s','.*token:\s*["']([^'"]+)["'].*?file:\s*["']([^'"]
 item_info_build=%s
 
 item_info_name=reqUrl
-item_info_from=http://www.caston.tv/key.php|token='+d2+'&is_ajax=1
+item_info_from=http://www.caston.tv/l.php|token='+d2+'&is_ajax=1
 item_info_build=%s
 
 item_info_name=r2

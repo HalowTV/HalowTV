@@ -10,8 +10,7 @@ item_info_build=%s
 
 item_info_name=ps2
 item_info_from=@PARAM1@
-item_info_convert=getInfo('%s','.*?\W([\w_]{66})\W.*','@REFERER@')
-item_info_convert=reverse
+item_info_convert=getInfo('%s','.*\W([\w_]{66})\W.*','@REFERER@')
 item_info_build=%s
 
 item_info_name=tmpUrl

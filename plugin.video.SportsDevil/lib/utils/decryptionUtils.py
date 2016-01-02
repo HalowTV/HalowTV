@@ -212,12 +212,12 @@ def doDemystify(data):
                 data = data.replace(g, destreamer(g))
 
     # JS P,A,C,K,E,D
-    if jsU.containsPacked(data):
-        data = jsU.unpackAll(data)
-        escape_again=True
-
     if jsU95.containsPacked(data):
         data = jsU95.unpackAll(data)
+        escape_again=True
+    
+    if jsU.containsPacked(data):
+        data = jsU.unpackAll(data)
         escape_again=True
 
     # JS W,I,S,E

@@ -122,7 +122,7 @@ class JsUnpacker95High:
             return data
 
     def containsPacked(self, data):
-        return 'p,a,c,k,e,d' in data or 'p,a,c,k,e,r' in data
+        return r'[\xa1-\xff]' in data
 
 
 class JsUnIonCube:
@@ -282,7 +282,7 @@ class JsUnPP:
         
         for i in t_data:
             out_data = removeNonAscii(str(base64.b16decode(i.upper())))
-            data = re.sub(r"var\s*t=\"[^}]+}", out_data, data)
+            data = re.sub(r"var\s*t=\"[^}]+}", out_data, data, count=1)
                 
         return data
     def containUnPP(self,data):
