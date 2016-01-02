@@ -89,9 +89,8 @@ def main():
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/tiviti-tv/chunks.m3u8?'       ,{ 'title': 'TİVİTİ TV'}, icons + 'http://karwan.tv/images/tvlogo/tiviti-tv.PNG')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/abn-sat-tv-kurdish/chunks.m3u8?'       ,{ 'title': 'ABN Sat TV '}, icons + 'http://karwan.tv/images/tvlogo/abn-sat-tv.PNG')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/roji-kurd-tv/chunks.m3u8?'       ,{ 'title': 'ROJIKurd'}, icons + 'https://yt3.ggpht.com/-g9prY3S1fks/AAAAAAAAAAI/AAAAAAAAAAA/S-I2bl14JPc/s900-c-k-no/photo.jpg')
-    add_video_item('http://live4.karwan.tv:8081/karwan.tv/super-tv/chunks.m3u8'       ,{ 'title': 'Super TV'}, icons + 'http://karwan.tv/images/tvlogo/super-tv.png
-    add_video_item('http://live4.karwan.tv:8081/karwan.tv/ishtar-tv/chunks.m3u8?'       ,{ 'title': 'ISHTAR TV'}, icons + 'http://karwan.tv/images/tvlogo/super-tv.png
-
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/super-tv/chunks.m3u8'       ,{ 'title': 'Super TV'}, icons + 'http://karwan.tv/images/tvlogo/super-tv.png')
+    add_video_item('http://live4.karwan.tv:8081/karwan.tv/ishtar-tv/chunks.m3u8?'       ,{ 'title': 'ISHTAR TV'}, icons + 'http://karwan.tv/images/tvlogo/super-tv.png')
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
     # add_video_item(''				,{ 'title': ''}, icons + '')
