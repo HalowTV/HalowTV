@@ -176,9 +176,10 @@ def makeRequest(url, headers=None):
 				
 def HALOWTVIndex():
     addon_log("HALOWTVIndex")
-    addDir('[COLOR gold]Latest News[/COLOR]','Twitter',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
+    addDir('[COLOR red]Favorites[/COLOR]','Favorites',4,'http://www.veryicon.com/icon/ico/System/Flatastic%203/favorites%20add.ico' ,  FANART,'','','','')
     getData(base64.b64decode(HALOWTVBase),'')
 
+    addDir('[COLOR gold]Latest News[/COLOR]','Twitter',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
     addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
 
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
@@ -1522,8 +1523,39 @@ def get_packed_iphonetv_url(page_data):
 	return s
 
 
+def get_ferrari_url(page_data):
+    print 'get_dag_url2',page_data
+    page_data2=getUrl(page_data);
+    patt='(http.*)'
+    import uuid
+    playback=str(uuid.uuid1()).upper()
+    links=re.compile(patt).findall(page_data2)
+    headers=[('X-Playback-Session-Id',playback)]
+    for l in links:
+        try:
+                page_datatemp=getUrl(l,headers=headers);
 
-    
+        except: pass
+
+    return page_data+'|&X-Playback-Session-Id='+playback
+
+
+def get_dag_url(page_data):
+    print 'get_dag_url',page_data
+    if page_data.startswith('http://dag.total-stream.net'):
+        headers=[('User-Agent','Verismo-BlackUI_(2.4.7.5.8.0.34)')]
+        page_data=getUrl(page_data,headers=headers);
+
+    if '127.0.0.1' in page_data:
+        return revist_dag(page_data)
+    elif re_me(page_data, 'wmsAuthSign%3D([^%&]+)') != '':
+        final_url = re_me(page_data, '&ver_t=([^&]+)&') + '?wmsAuthSign=' + re_me(page_data, 'wmsAuthSign%3D([^%&]+)') + '==/mp4:' + re_me(page_data, '\\?y=([^&]+)&')
+    else:
+        final_url = re_me(page_data, 'href="([^"]+)"[^"]+$')
+        if len(final_url)==0:
+            final_url=page_data
+    final_url = final_url.replace(' ', '%20')
+    return final_url
 
 
 def re_me(data, re_patten):
@@ -1535,11 +1567,77 @@ def re_me(data, re_patten):
         match = ''
     return match
 
+def revist_dag(page_data):
+    final_url = ''
+    if '127.0.0.1' in page_data:
+        final_url = re_me(page_data, '&ver_t=([^&]+)&') + ' live=true timeout=15 playpath=' + re_me(page_data, '\\?y=([a-zA-Z0-9-_\\.@]+)')
+
+    if re_me(page_data, 'token=([^&]+)&') != '':
+        final_url = final_url + '?token=' + re_me(page_data, 'token=([^&]+)&')
+    elif re_me(page_data, 'wmsAuthSign%3D([^%&]+)') != '':
+        final_url = re_me(page_data, '&ver_t=([^&]+)&') + '?wmsAuthSign=' + re_me(page_data, 'wmsAuthSign%3D([^%&]+)') + '==/mp4:' + re_me(page_data, '\\?y=([^&]+)&')
+    else:
+        final_url = re_me(page_data, 'HREF="([^"]+)"')
 
 
+def get_unwise( str_eval):
+    page_value=""
+    try:
+        ss="w,i,s,e=("+str_eval+')'
+        exec (ss)
+        page_value=unwise_func(w,i,s,e)
+    except: traceback.print_exc(file=sys.stdout)
+    #print 'unpacked',page_value
+    return page_value
 
+def unwise_func( w, i, s, e):
+    lIll = 0;
+    ll1I = 0;
+    Il1l = 0;
+    ll1l = [];
+    l1lI = [];
+    while True:
+        if (lIll < 5):
+            l1lI.append(w[lIll])
+        elif (lIll < len(w)):
+            ll1l.append(w[lIll]);
+        lIll+=1;
+        if (ll1I < 5):
+            l1lI.append(i[ll1I])
+        elif (ll1I < len(i)):
+            ll1l.append(i[ll1I])
+        ll1I+=1;
+        if (Il1l < 5):
+            l1lI.append(s[Il1l])
+        elif (Il1l < len(s)):
+            ll1l.append(s[Il1l]);
+        Il1l+=1;
+        if (len(w) + len(i) + len(s) + len(e) == len(ll1l) + len(l1lI) + len(e)):
+            break;
 
-    
+    lI1l = ''.join(ll1l)#.join('');
+    I1lI = ''.join(l1lI)#.join('');
+    ll1I = 0;
+    l1ll = [];
+    for lIll in range(0,len(ll1l),2):
+        #print 'array i',lIll,len(ll1l)
+        ll11 = -1;
+        if ( ord(I1lI[ll1I]) % 2):
+            ll11 = 1;
+        #print 'val is ', lI1l[lIll: lIll+2]
+        l1ll.append(chr(    int(lI1l[lIll: lIll+2], 36) - ll11));
+        ll1I+=1;
+        if (ll1I >= len(l1lI)):
+            ll1I = 0;
+    ret=''.join(l1ll)
+    if 'eval(function(w,i,s,e)' in ret:
+        print 'STILL GOing'
+        ret=re.compile('eval\(function\(w,i,s,e\).*}\((.*?)\)').findall(ret)[0]
+        return get_unwise(ret)
+    else:
+        print 'FINISHED'
+        return ret
+
 def get_unpacked( page_value, regex_for_text='', iterations=1, total_iteration=1):
     try:        
         reg_data=None
@@ -1738,6 +1836,18 @@ def doEval(fun_call,page_data,Cookie_Jar):
     print ret_val
     #exec('ret_val=1+1')
     return str(ret_val)
+
+def doEvalFunction(fun_call,page_data,Cookie_Jar,m):
+    print 'doEvalFunction'
+    ret_val=''
+    if functions_dir not in sys.path:
+        sys.path.append(functions_dir)
+    f=open(functions_dir+"/LSProdynamicCode.py","w")
+    f.write(fun_call);
+    f.close()
+    import LSProdynamicCode
+    ret_val=LSProdynamicCode.GetLSProData(page_data,Cookie_Jar,m)
+    return str(ret_val)
     
 def processRecaptcha(url):
 	html_text=getUrl(url)
@@ -1855,7 +1965,53 @@ def askCaptcha(m,html_page, cookieJar):
     solver = InputWindow(captcha=local_captcha)
     solution = solver.get()
     return solution
-    
+
+def askCaptchaNew(imageregex,html_page,cookieJar,m):
+    global iid
+    iid+=1
+
+
+    if not imageregex=='':
+        if html_page.startswith("http"):
+            page_=getUrl(html_page,cookieJar=cookieJar)
+        else:
+            page_=html_page
+        captcha_url=re.compile(imageregex).findall(html_page)[0]
+    else:
+        captcha_url=html_page
+        if 'oneplay.tv/embed' in html_page:
+            import oneplay
+            page_=getUrl(html_page,cookieJar=cookieJar)
+            captcha_url=oneplay.getCaptchaUrl(page_)
+
+    local_captcha = os.path.join(profile, str(iid)+"captcha.jpg" )
+    localFile = open(local_captcha, "wb")
+    print ' c capurl',captcha_url
+    req = urllib2.Request(captcha_url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:14.0) Gecko/20100101 Firefox/14.0.1')
+    if 'refer' in m:
+        req.add_header('Referer', m['refer'])
+    if 'agent' in m:
+        req.add_header('User-agent', m['agent'])
+    if 'accept' in m:
+        req.add_header('Accept', m['accept'])
+    if 'setcookie' in m:
+        print 'adding cookie',m['setcookie']
+        req.add_header('Cookie', m['setcookie'])
+
+    #cookie_handler = urllib2.HTTPCookieProcessor(cookieJar)
+    #opener = urllib2.build_opener(cookie_handler, urllib2.HTTPBasicAuthHandler(), urllib2.HTTPHandler())
+    #opener = urllib2.install_opener(opener)
+    #urllib2.urlopen(req)
+    response = urllib2.urlopen(req)
+
+    localFile.write(response.read())
+    response.close()
+    localFile.close()
+    solver = InputWindow(captcha=local_captcha)
+    solution = solver.get()
+    return solution
+
 class InputWindow(xbmcgui.WindowDialog):
     def __init__(self, *args, **kwargs):
         self.cptloc = kwargs.get('captcha')
@@ -1900,10 +2056,66 @@ def get_params():
         return param
 
 
+def getFavorites():
+        items = json.loads(open(favorites).read())
+        total = len(items)
+        for i in items:
+            name = i[0]
+            url = i[1]
+            iconimage = i[2]
+            try:
+                fanArt = i[3]
+                if fanArt == None:
+                    raise
+            except:
+                if addon.getSetting('use_thumb') == "true":
+                    fanArt = iconimage
+                else:
+                    fanArt = fanart
+            try: playlist = i[5]
+            except: playlist = None
+            try: regexs = i[6]
+            except: regexs = None
+
+            if i[4] == 0:
+                addLink(url,name,iconimage,fanArt,'','','','fav',playlist,regexs,total)
+            else:
+                addDir(name,url,i[4],iconimage,fanart,'','','','','fav')
 
 
+def addFavorite(name,url,iconimage,fanart,mode,playlist=None,regexs=None):
+        favList = []
+        try:
+            # seems that after
+            name = name.encode('utf-8', 'ignore')
+        except:
+            pass
+        if os.path.exists(favorites)==False:
+            addon_log('Making Favorites File')
+            favList.append((name,url,iconimage,fanart,mode,playlist,regexs))
+            a = open(favorites, "w")
+            a.write(json.dumps(favList))
+            a.close()
+        else:
+            addon_log('Appending Favorites')
+            a = open(favorites).read()
+            data = json.loads(a)
+            data.append((name,url,iconimage,fanart,mode))
+            b = open(favorites, "w")
+            b.write(json.dumps(data))
+            b.close()
 
 
+def rmFavorite(name):
+        data = json.loads(open(favorites).read())
+        for index in range(len(data)):
+            if data[index][0]==name:
+                del data[index]
+                b = open(favorites, "w")
+                b.write(json.dumps(data))
+                b.close()
+                break
+        xbmc.executebuiltin("XBMC.Container.Refresh")
 
 def urlsolver(url):
     if addon.getSetting('Updatecommonresolvers') == 'true':
@@ -1990,8 +2202,8 @@ def download_file(name, url):
             addSource(os.path.join(addon.getSetting('save_location'), name))
 
 
-def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcontext=False):
-        
+def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcontext=False,regexs=None,reg_url=None,allinfo={}):
+
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&fanart="+urllib.quote_plus(fanart)
         ok=True
         if date == '':
@@ -1999,15 +2211,57 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
         else:
             description += '\n\nDate: %s' %date
         liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
-        liz.setInfo(type="Video", infoLabels={ "Title": name, "Plot": description, "Genre": genre, "dateadded": date, "credits": credits })
+        if len(allinfo) <1 :
+            liz.setInfo(type="Video", infoLabels={ "Title": name, "Plot": description, "Genre": genre, "dateadded": date, "credits": credits })
+        else:
+            liz.setInfo(type="Video", infoLabels= allinfo)
         liz.setProperty("Fanart_Image", fanart)
-
-        
+        if showcontext:
+            contextMenu = []
+            if showcontext == 'source':
+                if name in str(SOURCES):
+                    contextMenu.append(('Remove from Sources','XBMC.RunPlugin(%s?mode=8&name=%s)' %(sys.argv[0], urllib.quote_plus(name))))
+            elif showcontext == 'download':
+                contextMenu.append(('Download','XBMC.RunPlugin(%s?url=%s&mode=9&name=%s)'
+                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
+            elif showcontext == 'fav':
+                contextMenu.append(('Remove from  HalowTV Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                                    %(sys.argv[0], urllib.quote_plus(name))))
+            if showcontext == '!!update':
+                fav_params2 = (
+                    '%s?url=%s&mode=17&regexs=%s'
+                    %(sys.argv[0], urllib.quote_plus(reg_url), regexs)
+                    )
+                contextMenu.append(('[COLOR yellow]!!update[/COLOR]','XBMC.RunPlugin(%s)' %fav_params2))
+            if not name in FAV:
+                contextMenu.append(('Add to HalowTV Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+                         %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart), mode)))
+            liz.addContextMenuItems(contextMenu)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
-
         return ok
+def ytdl_download(url,title,media_type='video'):
+    # play in xbmc while playing go back to contextMenu(c) to "!!Download!!"
+    # Trial yasceen: seperate |User-Agent=
+    import youtubedl
+    if not url == '':
+        if media_type== 'audio':
+            youtubedl.single_YD(url,download=True,audio=True)
+        else:
+            youtubedl.single_YD(url,download=True)
+    elif xbmc.Player().isPlaying() == True :
+        import YDStreamExtractor
+        if YDStreamExtractor.isDownloading() == True:
 
- 
+            YDStreamExtractor.manageDownloads()
+        else:
+            xbmc_url = xbmc.Player().getPlayingFile()
+
+            xbmc_url = xbmc_url.split('|User-Agent=')[0]
+            info = {'url':xbmc_url,'title':title,'media_type':media_type}
+            youtubedl.single_YD('',download=True,dl_info=info)
+    else:
+        xbmc.executebuiltin("XBMC.Notification(DOWNLOAD,First Play [COLOR yellow]WHILE playing download[/COLOR] ,10000)")
+        
 def search(site_name,search_term=None):
     thumbnail=''
     if os.path.exists(history) == False or addon.getSetting('clearseachhistory')=='true':
@@ -2167,39 +2421,45 @@ def pluginquerybyJSON(url):
             addDir(name,url,53,thumbnail,fanart,description,'',date,'')
             #xbmc.executebuiltin("Container.SetViewMode(500)")
 
-def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlist,regexs,total,setCookie=""):
+def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlist,regexs,total,setCookie="",allinfo={}):
         #print 'url,name',url,name
         contextMenu =[]
         try:
             name = name.encode('utf-8')
         except: pass
         ok = True
-       
-        if regexs: 
+        if regexs:
             mode = '17'
-           
             contextMenu.append(('[COLOR white]!!Download Currently Playing!![/COLOR]','XBMC.RunPlugin(%s?url=%s&mode=21&name=%s)'
-                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))           
-        elif  any(x in url for x in resolve_url) and  url.startswith('http'):
+                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
+        elif  (any(x in url for x in resolve_url) and  url.startswith('http')) or url.endswith('&mode=19'):
+            url=url.replace('&mode=19','')
             mode = '19'
-          
             contextMenu.append(('[COLOR white]!!Download Currently Playing!![/COLOR]','XBMC.RunPlugin(%s?url=%s&mode=21&name=%s)'
-                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))           
-        elif url.startswith('magnet:?xt=') or '.torrent' in url:
-          
+                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
+        elif url.endswith('&mode=18'):
+            url=url.replace('&mode=18','')
+            mode = '18'
+            contextMenu.append(('[COLOR white]!!Download!![/COLOR]','XBMC.RunPlugin(%s?url=%s&mode=23&name=%s)'
+                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
+            if addon.getSetting('dlaudioonly') == 'true':
+                contextMenu.append(('!!Download [COLOR seablue]Audio!![/COLOR]','XBMC.RunPlugin(%s?url=%s&mode=24&name=%s)'
+                                        %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
+        elif url.startswith('magnet:?xt='):
             if '&' in url and not '&amp;' in url :
                 url = url.replace('&','&amp;')
             url = 'plugin://plugin.video.pulsar/play?uri=' + url
             mode = '12'
-                     
-        else: 
+        else:
             mode = '12'
-      
             contextMenu.append(('[COLOR white]!!Download Currently Playing!![/COLOR]','XBMC.RunPlugin(%s?url=%s&mode=21&name=%s)'
-                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))           
+                                    %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
+        if 'plugin://plugin.video.youtube/play/?video_id=' in url:
+              yt_audio_url = url.replace('plugin://plugin.video.youtube/play/?video_id=','https://www.youtube.com/watch?v=')
+              contextMenu.append(('!!Download [COLOR blue]Audio!![/COLOR]','XBMC.RunPlugin(%s?url=%s&mode=24&name=%s)'
+                                      %(sys.argv[0], urllib.quote_plus(yt_audio_url), urllib.quote_plus(name))))
         u=sys.argv[0]+"?"
         play_list = False
-      
         if playlist:
             if addon.getSetting('add_playlist') == "false":
                 u += "url="+urllib.quote_plus(url)+"&mode="+mode
@@ -2213,15 +2473,18 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
             u += "&regexs="+regexs
         if not setCookie == '':
             u += "&setCookie="+urllib.quote_plus(setCookie)
-  
+
         if date == '':
             date = None
         else:
             description += '\n\nDate: %s' %date
         liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        liz.setInfo(type="Video", infoLabels={ "Title": name, "Plot": description, "Genre": genre, "dateadded": date })
+        if len(allinfo) <1:
+            liz.setInfo(type="Video", infoLabels={ "Title": name, "Plot": description, "Genre": genre, "dateadded": date })
+
+        else:
+            liz.setInfo(type="Video", infoLabels=allinfo)
         liz.setProperty("Fanart_Image", fanart)
-        
         if (not play_list) and not any(x in url for x in g_ignoreSetResolved):#  (not url.startswith('plugin://plugin.video.f4mTester')):
             if regexs:
                 if '$pyFunction:playmedia(' not in urllib.unquote_plus(regexs) and 'notplayable' not in urllib.unquote_plus(regexs)  :
@@ -2231,9 +2494,24 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                 liz.setProperty('IsPlayable', 'true')
         else:
             addon_log( 'NOT setting isplayable'+url)
-       
-        
-       
+        if showcontext:
+            contextMenu = []
+            if showcontext == 'fav':
+                contextMenu.append(
+                    ('Remove from HalowTV  Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                     %(sys.argv[0], urllib.quote_plus(name)))
+                     )
+            elif not name in FAV:
+                fav_params = (
+                    '%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=0'
+                    %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart))
+                    )
+                if playlist:
+                    fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
+                if regexs:
+                    fav_params += "&regexs="+regexs
+                contextMenu.append(('Add to HalowTV Favorites','XBMC.RunPlugin(%s)' %fav_params))
+            liz.addContextMenuItems(contextMenu)
         if not playlist is None:
             if addon.getSetting('add_playlist') == "false":
                 playlist_name = name.split(') ')[1]
@@ -2243,11 +2521,9 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                      ]
                 liz.addContextMenuItems(contextMenu_)
         #print 'adding',name
- #       print url,totalitems
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,totalItems=total)
         #print 'added',name
         return ok
-
 def playsetresolved(url,name,iconimage,setresolved=True):
     if setresolved:
         liz = xbmcgui.ListItem(name, iconImage=iconimage)
@@ -2355,9 +2631,35 @@ elif mode==3:
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
+elif mode==4:
+    addon_log("getFavorites")
+    getFavorites()
+    SetViewThumbnail()
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
+elif mode==5:
+    addon_log("addFavorite")
+    try:
+        name = name.split('\\ ')[1]
+    except:
+        pass
+    try:
+        name = name.split('  - ')[0]
+    except:
+        pass
+    addFavorite(name,url,iconimage,fanart,fav_mode)
 
-
+elif mode==6:
+    addon_log("rmFavorite")
+    try:
+        name = name.split('\\ ')[1]
+    except:
+        pass
+    try:
+        name = name.split('  - ')[0]
+    except:
+        pass
+    rmFavorite(name)
 
 elif mode==7:
     addon_log("addSource")
