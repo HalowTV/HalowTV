@@ -23,7 +23,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.swefilm" name="swefilm.tv" version="0.1" provider-name="Daniel Lundin">
+<addon id="plugin.video.swefilm" name="swefilm.tv" version="0.3" provider-name="Daniel Lundin">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.xbmcswift2" version="2.4.0"/>
@@ -163,7 +163,7 @@
 
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
-       version="8.0.19"
+       version="8.0.20"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>

@@ -3,7 +3,7 @@ import swefilm
 import utils
 
 plugin = Plugin()
-        
+
 @plugin.route('/')
 def index():
     return [
@@ -12,41 +12,78 @@ def index():
             'path': plugin.url_for('search')
         },
         {
-            'label': 'List movies',
-            'path': plugin.url_for('movies', page='1')
+            'label': 'Popular movies',
+            'path': plugin.url_for('movies', order='view', page='1')
         },
         {
-            'label': 'List series',
-            'path': plugin.url_for('series', page='1')
+            'label': 'Popular series',
+            'path': plugin.url_for('series', order='view', page='1')
+        },
+        {
+            'label': 'Latest updated movies',
+            'path': plugin.url_for('movies', order='new', page='1')
+        },
+        {
+            'label': 'Latest updated series',
+            'path': plugin.url_for('series', order='new', page='1')
+        },
+        {
+            'label': 'Genres',
+            'path': plugin.url_for('genres')
         }
     ]
 
-@plugin.route('/movies/<page>')
-def movies(page='1'):
+@plugin.route('/movies/<order>/<page>')
+def movies(order, page='1'):
     page = int(page)
-    movies = swefilm.list_movies(page)
+    movies = swefilm.list_movies(page, order)
     items = map(to_kodi_movie_item, movies)
     items.append({
         'label': 'next...',
-        'path': plugin.url_for('movies', page=str(page + 1)),
+        'path': plugin.url_for('movies', order=order, page=str(page + 1)),
         'is_playable': True
     })
     return items
 
-@plugin.route('/series/<page>')
-def series(page='1'):
+@plugin.route('/series/<order>/<page>')
+def series(order, page='1'):
     page = int(page)
-    series = swefilm.list_series(page)
+    series = swefilm.list_series(page, order)
     items = map(to_kodi_serie_item, series)
     items.append({
         'label': 'next...',
-        'path': plugin.url_for('series', page=str(page + 1))
+        'path': plugin.url_for('series', order=order, page=str(page + 1))
     })
     return items
+
+@plugin.route('/genres/')
+def genres():
+    def to_genre_item(item):
+        return {
+            'label': item,
+            'path': plugin.url_for('genre', genre=item, page=1)
+        }
+    items = map(to_genre_item, swefilm.list_genres())
+    return items
+
+@plugin.route('/genre/<genre>/<page>/')
+def genre(genre, page=1):
+    page = int(page)
+    genres = swefilm.list_genre(genre, page)
+    items = map(to_kodi_item, genres)
+    items.append({
+        'label': 'next...',
+        'path': plugin.url_for('genre', genre=genre, page=str(page + 1))
+    })
+    return items
+
 
 @plugin.route('/play_movie/<url>/')
 def play_movie(url):
     streams = swefilm.get_movie_streams(url)
+    print streams
+    if len(streams) == 0:
+        raise Exception("Failed to open stream")
     stream = quality_select_dialog(streams)
     plugin.set_resolved_url(stream)
 
@@ -54,6 +91,8 @@ def play_movie(url):
 @plugin.route('/play_episode/<url>/')
 def play_episode(url):
     streams = swefilm.get_movie_stream_from_player(url)
+    if len(streams) == 0:
+        raise Exception("Failed to open stream")
     stream = quality_select_dialog(streams)
     plugin.set_resolved_url(stream)
 

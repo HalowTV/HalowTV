@@ -52,9 +52,9 @@ def extract_source_tags(html):
     if source_tags:
         streams = []
         for source_tag in source_tags:
-            match = re.search(r'src=\'(.*?)\'.*?data-res="(.*?)"', source_tag)
+            match = re.search(r'src=\'(.*?)\'.*?(label|data-res|res)="(.*?)"', source_tag)
             if match:
-                streams.append((match.group(2), match.group(1)))
+                streams.append((match.group(3), match.group(1)))
 
         return streams
 
