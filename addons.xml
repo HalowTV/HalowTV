@@ -39,7 +39,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.amanda" name="GUL LIVE TV" version="6.5" provider-name="Halow">
+<addon id="plugin.video.amanda" name="GUL LIVE TV" version="6.6" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -163,7 +163,7 @@
 
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
-       version="8.0.20"
+       version="8.0.21"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
