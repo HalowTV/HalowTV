@@ -163,7 +163,7 @@
 
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
-       version="8.0.21"
+       version="8.0.22"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
