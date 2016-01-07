@@ -177,7 +177,7 @@
 
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
-       version="8.0.22"
+       version="8.0.23"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -197,14 +197,14 @@
 	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
 
   </requires>
-  <extension point="xbmc.python.pluginsource" library="HalowTV.py">
+  <extension point="xbmc.python.pluginsource" library="HALOWTV.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en"> http://halowtv.com/</summary>
-    <description lang="en">All channels from around the world/Movie/Child Movie/Streamax.tv/ YouTube/Sports Replays/Filmon.TV/Radio/Ace Stream/Music/Live Sport/LiveStream/follow me on FB/Twitter
+    <description lang="en">[COLOR red]All channels from around the world/Movie/Child Movie/Streamax.tv/Swefilm.Tv/http://dreamfilmhd.bz// YouTube/Sports Replays/Filmon.TV/Radio/Ace Stream/Music/Live Sport/LiveStream/follow me on FB/Twitter
 Halow TV Add-on
-http://halowtv.com/</description>
+http://halowtv.com/[/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
