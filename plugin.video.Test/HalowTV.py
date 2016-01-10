@@ -42,7 +42,7 @@ class NoRedirection(urllib2.HTTPErrorProcessor):
 
 
 sourceSitebvls = 'http://bvls2016.sc'      
-HALOWTVBase = 'aHR0cDovL2hhbG93dHYueDEwLmJ6L2xpdmUuY2hhbm5lbHMueG1s'
+HALOWTVBase = 'aHR0cDovL2hhbG93dHYuY29tL0hBTE9XWE1ML2xpdmUuY2hhbm5lbHMueG1s'
 
 
 
@@ -73,6 +73,7 @@ if os.path.exists(source_file)==True:
     SOURCES = open(source_file).read()
 else: SOURCES = []
 
+MyBase = addon.getSetting('My List')
 
 ###
 API_URL = 'http://ida.omroep.nl/aapi/?stream='
@@ -157,7 +158,7 @@ def addon_log(string):
 def makeRequest(url, headers=None):
         try:
             if headers is None:
-                headers = {'User-agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0'}
+                headers = {'User-agent' : 'kuntakinte'}
             req = urllib2.Request(url,None,headers)
             response = urllib2.urlopen(req)
             data = response.read()
@@ -180,7 +181,8 @@ def HALOWTVIndex():
     getData(base64.b64decode(HALOWTVBase),'')
 
     addDir('[COLOR gold]Latest News[/COLOR]','Twitter',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
-    addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
+    #addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
+    #addDir('add your List','My List',55,'http://www.magicdroidtv.com/wp-content/uploads/2013/06/channel-list.png',  FANART,'','','','')
 
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
@@ -2524,6 +2526,17 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,totalItems=total)
         #print 'added',name
         return ok
+
+def keyboard():
+    keyboard = xbmc.Keyboard('', 'Enter URL:', False)
+    keyboard.doModal()
+    if keyboard.isConfirmed():
+        query = keyboard.getText()
+        url=query
+        #urlsolver(url)
+        xbmc.Player().play(url)
+        
+
 def playsetresolved(url,name,iconimage,setresolved=True):
     if setresolved:
         liz = xbmcgui.ListItem(name, iconImage=iconimage)
@@ -2674,7 +2687,6 @@ elif mode==9:
     download_file(name, url)
 
 
-
 elif mode==11:
     addon_log("addSource")
     addSource(url)
@@ -2738,9 +2750,16 @@ elif mode==40:
 
 elif mode==45:
     twitter()
-    
+
+elif mode==47:
+    keyboard()    
 	
 elif mode==53:
     addon_log("Requesting JSON-RPC Items")
     pluginquerybyJSON(url)
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+elif mode==55:
+    addon_log("getData")
+    getData(MyBase,fanart)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
