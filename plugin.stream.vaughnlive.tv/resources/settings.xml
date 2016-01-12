@@ -1,0 +1,112 @@
+<settings>
+	<category label="General">
+		<setting visible="true" id="special-code" type="text" label="Special Code:" default="" />
+		<setting visible="true" id="thumbnail-type" type="bool" label="Thumbnail Type: Screenshot" default="false" />
+		<setting visible="true" id="sort-by-name" type="bool" label="Sort Type: By Channel Name" default="false" />
+		<setting visible="false" id="pages"    type="labelenum" label="Number of Pages" values="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|25|30|35|40|45|50|55|60|70|80|90|99|100"             default="1"/>
+		<setting visible="false" id="linksmaxshown" type="labelenum" label="Number of Links (Host Menu)" values="1|2|3|4|5|10|15|20|25|30|35|40|45|50|55|60|70|80|90|99|100|150|200|250|300|350|400|450|500|550|600|700|800|900|1000|1500|2000|3000|9000|9999"             default="9999"/>
+		<setting visible="false" id="label-empty-favorites" 		type="bool" label="Show Labels in List: Empty Favorites" default="false" />
+		<setting visible="true" id="debug-enable" 	type="bool" label="Enable Debugging to File" default="false" />
+		<setting visible="true" id="debug-show" 		type="bool" label="Enable Debugging to Notice(s)" default="false" />
+	</category>
+	<category label="Playback">
+		<setting visible="true" id="core-player" type="labelenum" label="Player Core" values="AUTO|DVDPLAYER|MPLAYER|PAPLAYER"             default="AUTO"/>
+		<setting visible="true" id="server-number"    type="labelenum" label="Server Number" values="0|1|2|3|4|5|6|7|8|9|10"             default="0"/>
+		<setting visible="true" id="DefaultTimeOut" type="labelenum" label="Default Play Time-out" values="0|5|10|15|20|25|30|35|40|45|50|55|60|65|70" default="30"/>
+		<setting visible="true" id="playback_eod" type="bool" label="EoD" default="false" />
+		<setting visible="true" id="playback_urlresolve" type="bool" label="Url Resolve" default="true" />
+		<setting visible="true" id="playback_urlonly" type="bool" label="Url Only ( ON:Url OFF:Playlist )" default="false" />
+	</category>
+	<!--category label="Meta Data">
+		<setting visible="false" id="enableMeta" 		type="bool" label="Enable Metadata" default="false" />
+		<setting visible="false" id="metadata_movies" 			type="bool" label="(Movies)" 									default="true" />
+		<setting visible="false" id="metadata_tv" 					type="bool" label="(TV)" 											default="true" />
+		<setting visible="false" id="metadata_tv_shows" 		type="bool" label="(TV) >> Shows" 						default="true" enable="!eq(-1,false)" />
+		<setting visible="false" id="metadata_tv_episodes" 	type="bool" label="(TV) >> Episodes" 					default="true" enable="!eq(-1,false)" />
+		<setting visible="false" id="metadata_tv_ep_plot" 	type="bool" label="(TV) >> Episodes >> Plot" 	default="true" enable="!eq(-1,false)" />
+	</category-->
+	<category label="Auto View">
+		<setting visible="true" id="auto-view" type="bool"   label="Enable Automatic View" default="false"/>
+		<setting visible="true" id="default-view"   type="number" label="Default"               default="500"   enable="!eq(-1,false)"/>
+		<setting visible="false" id="movies-view"    type="number" label="Movies"                default="515"  enable="!eq(-2,false)"/>
+		<setting visible="true" id="tvshows-view"   type="number" label="Channels"              default="500"  enable="!eq(-3,false)"/>
+		<setting visible="false" id="season-view"    type="number" label="Seasons"               default="50"   enable="!eq(-4,false)"/>
+		<setting visible="false" id="episode-view"   type="number" label="Episodes"              default="515"  enable="!eq(-5,false)"/>
+		<setting visible="false" id="links-view"   	 type="number" label="Links"              	 default="50"   enable="!eq(-6,false)"/>
+		<setting visible="false" id="anime-view"   	 type="number" label="Anime"              	 default="515"  enable="!eq(-7,false)"/>
+	</category>
+	<!-- category label="Downloads">
+		<setting visible="true" id="download_method"    	 		 type="labelenum" label="Number of Pages" values="Progress|ProgressBG|Test|Hidden|jDownloader (StreamURL)|jDownloader (Link)"             default="Hidden"/>
+		<setting visible="true" id="download_folder_default" 			type="folder" label="Download Folder (Default)"      	default="" />
+		<setting visible="false" id="download_folder_anime" 			type="folder" label="Download Folder (Animes)"      	default="" />
+		<setting visible="false" id="download_folder_movies" 			type="folder" label="Download Folder (Movies)"      	default="" />
+		<setting visible="false" id="download_folder_tv" 					type="folder" label="Download Folder (TV)    "      	default="" />
+		<setting visible="true" id="download_folder_wallpapers" 	type="folder" label="Download Folder (Wallpapers)  "  default="" />
+	</category-->
+	<!--category label="Favorites">
+		<setting visible="true" type="text" default=""   id="fav.tv.1.name"  label="Favorites  1: Name" />
+		<setting visible="true" type="text" default="2"  id="fav.tv.2.name"  label="Favorites  2: Name" />
+		<setting visible="true" type="text" default="3"  id="fav.tv.3.name"  label="Favorites  3: Name" />
+		<setting visible="true" type="text" default="4"  id="fav.tv.4.name"  label="Favorites  4: Name" />
+		<setting visible="true" type="text" default="5"  id="fav.tv.5.name"  label="Favorites  5: Name" />
+		<setting visible="true" type="text" default="6"  id="fav.tv.6.name"  label="Favorites  6: Name" />
+		<setting visible="true" type="text" default="7"  id="fav.tv.7.name"  label="Favorites  7: Name" />
+		<setting visible="false" type="text" default="8"  id="fav.tv.8.name"  label="Favorites  8: Name" />
+		<setting visible="false" type="text" default="9"  id="fav.tv.9.name"  label="Favorites  9: Name" />
+		<setting visible="false" type="text" default="10" id="fav.tv.10.name" label="Favorites 10: Name" />
+		<setting visible="false" type="text" default="11" id="fav.tv.11.name" label="Favorites 11: Name" />
+		<setting visible="false" id="tv-favorites-clear-enable" type="bool"   		label="  \/  ( Dummy Proofing )" default="false"/>
+		<setting visible="false" id="tv-zerolinks-show" type="bool"   		label="Show Episodes with 0 (Zero) Links" default="true"/>
+		<setting visible="false" type="text" default=""  id="fav.movies.1.name" label="Favorites 1: Name" />
+		<setting visible="false" type="text" default="2" id="fav.movies.2.name" label="Favorites 2: Name" />
+		<setting visible="false" type="text" default="3" id="fav.movies.3.name" label="Favorites 3: Name" />
+		<setting visible="false" type="text" default="4" id="fav.movies.4.name" label="Favorites 4: Name" />
+		<setting visible="false" type="text" default="5" id="fav.movies.5.name" label="Favorites 5: Name" />
+		<setting visible="false" type="text" default="6" id="fav.movies.6.name" label="Favorites 6: Name" />
+		<setting visible="false" type="text" default="7" id="fav.movies.7.name" label="Favorites 7: Name" />
+		<setting visible="false" type="text" default="8" id="fav.movies.8.name" label="Favorites 8: Name" />
+		<setting visible="false" type="text" default="9" id="fav.movies.9.name" label="Favorites 9: Name" />
+		<setting visible="false" type="text" default="10" id="fav.movies.10.name" label="Favorites 10: Name" />
+		<setting visible="false" type="text" default="11" id="fav.movies.11.name" label="Favorites 11: Name" />
+		<setting visible="false" id="movies-favorites-clear-enable" type="bool"   label="  \/  ( Dummy Proofing )" default="false"/>
+		<setting visible="false" type="text" default=""  id="fav.anime.1.name" label="Favorites 1: Name" />
+		<setting visible="false" type="text" default="2" id="fav.anime.2.name" label="Favorites 2: Name" />
+		<setting visible="false" type="text" default="3" id="fav.anime.3.name" label="Favorites 3: Name" />
+		<setting visible="false" type="text" default="4" id="fav.anime.4.name" label="Favorites 4: Name" />
+		<setting visible="false" type="text" default="5" id="fav.anime.5.name" label="Favorites 5: Name" />
+		<setting visible="false" type="text" default="6" id="fav.anime.6.name" label="Favorites 6: Name" />
+		<setting visible="false" type="text" default="7" id="fav.anime.7.name" label="Favorites 7: Name" />
+		<setting visible="false" type="text" default="8" id="fav.anime.8.name" label="Favorites 8: Name" />
+		<setting visible="false" type="text" default="9" id="fav.anime.9.name" label="Favorites 9: Name" />
+		<setting visible="false" type="text" default="10" id="fav.anime.10.name" label="Favorites 10: Name" />
+		<setting visible="false" type="text" default="11" id="fav.anime.11.name" label="Favorites 11: Name" />
+		<setting visible="false" id="anime-favorites-clear-enable" type="bool"   label="  \/  ( Dummy Proofing )" default="false"/>
+		<setting visible="false" type="text" default=""  id="fav.live.1.name" label="Favorites 1: Name" />
+		<setting visible="false" type="text" default="2" id="fav.live.2.name" label="Favorites 2: Name" />
+		<setting visible="false" type="text" default="3" id="fav.live.3.name" label="Favorites 3: Name" />
+		<setting visible="false" type="text" default="4" id="fav.live.4.name" label="Favorites 4: Name" />
+		<setting visible="false" type="text" default="5" id="fav.live.5.name" label="Favorites 5: Name" />
+		<setting visible="false" type="text" default="6" id="fav.live.6.name" label="Favorites 6: Name" />
+		<setting visible="false" type="text" default="7" id="fav.live.7.name" label="Favorites 7: Name" />
+		<setting visible="false" type="text" default="8" id="fav.live.8.name" label="Favorites 8: Name" />
+		<setting visible="false" type="text" default="9" id="fav.live.9.name" label="Favorites 9: Name" />
+		<setting visible="false" type="text" default="10" id="fav.live.10.name" label="Favorites 10: Name" />
+		<setting visible="false" type="text" default="11" id="fav.live.11.name" label="Favorites 11: Name" />
+		<setting visible="false" id="live-favorites-clear-enable" type="bool"   label="  \/  ( Dummy Proofing )" default="false"/>
+	</category-->
+	<category label="Context Menu Items">
+		<setting visible="true" id="CMI_ShowInfo" 								type="bool" label="Show Information" 						default="true" />
+		<setting visible="false" id="CMI_FindAirDates" 						type="bool" label="Find Air Dates" 							default="false" />
+		<setting visible="false" id="CMI_RefreshMetaData" 					type="bool" label="Refresh MetaData" 						default="false" />
+		<setting visible="false" id="CMI_ChangeFanart" 						type="bool" label="Change Fanart" 							default="true" />
+		<setting visible="false" id="CMI_DownloadWallpaper" 				type="bool" label="Download Wallpaper" 					default="true" />
+		<setting visible="false" id="CMI_SearchKissAnime" 					type="bool" label="Search KissAnime" 						default="false" />
+		<setting visible="false" id="CMI_SearchSolarMovieso" 			type="bool" label="Search SolarMovie.so" 				default="false" />
+		<setting visible="false" id="CMI_Search1Channel" 					type="bool" label="Search 1Channel" 						default="false" />
+		<setting visible="false" id="CMI_SearchPrimeWire" 				type="bool" label="(TV) - Search PrimeWire" 		default="false" />
+		<setting visible="false" id="CMI_SearchMerDBru" 						type="bool" label="Search MerDB.ru" 						default="false" />
+		<setting visible="false" id="CMI_SearchIceFilms" 					type="bool" label="Search IceFilms" 						default="false" />
+		<setting visible="false" id="CMI_JDownloader" 							type="bool" label="SendTo JDownloader (Url)" 		default="false" />
+		<setting visible="false" id="CMI_JDownloaderResolver" 			type="bool" label="SendTo JDownloader (UrlResolver)" 	default="false" />
+	</category>
+</settings>

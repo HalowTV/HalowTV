@@ -14,6 +14,32 @@
   </extension>
 </addon>
 
+<addon id="plugin.stream.vaughnlive.tv"
+       name="Vaughn Live"
+       version="0.1.8"
+       provider-name="The[COLOR tan]Highway[/COLOR], Shani, konbon">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  	<import addon="script.module.addon.common" />
+  	<import addon="script.common.plugin.cache" />
+  	<import addon="script.module.t0mm0.common" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+  	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary>For PC with a Default Browser.  Streams are now playable in KODI (XBMC). Thanks to konbon for the new artwork.</summary>
+  	<description>Used to browse the site of Live Streams and allow you to launch your OS's default browser via XBMC's context menu(s) so to visit the channel's page, embed video, or embed chat.  Streams are now playable in KODI (XBMC).</description>
+  	<disclaimer>By using this, you take reponsibility for anything that happens.</disclaimer>
+  	<language>en</language>
+  	<platform>all</platform>
+    <forum></forum>
+    <website></website>
+    <source></source>
+    <email></email>
+  </extension>
+</addon>
+
 <addon id="plugin.video.amanda" name="GUL LIVE TV" version="6.6" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -191,7 +217,7 @@
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
     <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" /> 
+    <import addon="script.module.simplejson" />
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
 	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
