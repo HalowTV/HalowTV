@@ -78,6 +78,9 @@ from utils.webUtils import CachedWebRequest
 import cookielib
 
 def getHTML(url, form_data='', referer='', xml=False, mobile=False, ignoreCache=False, demystify=False):
+    if url == 'http://www.streamlive.to':
+            url = xbmc.translatePath(os.path.join(Paths.imgDir, 'live.xml'))
+            
     cookiePath = xbmc.translatePath(os.path.join(Paths.cacheDir, 'cookies.lwp'))
     request = CachedWebRequest(cookiePath, Paths.cacheDir)
     return request.getSource(url, form_data, referer, xml, mobile, ignoreCache, demystify)

@@ -220,7 +220,7 @@ def findVideoFrameLink(page, data):
     if m:
         return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
     
-    m = regexUtils.findall(data, '<a href="([^"]+)" target="_blank"><img src="[^"]+" height="\d+" width="\d+" longdesc="[^"]+"/></a>')
+    m = regexUtils.findall(data, '<a\s*href="([^"]+)"\s*target="_blank"><img\s*src="[^"]+"\s*height="\d+"\s*width="\d+"\s*longdesc="[^"]+"\s*/></a>')
     if m:
         return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
         

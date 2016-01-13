@@ -57,7 +57,7 @@ class Net:
     
     _cj = cookielib.LWPCookieJar()
     _proxy = None
-    _user_agent = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 ' + \
+    _user_agent = 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 ' + \
                   '(KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36'
     _http_debug = False
     
