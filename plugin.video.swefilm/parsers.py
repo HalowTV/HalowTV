@@ -10,7 +10,10 @@ def parse_player(html):
     base64_end = html.find('\'', base64_start)
     base64_string = html[base64_start : base64_end]
     content = base64.b64decode(base64_string)
-    return extract_source_tags(content)
+
+    video_sources = extract_source_tags(content)
+    subtitles = extract_subtitles(content)
+    return video_sources, subtitles
 
 
 def parse_movie_page(html):
@@ -46,6 +49,17 @@ def parse_episodes(html):
             [url, title] = episode
             result.append((url, title))
     return result
+
+def extract_subtitles(html):
+    subtitle_tags = re.findall(r'(<track.*?\/>)', html)
+    if subtitle_tags:
+        subtitles = []
+        for subtitle_tag in subtitle_tags:
+            match = re.search(r'src="(.*?)"', subtitle_tag)
+            if match:
+                return [match.group(1)]
+
+        return None
 
 def extract_source_tags(html):
     source_tags = re.findall(r'(<source.*?\/>)', html)

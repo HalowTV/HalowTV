@@ -1,4 +1,0 @@
-py==1.4.31
-pytest==2.8.5
-wsgiref==0.1.2
-xbmcswift2==0.3.0

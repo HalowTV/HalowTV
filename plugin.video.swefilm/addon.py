@@ -80,21 +80,21 @@ def genre(genre, page=1):
 
 @plugin.route('/play_movie/<url>/')
 def play_movie(url):
-    streams = swefilm.get_movie_streams(url)
+    streams, subtitles = swefilm.get_movie_streams(url)
     print streams
     if len(streams) == 0:
         raise Exception("Failed to open stream")
     stream = quality_select_dialog(streams)
-    plugin.set_resolved_url(stream)
+    plugin.set_resolved_url(stream, subtitles[0] if len(subtitles) else None)
 
 
 @plugin.route('/play_episode/<url>/')
 def play_episode(url):
-    streams = swefilm.get_movie_stream_from_player(url)
+    streams, subtitles = swefilm.get_movie_stream_from_player(url)
     if len(streams) == 0:
         raise Exception("Failed to open stream")
     stream = quality_select_dialog(streams)
-    plugin.set_resolved_url(stream)
+    plugin.set_resolved_url(stream, subtitles[0] if len(subtitles) else None)
 
 @plugin.route('/search/')
 def search():
