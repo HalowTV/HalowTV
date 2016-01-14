@@ -168,7 +168,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="5.5" provider-name="Halow">
+<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="5.6" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
