@@ -39,6 +39,7 @@ def main():
     add_video_item('rtsp://livestreaming.itworkscdn.net/rudawlive/rudawtv'					,{ 'title': 'Rudaw TV'}, icons + 'http://karwan.tv/images/tvlogo/rudaw.png')
     add_video_item('rtmp://51.254.209.160/live/livestream'						,{ 'title': 'KNN TV'}, icons + 'http://karwan.tv/images/tvlogo/knn-tv.png')
     add_video_item('rtmp://64.150.177.45/live//mp4:myStream',{ 'title': 'Geli Kurdistan'}, icons + 'http://karwan.tv/images/tvlogo/geli-kurdistan-tv.png')
+    add_video_item('http://87.81.198.172:80/hls/mystream.m3u8'       ,{ 'title': 'ROJIKurd'}, icons + 'https://yt3.ggpht.com/-g9prY3S1fks/AAAAAAAAAAI/AAAAAAAAAAA/S-I2bl14JPc/s900-c-k-no/photo.jpg')
     add_video_item('http://62.210.100.139:1935/kurdistan24tv/smil:kurdistan24/chunklist_w888035107_b886000_slen.m3u8'	    ,{ 'title': 'kurdistan24 TV'}, icons + 'http://karwan.tv/images/tvlogo/kurdistan24-tv.png')
     add_video_item('http://live.kurdstream.net:1935/liveTrans//myStream_360p/playlist.m3u8'				,{ 'title': 'Kurd MAX TV'}, icons + 'http://karwan.tv/images/tvlogo/kurdmax-tv.png')
     add_video_item('http://63.237.48.23/ios/GEM_KURD/GEM_KURD.m3u8'			,{ 'title': 'GEM Kurd TV'}, icons + 'http://karwan.tv/images/tvlogo/gem-kurd-tv.png')
@@ -90,7 +91,6 @@ def main():
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/farkli-tv/chunks.m3u8?'       ,{ 'title': 'FARKLI TV'}, icons + 'http://karwan.tv/images/tvlogo/farkli-tv.PNG')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/tiviti-tv/chunks.m3u8?'       ,{ 'title': 'TİVİTİ TV'}, icons + 'http://karwan.tv/images/tvlogo/tiviti-tv.PNG')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/abn-sat-tv-kurdish/chunks.m3u8?'       ,{ 'title': 'ABN Sat TV '}, icons + 'http://karwan.tv/images/tvlogo/abn-sat-tv.PNG')
-    add_video_item('http://87.81.198.172:80/hls/mystream.m3u8'       ,{ 'title': 'ROJIKurd'}, icons + 'https://yt3.ggpht.com/-g9prY3S1fks/AAAAAAAAAAI/AAAAAAAAAAA/S-I2bl14JPc/s900-c-k-no/photo.jpg')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/super-tv/chunks.m3u8'       ,{ 'title': 'Super TV'}, icons + 'http://karwan.tv/images/tvlogo/super-tv.png')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/ishtar-tv/chunks.m3u8?'       ,{ 'title': 'ISHTAR TV'}, icons + 'http://karwan.tv/images/tvlogo/ishtar-tv.png')
 
