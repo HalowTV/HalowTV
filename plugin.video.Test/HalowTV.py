@@ -42,7 +42,7 @@ class NoRedirection(urllib2.HTTPErrorProcessor):
 
 
 sourceSitebvls = 'http://bvls2016.sc'      
-HALOWTVBase = 'aHR0cDovL2hhbG93dHYuY29tL0hBTE9XWE1ML2xpdmUuY2hhbm5lbHMueG1s'
+HALOWTVBase = 'aHR0cDovL2hhbG93dHYub3JnL0hBTE9XWE1ML2xpdmUuY2hhbm5lbHMueG1s'
 
 
 
@@ -180,7 +180,7 @@ def HALOWTVIndex():
     addDir('[COLOR red]Favorites[/COLOR]','Favorites',4,'http://www.veryicon.com/icon/ico/System/Flatastic%203/favorites%20add.ico' ,  FANART,'','','','')
     getData(base64.b64decode(HALOWTVBase),'')
 
-    addDir('[COLOR gold]Latest News[/COLOR]','Twitter',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
+    #addDir('[COLOR gold]Latest News[/COLOR]','Twitter',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
     #addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
     #addDir('add your List','My List',55,'http://www.magicdroidtv.com/wp-content/uploads/2013/06/channel-list.png',  FANART,'','','','')
 
