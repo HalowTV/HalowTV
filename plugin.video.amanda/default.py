@@ -140,9 +140,10 @@ def Categories():
     AddDir("[COLOR green][B]Indonesian LIVE TV[/B][/COLOR]", Raw+"H2tigGCQ" ,4 ,"http://www.country-dialing-codes.net/img/png-country-4x2-fancy-res-1280x960/id.png")
     AddDir("[COLOR green][B]Philippine LIVE TV[/B][/COLOR]", Raw+"gqd5pSZM" ,4 ,"http://png-5.findicons.com/files/icons/656/rounded_world_flags/256/philippines.png")
     AddDir("[COLOR green][B]Romania  LIVE TV[/B][/COLOR]", Raw+"x5NqzmwS" ,4 ,"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/1280px-Flag_of_Romania.svg.png")
+    AddDir("[COLOR green][B]Kenya  LIVE TV[/B][/COLOR]", Raw+"DGCgx2gB" ,4 ,"http://www.varldensflaggor.se/bilder/original/kenyas-flagga.png")
 
 
-    xbmc.executebuiltin('Container.SetViewMode(25)') 
+    xbmc.executebuiltin('Container.SetViewMode(500)') 
    
 
 def MOVIES():
