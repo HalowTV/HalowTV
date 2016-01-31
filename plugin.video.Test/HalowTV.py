@@ -177,24 +177,25 @@ def makeRequest(url, headers=None):
 				
 def HALOWTVIndex():
     addon_log("HALOWTVIndex")
-    addDir('[COLOR red]Favorites[/COLOR]','Favorites',4,'http://www.veryicon.com/icon/ico/System/Flatastic%203/favorites%20add.ico' ,  FANART,'','','','')
+    #addDir('[COLOR red]Favorites[/COLOR]','Favorites',4,'http://www.veryicon.com/icon/ico/System/Flatastic%203/favorites%20add.ico' ,  FANART,'','','','')
     getData(base64.b64decode(HALOWTVBase),'')
 
-    #addDir('[COLOR gold]Latest News[/COLOR]','Twitter',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
     #addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
     #addDir('add your List','My List',55,'http://www.magicdroidtv.com/wp-content/uploads/2013/06/channel-list.png',  FANART,'','','','')
+    addDir('[COLOR gold]Latest News[/COLOR]','text_online',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
 
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
-def twitter():
-	text = 'Facebook Halow TV Ad-ons'
-	twit = 'http://halowtv.x10.bz/last%20news.php.html'
-	req = urllib2.Request(twit)
+
+def text_online():		
+	text = '[COLOR royalblue][B]HalowTV[/B][/COLOR]'
+	newstext = 'http://pastebin.com/raw/BWDT52yy'
+	req = urllib2.Request(newstext)
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 	response = urllib2.urlopen(req)
 	link=response.read()
 	response.close()
-	match=re.compile("<div class=\"baseHtml\">(.+?)</div>",re.DOTALL).findall(link)
+	match=re.compile("<START>(.+?)<END>",re.DOTALL).findall(link)
 	for status in match:
 	    try:
 			    status = status.decode('ascii', 'ignore')
@@ -202,7 +203,7 @@ def twitter():
 			    status = status.decode('utf-8','ignore')
 	    status = status.replace('&amp;','')
 	    text = status
-	showText('[COLOR yellow][B]@HalowTV[/B][/COLOR]', text)
+	showText('[COLOR royalblue][B]HALOWTV[/B][/COLOR]', text)
 
 def showText(heading, text):
     id = 10147
@@ -219,8 +220,8 @@ def showText(heading, text):
 	    return
 	except:
 	    pass
-		
-	
+
+
 def getSources():
         if os.path.exists(favorites) == True:
             addDir('Favorites','url',4,os.path.join(home, 'resources', 'favorite.png'),FANART,'','','','')
@@ -2749,7 +2750,7 @@ elif mode==40:
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==45:
-    twitter()
+    text_online()
 
 elif mode==47:
     keyboard()    
@@ -2763,3 +2764,6 @@ elif mode==55:
     addon_log("getData")
     getData(MyBase,fanart)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+elif mode == 99:
+	search()
