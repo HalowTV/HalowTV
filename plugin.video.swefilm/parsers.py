@@ -4,16 +4,21 @@ from collections import namedtuple
 
 Movie = namedtuple('Movie', ['title', 'year', 'length', 'poster', 'resolution', 'player_url'])
 
-def parse_player(html):
-    atob_start = html.find('window.atob')
-    base64_start = atob_start + len('window.atob(\'')
-    base64_end = html.find('\'', base64_start)
-    base64_string = html[base64_start : base64_end]
-    content = base64.b64decode(base64_string)
+def do_ntimes(fn, arg, count):
+    res = arg
+    for i in range(count):
+        res = fn(res)
+    return res
 
-    video_sources = extract_source_tags(content)
-    subtitles = extract_subtitles(content)
-    return video_sources, subtitles
+def parse_player(html):
+    atob = re.search(r"atob\('(.*?)'\)", html)
+    atob_count = html.count('atob(')
+    if atob:
+        base64_string = atob.group(1)
+        content = do_ntimes(base64.b64decode, base64_string, atob_count) #base64.b64decode(base64_string)
+        video_sources = extract_source_tags(content)
+        subtitles = extract_subtitles(content)
+        return video_sources, subtitles
 
 
 def parse_movie_page(html):
