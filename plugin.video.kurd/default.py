@@ -45,6 +45,7 @@ def main():
     add_video_item('http://63.237.48.23/ios/GEM_KURD/GEM_KURD.m3u8'			,{ 'title': 'GEM Kurd TV'}, icons + 'http://karwan.tv/images/tvlogo/gem-kurd-tv.png')
     add_video_item('http://38.117.88.153:7777/KorekTV/KorekTV_LR.m3u8?user=sgls4ddwrx45qvtqdc55rwvmhtmf&session=daa58d7aab4f4af12c652d17d9387a3a61b6156f4b3233c1a10474d5bdca29a8e30e201482969cf38a65537e32f96ab857442c670f6ece7e&hlsid=HTTP_ID_114417&group_id=-1&starttime=20151225T175450.343750' ,{ 'title': 'Korek TV'}, icons + 'http://karwan.tv/images/tvlogo/korek-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal12/_definst_/livestream/playlist.m3u8'						,{ 'title': 'Kanal 4'}, icons + 'http://karwan.tv/images/tvlogo/kanal4.png')
+    add_video_item('http://89.163.255.18:2052/live/babo/chunklist_w1303061677.m3u8'    ,{ 'title': 'IMOVES 3D HD'}, icons + 'https://scontent-arn2-1.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/12654187_495147467340029_7943857214277295984_n.jpg?oh=fe24ae64ceaa213abbab6b8c67fa76e0&oe=5735753B')
     add_video_item('http://stream-02.vty.dailymotion.com/31/dm/1/x32d5ky/live.isml/events(live-1454391224)/live-video=700000.m3u8'       ,{ 'title': 'Biaban Family HD'}, icons + 'http://ladda-upp.se/files/2016/b180019.jpg')
     add_video_item('http://kurd-live.com:1935/live/new/chunklist_w1304379760.m3u8'       ,{ 'title': 'New HD TV'}, icons + 'http://newlinehd.tv/images/logo.png')
     add_video_item('http://162.244.81.103:1935/RegaTV/myStream/playlist.m3u8'					,{ 'title': 'REGA TV'}, icons + 'http://karwan.tv/images/tvlogo/rega-tv.png')
@@ -88,7 +89,6 @@ def main():
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/qellat-tv/chunks.m3u8?'                       ,{ 'title': 'QELLAT TV'}, icons + 'http://karwan.tv/images/tvlogo/qellat-tv.png')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/badinan-sat-tv/chunks.m3u8?'                       ,{ 'title': 'Badinan Sat TV'}, icons + 'http://karwan.tv/images/tvlogo/badinan-sat-tv.png')
     add_video_item('http://live4.karwan.tv:8081/sardam-tv/sardam-tv/chunks.m3u8?'       ,{ 'title': 'Sardam TV'}, icons + 'http://karwan.tv/images/tvlogo/sardam-tv.PNG')
-    add_video_item('http://89.163.255.18:2052/live/babo/chunklist_w1303061677.m3u8'    ,{ 'title': 'IMOVES 3D HD'}, icons + 'https://scontent-arn2-1.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/12654187_495147467340029_7943857214277295984_n.jpg?oh=fe24ae64ceaa213abbab6b8c67fa76e0&oe=5735753B')
 
 
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/mgc-tv/chunks.m3u8?'       ,{ 'title': 'MGC TV'}, icons + 'http://karwan.tv/images/tvlogo/mgc-tv.PNG')

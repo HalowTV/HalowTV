@@ -774,7 +774,7 @@ def SearchChannels():
 						
     
     progress.close()
-    xbmc.executebuiltin("Container.SetViewMode(50)")
+    xbmc.executebuiltin("Container.SetViewMode(500)")
 	
 def Search_m3u(data,Searchkey):
     content = data.rstrip()
@@ -2163,18 +2163,18 @@ def SetViewThumbnail():
     if skin_used == 'skin.confluence':
         xbmc.executebuiltin('Container.SetViewMode(500)')
     elif skin_used == 'skin.aeon.nox':
-        xbmc.executebuiltin('Container.SetViewMode(511)') 
+        xbmc.executebuiltin('Container.SetViewMode(500)') 
     else:
         xbmc.executebuiltin('Container.SetViewMode(500)')
 
 def SetViewList():
     skin_used = xbmc.getSkinDir()
     if skin_used == 'skin.confluence':
-        xbmc.executebuiltin('Container.SetViewMode(511)')
+        xbmc.executebuiltin('Container.SetViewMode(500)')
     elif skin_used == 'skin.aeon.nox':
-        xbmc.executebuiltin('Container.SetViewMode(511)') 
+        xbmc.executebuiltin('Container.SetViewMode(500)') 
     else:
-        xbmc.executebuiltin('Container.SetViewMode(511)')
+        xbmc.executebuiltin('Container.SetViewMode(500)')
 	
 	
 def pluginquerybyJSON(url):
