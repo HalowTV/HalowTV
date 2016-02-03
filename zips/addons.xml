@@ -145,7 +145,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="5.10" provider-name="Halow">
+<addon id="plugin.video.kurd" name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]" version="5.11" provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -159,6 +159,38 @@
     <description>Kurdistan Livestreams
 
  ALL KURDISH TV FROM HALOW TV</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.kurdcinama"
+       name="[COLOR red]Kurd[COLOR green]Cinama[/COLOR]"
+       version="1.0.1"
+       provider-name="Halow">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="HALOWTV.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+    <description lang="en">[COLOR red]WATCH ENG KUDISH TV SHOW ON KURD CINAMA[/COLOR]</description>
+    <platform>all</platform>
   </extension>
 </addon>
 
