@@ -1,11 +1,11 @@
 ﻿<settings>
-  <category label="General">
-    <setting id="Updatecommonresolvers" label="Update Resolver" type="bool" default="false"/>
-	<setting label="Enable Auto Play" default="false" type="bool" id="autoplay"/>
-	<setting label="Enable Thumbnail" default="true" type="bool" id="Thumbnail_On"/>
-	<setting id="default_player" type="labelenum" label="Default " values="1" default="2"  />
-  </category>
-  <category label="My List">
-		<setting label="" id="" type="text" default="" />
+	<category label="General">
+		<setting id="Updatecommonresolvers" label="Update Resolver" type="bool" default="false"/>
+		<setting label="Enable Auto Play" default="false" type="bool" id="autoplay"/>
+		<setting label="Enable Thumbnail" default="true" type="bool" id="Thumbnail_On"/>
 	</category>
 </settings>
+
+
+
+

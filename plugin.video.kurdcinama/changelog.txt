@@ -1,7 +1,13 @@
- [/B]KURDISH  CINAMA NEW MOVIE & TV SHOW [/B]
+[B]V4.3.8[/B]
+- Change My Own List 
 
- [/B]WEBBESID : http://www.kurdcinama.com/[/B]
+[B]V4.3.7[/B]
+- Enable Pastebin in My Own List type only code after raw/
 
- [/B]COPY ONLY HALOWTV [/B]
 
+[B]V4.3.6[/B]
+- Enable to make a torrent playlist
 
+[B]V4.3.5[/B]
+- My Own List
+- Url Test

@@ -1,8 +1,8 @@
-#Halow TV
-
+#Kurdcinama.com
 import urllib
 import urllib2
 import datetime
+import shutil
 import re
 import os
 import base64
@@ -42,7 +42,8 @@ class NoRedirection(urllib2.HTTPErrorProcessor):
        return response
    https_response = http_response
 
-HALOWTVBase = 'aHR0cDovL3Bhc3RlYmluLmNvbS9yYXcvQk5SMnIweUs='
+
+DCTVBase = 'aHR0cDovL3Bhc3RlYmluLmNvbS9yYXcvQk5SMnIweUs='
 
 
 
@@ -55,6 +56,11 @@ home = xbmc.translatePath(addon.getAddonInfo('path').decode('utf-8'))
 favorites = os.path.join(profile, 'favorites')
 history = os.path.join(profile, 'history')
 
+
+
+fanart = xbmc.translatePath(os.path.join(home, 'fanart.jpg'))
+iconpath = xbmc.translatePath(os.path.join(home, 'resources/icons/'))
+#icon = xbmc.translatePath(os.path.join(home, 'resources/icons/icon.png'))
 
 
 REV = os.path.join(profile, 'list_revision')
@@ -73,6 +79,10 @@ if os.path.exists(source_file)==True:
     SOURCES = open(source_file).read()
 else: SOURCES = []
 
+
+
+    
+    
 
 ###
 API_URL = 'http://ida.omroep.nl/aapi/?stream='
@@ -151,7 +161,16 @@ def findStream(page) :
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.live.kurdcinamar3-%s]: %s" %(string))
+        xbmc.log("[addon.live.Kurd Cinamar3-%s]: %s" %(string))
+
+
+def Play():
+    paradise = 'http://shoutcast.paradiseradio.org:8390/'
+    pl = xbmc.PlayList(xbmc.PLAYLIST_MUSIC)
+    pl.clear()    
+    pl.add(paradise)
+
+    xbmc.Player().play(pl)
 
 
 def makeRequest(url, headers=None):
@@ -167,40 +186,52 @@ def makeRequest(url, headers=None):
             addon_log('URL: '+url)
             if hasattr(e, 'code'):
                 addon_log('We failed with error code - %s.' % e.code)
-                xbmc.executebuiltin("XBMC.Notification(kurdcinama,We failed with error code - "+str(e.code)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,We failed with error code - "+str(e.code)+",10000,"+icon+")")
             elif hasattr(e, 'reason'):
                 addon_log('We failed to reach a server.')
                 addon_log('Reason: %s' %e.reason)
-                xbmc.executebuiltin("XBMC.Notification(kurdcinama,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
 
 				
-def HALOWTVIndex():
-    addon_log("HALOWTVIndex")
-    #addDir('[COLOR gold]Latest News[/COLOR]','Twitter',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
-    getData(base64.b64decode(HALOWTVBase),'')
-
-    #addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
-
+def DCTVIndex():
+    addon_log("DCTVIndex")
+    #addDir('Nieuws','Nieuws',46,'%s/news.png'% iconpath ,  FANART,'','','','')
+    try :
+        getData(base64.b64decode(DCTVBase),'')
+    except:
+        pass
+    addDir('Search','Search',40,'png' ,  FANART,'','','','')
+    #addDir('Listen Paradise Radio','Listen Paradise Radio',4,'%s/paradiseradio.png'% iconpath ,  FANART,'','','','')
+    
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
-def twitter():
-	text = 'Facebook kurdcinama'
+
+def Nieuws():
+	text = ''
 	twit = ''
 	req = urllib2.Request(twit)
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 	response = urllib2.urlopen(req)
 	link=response.read()
 	response.close()
-	match=re.compile("<div class=\"baseHtml\">(.+?)</div>",re.DOTALL).findall(link)
-	for status in match:
+	match=re.compile("<title>(.+?)</title><pubDate>(.+?)</pubDate>",re.DOTALL).findall(link)
+	for status, dte in match:
 	    try:
 			    status = status.decode('ascii', 'ignore')
 	    except:
 			    status = status.decode('utf-8','ignore')
+	    dte = dte[:-15]
 	    status = status.replace('&amp;','')
-	    text = status
-	showText('[COLOR yellow][B]@kurdcinama[/B][/COLOR]', text)
+	    dte = '[COLOR blue][B]'+dte+'[/B][/COLOR]'
+	    text = text+dte+'\n'+status+'\n'+'\n'
+	showText('[COLOR blue][B]Kurd Cinama Laaste Nieuws[/B][/COLOR]', text)
 
+
+
+def Privacy_Policy():
+	dialog = xbmcgui.Dialog()
+        dialog.ok("Privacy Policy", "No video or videos are hosted by .", "Any of the video you can find here may be gotten for free on sites like Justin.tv, Ustream.tv, Selfcast, bvls2016, and many others.Note we do not promise or guarantee our service and are not responsible for any action of our user's.We have no partnership and don't request to have partnership with any owner of video's or stream's given on our website.","All content is copyright of their respective owners.")
+        
 def showText(heading, text):
     id = 10147
     xbmc.executebuiltin('ActivateWindow(%d)' % id)
@@ -342,7 +373,7 @@ def addSource(url=None):
             b.close()
         addon.setSetting('new_url_source', "")
         addon.setSetting('new_file_source', "")
-        xbmc.executebuiltin("XBMC.Notification(kurdcinama,New source added.,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,New source added.,5000,"+icon+")")
         addon.openSettings()
 
 
@@ -452,7 +483,7 @@ def getData(url,fanart):
                 name = channel('name')[0].string
                 thumbnail = channel('thumbnail')[0].string
                 if thumbnail == None:
-                    thumbnail = ''
+                    thumbnail = icon
 
                 try:
                     if not channel('fanart'):
@@ -507,7 +538,11 @@ def getData(url,fanart):
             addon_log('No Channels: getItems')
             getItems(soup('item'),fanart)
     else:
-        parse_m3u(soup)
+        try:
+            parse_m3u(soup)
+        except:
+            pass
+            
 
     if SetViewLayout == "Thumbnail":
        SetViewThumbnail()
@@ -539,7 +574,7 @@ def parse_m3u(data):
             #else:
 
         else:
-            thumbnail = ''
+            thumbnail = icon
         if 'type' in other:
             mode_type = re_me(other,'type=[\'"](.*?)[\'"]')
             if mode_type == 'yt-dl':
@@ -572,7 +607,7 @@ def getChannelItems(name,url,fanart):
                 if thumbnail == None:
                     raise
             except:
-                thumbnail = ''
+                thumbnail = icon
             try:
                 if not channel('fanart'):
                     if addon.getSetting('use_thumb') == "true":
@@ -647,7 +682,7 @@ def GetSublinks(name,url,iconimage,fanart):
             pass
     else:
          dialog=xbmcgui.Dialog()
-         rNo=dialog.select('kurdcinama Select A Source', List)
+         rNo=dialog.select('Kurd Cinama Select A Source', List)
          if rNo>=0:
              rName=str(List[rNo])
              rURL=str(ListU[rNo])
@@ -662,25 +697,25 @@ def GetSublinks(name,url,iconimage,fanart):
 				
 def SearchChannels():
 #hakamac code
-    KeyboardMessage = 'Name of channel show or movie on  kurdcinama'
+    KeyboardMessage = 'Name of channel show or movie'
     Searchkey = ''
     keyboard = xbmc.Keyboard(Searchkey, KeyboardMessage)
     keyboard.doModal()
     if keyboard.isConfirmed():
        Searchkey = keyboard.getText().replace('\n','').strip()
        if len(Searchkey) == 0: 
-          xbmcgui.Dialog().ok('kurdcinama', 'Nothing Entered')
+          xbmcgui.Dialog().ok('Kurd Cinama', 'Nothing Entered')
           return	   
     
     Searchkey = Searchkey.lower()
     List=[]
-    List.append(HALOWTVBase)
+    List.append(DCTVBase)
     PassedUrls = 0
     FoundChannel = 1 
     ReadChannel = 0
     FoundMatch = 0
     progress = xbmcgui.DialogProgress()
-    progress.create('kurdcinama Searching Please wait',' ')
+    progress.create('Kurd Cinama Searching Please wait',' ')
 	
     while FoundChannel <> ReadChannel:
         BaseSearch = List[ReadChannel].strip()
@@ -847,7 +882,22 @@ def getItems(items,fanart):
                                 else:
                                     p2p='plugin://program.plexus/?url='+i.string +'&mode=1&name=' +name 
                                 url.append(p2p)
-                                
+                elif len(item('torrent')) >0:
+                    for i in item('torrent'):
+                        if not i.string == None:
+                            title = item('title')[0].string
+                            name = base64.b64decode(title)
+                            if addon.getSetting('torrent_player') == 'Pulsar':
+                                torrent = 'plugin://plugin.video.pulsar/play?uri='+base64.b64decode(i.string)
+                            else: #addon.getSetting('torrent_player') == 'KmediaTorrent':
+                                torrent = 'plugin://plugin.video.kmediatorrent/play/'+base64.b64decode(i.string)
+                            #elif addon.getSetting('torrent_player') == 'Torrenter':
+                                #torrent = 'plugin://plugin.video.torrenter/?action=playSTRM&url='+i.string+'&not_download_only=True'
+                            #elif addon.getSetting('torrent_player') == 'YATP':
+                                #torrent = 'plugin://plugin.video.yatp/?action=play&torrent='+i.string
+                            #else :
+                                #torrent = 'plugin.video.xbmctorrent/play/'+i.string
+                            url.append(torrent)
                 elif len(item('vaughn')) >0:
                     for i in item('vaughn'):
                         if not i.string == None:
@@ -1917,7 +1967,7 @@ def urlsolver(url):
     try:
         import genesisresolvers
     except Exception:
-        xbmc.executebuiltin("XBMC.Notification(kurdcinama,Please enable Update Commonresolvers to Play in Settings. - ,10000)")
+        xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,Please enable Update Commonresolvers to Play in Settings. - ,10000)")
 
     resolved=genesisresolvers.get(url).result
     if url == resolved or resolved is None:
@@ -1980,12 +2030,12 @@ def play_playlist(name, mu_playlist):
 
 def download_file(name, url):
         if addon.getSetting('save_location') == "":
-            xbmc.executebuiltin("XBMC.Notification('kurdcinama','Choose a location to save files.',15000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification('Kurd Cinama','Choose a location to save files.',15000,"+icon+")")
             addon.openSettings()
         params = {'url': url, 'download_path': addon.getSetting('save_location')}
         downloader.download(name, params)
         dialog = xbmcgui.Dialog()
-        ret = dialog.yesno('kurdcinama', 'Do you want to add this file as a source?')
+        ret = dialog.yesno('Kurd Cinama', 'Do you want to add this file as a source?')
         if ret:
             addSource(os.path.join(addon.getSetting('save_location'), name))
 
@@ -2084,7 +2134,7 @@ def search(site_name,search_term=None):
                 SaveToFile(history,page_data,append=True)
                 return url
         else:
-            xbmc.executebuiltin("XBMC.Notification(kurdcinama,No IMDB match found ,7000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,No IMDB match found ,7000,"+icon+")")
 ## Lunatixz PseudoTV feature
 def ascii(string):
     if isinstance(string, basestring):
@@ -2248,6 +2298,17 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
         #print 'added',name
         return ok
 
+def keyboard():
+    keyboard = xbmc.Keyboard('', 'Enter URL:', False)
+    keyboard.doModal()
+    if keyboard.isConfirmed():
+        query = keyboard.getText()
+        url=query
+        #urlsolver(url)
+        xbmc.Player().play(url)
+
+
+
 def playsetresolved(url,name,iconimage,setresolved=True):
     if setresolved:
         liz = xbmcgui.ListItem(name, iconImage=iconimage)
@@ -2336,7 +2397,7 @@ addon_log("Name: "+str(name))
    
 if mode==None:
     addon_log("Index")
-    HALOWTVIndex()
+    DCTVIndex()
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==1:
@@ -2354,9 +2415,13 @@ elif mode==3:
     getSubChannelItems(name,url,fanart)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
+elif mode==4:
+        Play()
 
-
-
+elif mode==6:
+    addon_log("getData")
+    getData(url,fanart)
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
 elif mode==7:
@@ -2406,7 +2471,7 @@ elif mode==17:
     if url:
         playsetresolved(url,name,iconimage,setresolved)
     else:
-        xbmc.executebuiltin("XBMC.Notification(kurdcinama,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 
 elif mode==19:
 	addon_log("Genesiscommonresolvers")
@@ -2435,7 +2500,16 @@ elif mode==40:
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==45:
-    twitter()
+    Privacy_Policy()
+
+elif mode==46:
+    Nieuws()
+
+elif mode==47:
+    keyboard()
+
+elif mode==48:
+    MyIndex()
     
 	
 elif mode==53:
