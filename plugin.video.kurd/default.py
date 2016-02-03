@@ -88,6 +88,9 @@ def main():
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/qellat-tv/chunks.m3u8?'                       ,{ 'title': 'QELLAT TV'}, icons + 'http://karwan.tv/images/tvlogo/qellat-tv.png')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/badinan-sat-tv/chunks.m3u8?'                       ,{ 'title': 'Badinan Sat TV'}, icons + 'http://karwan.tv/images/tvlogo/badinan-sat-tv.png')
     add_video_item('http://live4.karwan.tv:8081/sardam-tv/sardam-tv/chunks.m3u8?'       ,{ 'title': 'Sardam TV'}, icons + 'http://karwan.tv/images/tvlogo/sardam-tv.PNG')
+    add_video_item('http://89.163.255.18:2052/live/babo/chunklist_w1303061677.m3u8'    ,{ 'title': 'IMOVES 3D HD'}, icons + 'https://scontent-arn2-1.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/12654187_495147467340029_7943857214277295984_n.jpg?oh=fe24ae64ceaa213abbab6b8c67fa76e0&oe=5735753B')
+
+
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/mgc-tv/chunks.m3u8?'       ,{ 'title': 'MGC TV'}, icons + 'http://karwan.tv/images/tvlogo/mgc-tv.PNG')
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/farkli-tv/chunks.m3u8?'       ,{ 'title': 'FARKLI TV'}, icons + 'http://karwan.tv/images/tvlogo/farkli-tv.PNG')
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/tiviti-tv/chunks.m3u8?'       ,{ 'title': 'TİVİTİ TV'}, icons + 'http://karwan.tv/images/tvlogo/tiviti-tv.PNG')
