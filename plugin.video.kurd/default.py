@@ -50,7 +50,7 @@ def main():
     add_video_item('http://kurd-live.com:1935/live/new/chunklist_w1304379760.m3u8'       ,{ 'title': 'New HD TV'}, icons + 'http://newlinehd.tv/images/logo.png')
     add_video_item('http://162.244.81.103:1935/RegaTV/myStream/playlist.m3u8'					,{ 'title': 'REGA TV'}, icons + 'http://karwan.tv/images/tvlogo/rega-tv.png')
     add_video_item('http://38.117.88.84:7777/VINTV/VINTV_LR.m3u8?user=sgls4ddwrx45qvtqdc55rwvmhtmf&session=daa9fe599c49f81d593b85e34a499fd068633648afc627b974679d1f9200a8de31a2d0e595b18b3a0d85789d53eb146633971f5d2e6620c8&hlsid=HLS_171118'	,{ 'title': 'Vin TV'}, icons + 'http://karwan.tv/images/tvlogo/vin-tv.png')
-    add_video_item('http://38.117.88.153:7777/KirkukTV/KirkukTV_LR.m3u8?user=sglssap0pyfd4ly4wbbowu5liejb&session=ff42b3e559d5cb21df2fff98a81da21b3ac7c3e2f36c7dc0a875aa5792e84bfcf6496a5bf943e796368f817c85cb5f94d8131bd34a7e67a1de2a9a15d4e21705&hlsid=HTTP_ID_95055&group_id=-1&starttime=20151225T175450.343750' ,{ 'title': 'Kirkuk TV'}, icons + 'http://karwan.tv/images/tvlogo/kirkuk-tv.png')
+    add_video_item('http://cofafrw181.glwiz.com:7777/KirkukTV.m3u8?' ,{ 'title': 'Kirkuk TV'}, icons + 'http://karwan.tv/images/tvlogo/kirkuk-tv.png')
     add_video_item('http://38.117.88.153:7777/Jamawar/Jamawar_LR.m3u8?user=sglssap0pyfd4ly4wbbowu5liejb&session=4c6efa823699dc0bcc35ef56ce2712ac61b6156f4b3233c1d421a39c32170cac27b3f61158cd7653df6bd10244ef1e26476103c1e3be1df6&hlsid=HTTP_ID_95239&group_id=-1&starttime=20151225T175450.328125'				,{ 'title': 'Jamawar TV'}, icons + 'http://karwan.tv/images/tvlogo/jamawar-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal3/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Newroz TV'}, icons + 'http://karwan.tv/images/tvlogo/newroz-tv.png')
     add_video_item('http://avenuewtv.srfms.com:2219/live/livestream/playist.m3u8'					,{ 'title': 'WAAR TV'}, icons + 'http://karwan.tv/images/tvlogo/waar-tv.png')
@@ -89,6 +89,7 @@ def main():
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/qellat-tv/chunks.m3u8?'                       ,{ 'title': 'QELLAT TV'}, icons + 'http://karwan.tv/images/tvlogo/qellat-tv.png')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/badinan-sat-tv/chunks.m3u8?'                       ,{ 'title': 'Badinan Sat TV'}, icons + 'http://karwan.tv/images/tvlogo/badinan-sat-tv.png')
     add_video_item('http://live4.karwan.tv:8081/sardam-tv/sardam-tv/chunks.m3u8?'       ,{ 'title': 'Sardam TV'}, icons + 'http://karwan.tv/images/tvlogo/sardam-tv.PNG')
+    add_video_item('mms://77.36.241.3:1001'       ,{ 'title': 'Mahabad  TV'}, icons + 'https://upload.wikimedia.org/wikipedia/fa/c/cb/Mahabad_tv.png')
 
 
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/mgc-tv/chunks.m3u8?'       ,{ 'title': 'MGC TV'}, icons + 'http://karwan.tv/images/tvlogo/mgc-tv.PNG')
