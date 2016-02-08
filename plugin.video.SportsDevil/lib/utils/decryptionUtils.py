@@ -3,7 +3,7 @@ import pyDes
 import urllib
 import re
 from regexUtils import parseTextToGroups
-from javascriptUtils import JsFunctions, JsUnpacker, JsUnpacker95High, JsUnwiser, JsUnIonCube, JsUnFunc, JsUnPP, JsUnPush
+from javascriptUtils import JsFunctions, JsUnpacker, JsUnpackerV2, JsUnpacker95High, JsUnwiser, JsUnIonCube, JsUnFunc, JsUnPP, JsUnPush
 
 def encryptDES_ECB(data, key):
     data = data.encode()
@@ -79,6 +79,7 @@ def doDemystify(data):
     #init jsFunctions and jsUnpacker
     jsF = JsFunctions()
     jsU = JsUnpacker()
+    jsU2 = JsUnpackerV2()
     jsUW = JsUnwiser()
     jsUI = JsUnIonCube()
     jsUF = JsUnFunc()
@@ -214,6 +215,10 @@ def doDemystify(data):
     # JS P,A,C,K,E,D
     if jsU95.containsPacked(data):
         data = jsU95.unpackAll(data)
+        escape_again=True
+        
+    if jsU2.containsPacked(data):
+        data = jsU2.unpackAll(data)
         escape_again=True
     
     if jsU.containsPacked(data):

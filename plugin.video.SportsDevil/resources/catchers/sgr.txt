@@ -1,24 +1,14 @@
-item_info_name=tmp
-item_info_from=@PARAM1@
-item_info_convert=parseText('%s','.*fid="([^"' ]+).*src="([^"' ]+).*','fid|js')
-item_info_build=%s
-
 item_info_name=title
-item_info_from=fid
-item_info_build=CastTo - %s
-
-item_info_name=tmp2
-item_info_from=js
-item_info_convert=getInfo('%s','.*?src=([^"' ]+).*','@REFERER@')
-item_info_build=%s
+item_info_from=@PARAM1@
+item_info_build=sgr-m3u8
 
 item_info_name=pageUrl
-item_info_from=tmp2 + fid + '&vw=650&vh=500
+item_info_from=@PARAM1@
 item_info_build=%s
-
+ 
 item_info_name=file
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*(http[^"']+\.m3u8[^"']*).*','@pageUrl@')
+item_info_convert=getInfo('%s','.*?(http[^"'\s]+\.m3u8[^"'\s]*).*','@REFERER@')
 item_info_build=%s
 
 item_info_name=ref

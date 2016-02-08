@@ -306,10 +306,10 @@ class Parser(object):
     def __findRedirect(self, page, referer='', demystify=False):
         data = common.getHTML(page, None, referer=referer, xml=False, mobile=False, demystify=demystify)
         
-        if findVideoFrameLink(page, data):
+        if findContentRefreshLink(page, data):
+            return findContentRefreshLink(page, data)
+        elif findVideoFrameLink(page, data):
             return findVideoFrameLink(page, data)
-        elif findContentRefreshLink(data):
-            return findContentRefreshLink(data)
         elif findEmbedPHPLink(data):
             return findEmbedPHPLink(data)
             
