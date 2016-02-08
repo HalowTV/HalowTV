@@ -30,7 +30,7 @@ def iptvxtra_play():
     sys.exit(0)
 
 def main():
-    add_video_item('http://wpc.C1A9.edgecastcdn.net/hls-live/20C1A9/kurdsat/ls_satlink/b_528.m3u8'	,{ 'title': 'KurdSat TV'}, icons + 'http://karwan.tv/images/tvlogo/kurdsat-tv.png')
+    add_video_item('http://198.100.158.231:1935/kanal11/_definst_/livestream/playlist.m3u8'	,{ 'title': 'KurdSat TV'}, icons + 'http://karwan.tv/images/tvlogo/kurdsat-tv.png')
     add_video_item('rtmp://68.168.105.117/live//livestream'	,{ 'title': 'KurdSat News'}, icons + 'http://karwan.tv/images/tvlogo/kurdsat-news-tv.png')
     add_video_item('rtmp://84.244.187.12/live/livestream'			,{ 'title': 'Kurdistan TV'}, icons + 'http://karwan.tv/images/tvlogo/kurdistan-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal10/_definst_/livestream/playlist.m3u8'				,{ 'title': 'Zagros TV'}, icons + 'http://karwan.tv/images/tvlogo/zagros-tv.png')
@@ -69,7 +69,7 @@ def main():
     add_video_item('http://198.100.158.231:1935/kanal16/_definst_/livestream/playlist.m3u8'			,{ 'title': 'Rojhelat TV'}, icons + 'http://karwan.tv/images/tvlogo/rojhelat.png')
     add_video_item('http://live4.karwan.tv:8081/karwan.tv/komala-tv.stream/chunks.m3u8'				,{ 'title': 'Komala TV'}, icons + 'http://karwan.tv/images/tvlogo/komala-tv.png')
     add_video_item('http://62.210.100.139:1935/imctv/smil:imc.smil/playlist.m3u8'						,{ 'title': 'IMC TV'}, icons + 'http://karwan.tv/images/tvlogo/imc-tv.png')
-    add_video_item('http://stream-09.vty.dailymotion.com/08/dm/1/x31ptjl/live.isml/events(live-1452563831)/live-audio=128000-video=1200000.m3u8'			,{ 'title': 'MED Nuce TV'}, icons + 'http://karwan.tv/images/tvlogo/med-nuce-tv.png')
+    add_video_item('http://62.210.100.139:1935/mednucetv/smil:mednuce.smil/chunklist_w199550435_b986000_DVR_slen.m3u8'    	,{ 'title': 'MED Nuce TV'}, icons + 'http://karwan.tv/images/tvlogo/med-nuce-tv.png')
     add_video_item('http://62.210.100.139:1935/sterktv/smil:sterk/playlist.m3u8?'					,{ 'title': 'Sterk TV'}, icons + 'http://karwan.tv/images/tvlogo/sterk-tv.png')
     add_video_item('http://62.210.100.139:1935/medmuziktv/smil:medmuzik.smil/chunklist_w1912875585_b886000_slen.m3u8'			,{ 'title': 'MED Muzik TV'}, icons + 'http://karwan.tv/images/tvlogo/med-muzik-tv.png')
     add_video_item('http://origin.live.web.tv.streamprovider.net/streams/8c4a5bd6d3c5d3c21c11deb333bd4b7d/index.m3u8'					,{ 'title': 'Damla TV'}, icons + 'http://karwan.tv/images/tvlogo/damla-tv.png')
