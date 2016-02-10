@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.HALOWsnagfilms"
+       name="[COLOR red]Halow [COLOR green]Child[/COLOR]"
+       version="1.0.0"
+       provider-name="Halow TV">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">snagfilms.com</summary>
+    <description lang="en">Now Child Add-ons watch for free Thx for 2uk3y </description>
+    <disclaimer lang="en">Now Child Add-ons watch for free Thx for 2uk3y </disclaimer>
+    <platform>all</platform>
+    <language>en</language>
+    <license>Now Child Add-ons watch for free Thx for 2uk3y </license>
+    <forum>http://www.snagfilms.com/</forum>
+    <website>http://www.snagfilms.com/</website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
