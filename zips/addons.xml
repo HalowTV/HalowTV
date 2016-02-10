@@ -132,7 +132,7 @@
 
 <addon id="plugin.video.HALOWsnagfilms"
        name="[COLOR red]Halow [COLOR green]Child[/COLOR]"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="Halow TV">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -152,24 +152,6 @@
     <website>http://www.snagfilms.com/</website>
     <email></email>
     <source></source>
-  </extension>
-</addon>
-
-<addon id="plugin.video.halowmovies" name="[COLOR red][B]Halow[COLOR green] Movies[/B][/COLOR]" version="1.2" provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.addon.common" />
-	<import addon="script.module.metahandler" version="2.5.1"/>
-	<import addon="script.module.requests" />
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">WATCH MOVIES TV SERIES FREE FROM HALOW MOVIES </summary>
-    <description lang="en">WATCH MOVIES TV SERIES FREE FROM HALOW MOVIES</description>
-	<disclaimer lang="en">WATCH MOVIES TV SERIES FREE FROM HALOW MOVIES</disclaimer>
-    <platform>all</platform>
   </extension>
 </addon>
 

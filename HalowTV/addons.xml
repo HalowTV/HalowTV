@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.HALOWsnagfilms"
        name="[COLOR red]Halow [COLOR green]Child[/COLOR]"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="Halow TV">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>

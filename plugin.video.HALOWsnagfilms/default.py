@@ -18,7 +18,7 @@ import os
 host = "http://www.snagfilms.com/movies/kids_and_family"
 
 thisPlugin = int(sys.argv[1])
-addonId = "plugin.video.halowkids"
+addonId = "plugin.video.HALOWsnagfilms"
 dataPath = xbmc.translatePath('special://profile/addon_data/%s' % (addonId))
 addon = xbmcaddon.Addon()
 addonInfo = xbmcaddon.Addon().getAddonInfo
