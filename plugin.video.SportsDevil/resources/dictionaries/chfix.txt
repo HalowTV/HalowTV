@@ -75,7 +75,7 @@ Sky Sport 3 ITA
 Sportsnet World
 Sportsnet One
 Sportsnet Ontario
-ESPN
+ESPN USA
   Espn Usa
 BT Sport ESPN
   Espn
@@ -110,8 +110,6 @@ Star Sports 4
 Star Sports 1
 PTV Sports
   Ptv Sports
-PTV Sports 2
-  Ptv Sports 2
 Premier Sports
 MUTV
   Mutv
@@ -119,9 +117,3 @@ BBC One
   Bbc One
 BBC Two
   Bbc Two
-WWE Network
-  Wwe Network
-ITV1
-  Itv 1
-NBCSN
-  Nbc Sports

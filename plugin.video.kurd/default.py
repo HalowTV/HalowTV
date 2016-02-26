@@ -47,7 +47,7 @@ def main():
     add_video_item('http://198.100.158.231:1935/kanal12/_definst_/livestream/playlist.m3u8' ,{ 'title': '[COLOR yellow][B]Kanal 4 [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/kanal4.png')
     add_video_item('http://kurd-live.com:1935/live/new/chunklist_w1304379760.m3u8'       ,{ 'title': '[COLOR yellow][B]New HD TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://newlinehd.tv/images/logo.png')
     add_video_item('http://162.244.81.103:1935/RegaTV/myStream/playlist.m3u8' ,{ 'title': '[COLOR yellow][B]REGA TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/rega-tv.png')
-    add_video_item('http://38.117.88.84:7777/VINTV/VINTV_LR.m3u8?'	,{ 'title': '[COLOR yellow][B]Vin TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/vin-tv.png')
+    add_video_item('http://95.170.203.140:1213/hls/vinlive.m3u8'	,{ 'title': '[COLOR yellow][B]Vin TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/vin-tv.png')
     add_video_item('http://cofafrw181.glwiz.com:7777/KirkukTV.m3u8?' ,{ 'title': '[COLOR yellow][B]Kirkuk TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/kirkuk-tv.png')
     add_video_item('http://38.117.88.153:7777/Jamawar/Jamawar_LR.m3u8?'	,{ 'title': '[COLOR yellow][B]Jamawar TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/jamawar-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal3/_definst_/livestream/playlist.m3u8',{ 'title': '[COLOR yellow][B]Newroz TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/newroz-tv.png')
