@@ -30,7 +30,7 @@ def iptvxtra_play():
     sys.exit(0)
 
 def main():
-    add_video_item('http://198.100.158.231:1935/kanal11/_definst_/livestream/playlist.m3u8'	,{ 'title': '[COLOR yellow][B]KurdSat TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/kurdsat-tv.png')
+    add_video_item('http://wpc.C1A9.edgecastcdn.net/hls-live/20C1A9/kurdsat/ls_satlink/b_528.m3u8'	,{ 'title': '[COLOR yellow][B]KurdSat TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/kurdsat-tv.png')
     add_video_item('rtmp://68.168.105.117/live//livestream'	,{ 'title': '[COLOR yellow][B]KurdSat News [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/kurdsat-news-tv.png')
     add_video_item('rtmp://84.244.187.12/live/livestream'			,{ 'title': '[COLOR yellow][B]Kurdistan TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/kurdistan-tv.png')
     add_video_item('http://198.100.158.231:1935/kanal10/_definst_/livestream/playlist.m3u8' ,{ 'title': '[COLOR yellow][B]Zagros TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/zagros-tv.png')
