@@ -14,19 +14,27 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.f4mTester" version="2.2.3" name="f4mTester" provider-name="Shani">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.2.3"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>f4mTester</summary>
-        <description></description>
-        <platform>all</platform>
-    </extension>
+<addon
+  id="plugin.video.SportsDevil"
+  version="2016.02.01"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.requests" />
+   <import addon="script.module.pydevd" version="4.4.0" optional="true"/>
+  </requires>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Play videos of different sports streaming sites</summary>
+    <description>Play videos of different sports streaming sites</description>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="plugin.stream.vaughnlive.tv"
@@ -93,6 +101,21 @@
     <summary>Stream from http://dreamfilmhd.org</summary>
     <description>Stream from http://dreamfilmhd.org</description>
   </extension>
+</addon>
+
+<addon id="plugin.video.f4mTester" version="2.2.3" name="f4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.2.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="plugin.video.filmontv" name="FilmOn" version="1.4" provider-name="FilmOn.TV Networks Inc">
@@ -309,7 +332,7 @@
 
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
-       version="8.0.30"
+       version="9.0.1"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -323,7 +346,7 @@
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
     <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />
+    <import addon="script.module.simplejson" /> 
     <import addon="script.common.plugin.cache" version="2.5.2"/>
     <import addon="script.module.metahandler" version="2.5.1"/>
 	<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
@@ -336,26 +359,9 @@
     <summary lang="en"> http://halowtv.com/</summary>
     <description lang="en">[COLOR red]All channels from around the world/Movie/Child Movie/Streamax.tv/Swefilm.Tv/http://dreamfilmhd.bz// YouTube/Sports Replays/Filmon.TV/Radio/Ace Stream/Music/Live Sport/LiveStream/follow me on FB/Twitter
 Halow TV Add-on
-http://halowtv.com/[/COLOR]</description>
+http://halowtv.org[/COLOR]</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.veetle" version="0.3.3" name="Veetle" provider-name="fightnight (creator: t0mm0)">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.simplejson" version="2.0.10"/>
-        <import addon="script.common.plugin.cache" version="1.3.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point= "xbmc.addon.metadata">
-	<summary lang="en">Browse and stream from veetle.com</summary>
-	<description lang="en">Enables watching streams on veetle.com that are flash enabled.</description>
-        <disclaimer lang="en">Does not work for 'HD' streams which require a software download.</disclaimer>
-        <platform>all</platform>
-    </extension>
 </addon>
 
 <addon id="program.plexus"
