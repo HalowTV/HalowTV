@@ -16,6 +16,12 @@ def gAesDec(data, key):
     import mycrypt
     return mycrypt.decrypt(key,data)
 
+def cjsAesDec(data, key):
+    import json,mycrypt
+    enc_data = json.loads(data.decode('base-64'))
+    ciphertext = 'Salted__' + enc_data['s'].decode('hex') + enc_data['ct'].decode('base-64')
+    return json.loads(mycrypt.decrypt(key,ciphertext.encode('base-64')))
+
 def aesDec(data, key):
     from base64 import b64decode
     try:

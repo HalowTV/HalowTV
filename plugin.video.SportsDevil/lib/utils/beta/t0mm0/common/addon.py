@@ -596,11 +596,16 @@ class Addon:
             play = self.build_plugin_url(queries)
         else: 
             play = resolved
-        listitem = xbmcgui.ListItem(infolabels['title'], iconImage=img, 
-                                    thumbnailImage=img)
+        listitem = xbmcgui.ListItem(infolabels['title'])
         listitem.setInfo(item_type, infolabels)
         listitem.setProperty('IsPlayable', 'true')
         listitem.setProperty('fanart_image', fanart)
+        try:
+            listitem.setArt({'thumb': img})
+        except:
+            listitem.setThumbnailImage(img)
+            self.log_debug('t0mm0-addon.py: setThumbnailImage is deprecated')
+            
         if contextmenu_items:
             listitem.addContextMenuItems(contextmenu_items, replaceItems=context_replace)        
         if playlist is not False:

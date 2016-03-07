@@ -4,7 +4,7 @@ item_info_build=NewsKO - %s
 
 item_info_name=pageUrl
 item_info_from=@PARAM1@
-item_info_build=http://www.newsko.co.uk/embed1.php?channel=%s&vw=640&vh=480
+item_info_build=http://www.newsko.co.uk/embed.php?channel=%s&vw=640&vh=385
 
 item_info_name=req1
 item_info_from=pageUrl
@@ -16,6 +16,17 @@ item_info_from=req1
 item_info_convert=getInfo('%s','.*?rtmp":"([^"]+)","streamname":"([^"]+)','@pageUrl@','rtmp|file')
 item_info_build=%s
 
+item_info_name=wms
+item_info_from=http://'+rtmp+'/player.php?ch='+file+'
+item_info_convert=getInfo('%s','.*?(c2V[^"'&]+)','@pageUrl@')
+item_info_build=%s
+
+item_info_name=ref
+item_info_from=http://'+rtmp+'/player.php?ch='+file+'
+item_info_convert=quote(%s)
+item_info_convert=quote(%s)
+item_info_build=%s
+
 item_info_name=url
-item_info_from=rtmp + ' playpath=' + file + ' swfhash=2f17c059e0fb060411ac97d1da663ce996b5538b85a55affb7e42a3062abfba7 swfsize=224436 token=#@8x12pX@!x@# live=1 timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_from=http://'+rtmp+'/live/'+file+'.m3u8?token='+wms+'|Referer='+ref+'&User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36&X-Requested-With=ShockwaveFlash/20.0.0.306
 item_info_build=%s

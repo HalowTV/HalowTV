@@ -165,7 +165,6 @@ class Parser(object):
             demystify = False
             back = ''
             startUrl = inputList.curr_url
-            #print inputList, lItem
             while count == 0 and i <= maxits:
                 if i > 1:
                     ignoreCache = True
@@ -612,6 +611,8 @@ class Parser(object):
                 src = cc.decodeXppod(src)
             
             elif command == 'decodeXppodHLS':
+                if 'stkey' in item.infos:
+                    src = src.replace(item.infos['stkey'],'')
                 src = cc.decodeXppod_hls(src)
 
             elif command == 'replace':
@@ -637,6 +638,9 @@ class Parser(object):
 
             elif command == 'gAesDec':
                 src = crypt.gAesDec(src,item.infos[params])
+                
+            elif command == 'cjsAesDec':
+                src = crypt.cjsAesDec(src,item.infos[params])
             
             elif command == 'aesDec':
                 src = crypt.aesDec(src,item.infos[params])
@@ -672,9 +676,7 @@ class Parser(object):
                 src = src[::-1]
                 
             elif command == 'demystify':
-                print 'demystify'
                 src = crypt.doDemystify(src)
-                print 'after demystify',src
 
             elif command == 'random':
                 paramArr = params.split(',')

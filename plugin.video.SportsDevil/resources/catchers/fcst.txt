@@ -54,5 +54,5 @@ item_info_from=rtmp_1 || rtmp_2
 item_info_build=%s
 
 item_info_name=url
-item_info_from=rtmp+' playpath='+file+' swfUrl=http://www.finecast.tv/player6/jwplayer.flash.swf flashver=WIN\2020,0,0,286 live=1 timeout=15 pageUrl=' + pageUrl
+item_info_from=rtmp+' playpath='+file+' swfUrl=http://www.finecast.tv/player6/jwplayer.flash.swf flashver=WIN\2020,0,0,306 live=1 timeout=15 pageUrl=' + pageUrl
 item_info_build=%s

@@ -4,15 +4,20 @@ item_info_build=UltraCast - %s
 
 item_info_name=pageUrl
 item_info_from=@PARAM1@
-item_info_build=http://www.ultracast.me/player.php?width=646&height=450&id=%s
+item_info_build=http://www.ultracast.me/player.php?id=%s&width=600&height=450
 
 item_info_name=d2
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*token:\s*["']([^'"]+)["'].*?file:\s*["']([^'"]+)["']','@REFERER@','d2|file')
+item_info_convert=getInfo('%s','.*pwd:\s*["']([^'"]+)["'].*?token:\s*["']([^'"]+)["'].*?file:\s*["']([^'"]+)["']','@REFERER@','pwd|r_tok|file')
+item_info_build=%s
+
+item_info_name=r_url
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*url:\s*["']([^'"]+)["'].*','@REFERER@')
 item_info_build=%s
 
 item_info_name=reqUrl
-item_info_from=http://www.ultracast.me/1.php|token='+d2+'&is_ajax=1
+item_info_from=http://www.ultracast.me/'+r_url+'|pwd='+pwd+'&token='+r_tok+'&is_ajax=1
 item_info_build=%s
 
 item_info_name=r2
@@ -38,5 +43,5 @@ item_info_convert=quote(%s)
 item_info_build=%s
 
 item_info_name=url
-item_info_from=file+rtmp+'|Referer='+ref+'&User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36&X-Requested-With=ShockwaveFlash/20.0.0.286
+item_info_from=file+rtmp+'|Referer='+ref+'&User-Agent=Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36&X-Requested-With=ShockwaveFlash/20.0.0.306
 item_info_build=%s

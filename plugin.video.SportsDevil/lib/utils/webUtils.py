@@ -34,9 +34,8 @@ class BaseRequest(object):
         self.s = requests.Session()
         if fileExists(self.cookie_file):
             self.s.cookies = self.load_cookies_from_lwp(self.cookie_file)
-        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36'})
+        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'})
         self.s.headers.update({'Accept-Language' : 'en'})
-        self.s.keep_alive = False
         self.url = ''
     
     def save_cookies_lwp(self, cookiejar, filename):
@@ -88,30 +87,28 @@ class BaseRequest(object):
             headers['X-Forwarded-For'] = '178.162.222.121'
         if 'playerapp1.pw' in urlparse.urlsplit(url).netloc:
             headers['X-Forwarded-For'] = '178.162.222.122'
-            
-        if 'finecast.tv' in urlparse.urlsplit(url).netloc:
-            self.s.headers.update({'Cookie' : 'PHPSESSID=d08b73a2b7e0945b3b1bb700f01f7d72'})
         
         if form_data:
-            #ca**on.tv/key.php
+            #zo**tv
             if 'uagent' in form_data[0]:
                 form_data[0] = ('uagent',urllib.quote(self.s.headers['User-Agent']))
-            
-            if '123456789' in form_data[0]:
-                import random
-                cotok = str(random.randrange(100000000, 999999999))
-                form_data[0] = ('token',cotok)
-                r = self.s.post(url, headers=headers, data=form_data, timeout=20, cookies = {'token' : cotok})
-            else:
-                r = self.s.post(url, headers=headers, data=form_data, timeout=20)
-            response  = r.text
+
+            r = self.s.post(url, headers=headers, data=form_data, timeout=20)
         else:
             try:
                 r = self.s.get(url, headers=headers, timeout=20)
-                response  = r.text
             except (requests.exceptions.MissingSchema):
-                response  = 'pass'
+                return 'pass'
         
+        #many utf8 encodings are specified in HTTP body not headers and requests only checks headers, maybe use html5lib
+        #https://github.com/kennethreitz/requests/issues/2086
+        if 'streamlive.to' in urlparse.urlsplit(url).netloc \
+        or 'sport365.live' in urlparse.urlsplit(url).netloc:
+            r.encoding = 'utf-8'
+        if 'lfootball.ws' in urlparse.urlsplit(url).netloc:
+            r.encoding = 'windows-1251'
+            
+        response  = r.text
         if len(response) > 10:
             if self.cookie_file:
                 self.save_cookies_lwp(self.s.cookies, self.cookie_file)

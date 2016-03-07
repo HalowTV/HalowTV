@@ -80,7 +80,7 @@ class Main:
         common.log('SportsDevil initialized')
         
 
-
+    # removed in 17 http://forum.kodi.tv/showthread.php?tid=250936&pid=2198464#pid2198464
     def getPlayerType(self):
         sPlayerType = common.getSetting('playerType')
         
@@ -111,7 +111,7 @@ class Main:
             xbmcplugin.setResolvedUrl(self.handle, True, listitem)
         else:
             url = urllib.unquote_plus(videoItem['url'])
-            xbmc.Player(self.getPlayerType()).play(url, listitem)
+            xbmc.Player().play(url, listitem)
     
     def launchChrome(self, url, title):
         action = 'RunPlugin(%s)' % ('plugin://plugin.program.chrome.launcher/?kiosk=yes&mode=showSite&stopPlayback=yes&url=' + url)
@@ -125,7 +125,7 @@ class Main:
             liz = xbmcgui.ListItem(title)
             liz.setPath(video)
             liz.setProperty('IsPlayable','true')
-            xbmc.Player(self.getPlayerType()).play(video, liz)
+            xbmc.Player().play(video, liz)
         except:
             import sys,traceback
             traceback.print_exc(file = sys.stdout)
@@ -361,13 +361,18 @@ class Main:
                 icon = common.Paths.defaultVideoIcon
             else:
                 icon = common.Paths.defaultCategoryIcon
-                
-        liz = xbmcgui.ListItem(title, title, iconImage=icon, thumbnailImage=icon)
 
         fanart = item['fanart']
         if not fanart:
             fanart = common.Paths.pluginFanart
-        liz.setProperty('fanart_image', fanart)
+
+        liz = xbmcgui.ListItem(title)
+        try:
+            liz.setArt({'thumb': icon, 'fanart': fanart})
+        except:
+            liz.setProperty('fanart_image', fanart)
+            liz.setThumbnailImage(icon)
+            common.log('main.py:374: setThumbnailImage is deprecated')
 
         """
         General Values that apply to all types:
@@ -422,7 +427,14 @@ class Main:
 
         if m_type == 'video':
             liz.setProperty('IsPlayable','true')
-            #liz.setMimeType('text')
+
+        if title.startswith('p2pcast'):
+            try:
+                liz.setMimeType('application/vnd.apple.mpegurl')
+                #liz.setContentLookup(False)
+            except:
+                common.showError('Update Kodi to 16+ to view this stream')
+                return None
 
         return liz
 
