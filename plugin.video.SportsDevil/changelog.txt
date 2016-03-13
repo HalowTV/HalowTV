@@ -1,3 +1,7 @@
+v 2016.1.17
+------------------------------
+- Removed AtdheNet.tv for its currently incompatible
+
 v 1.8.8.0 (17-Oct-14)
 ------------------------------
 - Fix: iLive (thanks to L2501)

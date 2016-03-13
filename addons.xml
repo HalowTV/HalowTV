@@ -16,7 +16,7 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="2016.03.06"
+  version="2016.3.9"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
@@ -31,7 +31,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Play videos of different sports streaming sites</summary>
-    <description>Play videos of different sports streaming sites</description>
+    <description>Play videos of different sports streaming sites. [CR]For more addons visit [COLOR blue]iwillfolo.com[/COLOR]</description>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <platform>all</platform>
   </extension>
