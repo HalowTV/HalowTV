@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<item>
+<title>[COLOR gold]****Vrijdag 21 augustus ****[/COLOR]</title>
+<link>http://ignoreme</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>F1 GP Belgie (oefensessie) (09:55)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55919b408e264 ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports F1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.78.15:443/liverepeater/ playpath=35 token=#atd%#$ZH pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports F1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.64.140:443/liverepeater playpath=35 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports F1 Italy[/COLOR] - [COLOR blue]720p[/COLOR] ::LISTSOURCE:http://212.51.146.19:4004 ::--#
+sublink:LISTNAME:[COLOR yellow]Sport1 DE[/COLOR] - [COLOR blue]720p[/COLOR] ::LISTSOURCE:http://streaming-hub.com/tv/i/sport1_1@97464/index_1300_av-p.m3u8 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>F1 GP Belgie (oefensessie) (13:55)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55919b408e264 ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports F1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.78.15:443/liverepeater/ playpath=35 token=#atd%#$ZH pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports F1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.64.140:443/liverepeater playpath=35 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports F1 Italy[/COLOR] - [COLOR blue]720p[/COLOR] ::LISTSOURCE:http://212.51.146.19:4004 ::--#
+sublink:LISTNAME:[COLOR yellow]Sport1 DE[/COLOR] - [COLOR blue]720p[/COLOR] ::LISTSOURCE:http://streaming-hub.com/tv/i/sport1_1@97464/index_1300_av-p.m3u8 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Tennis: Cincinnati (17:00)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]Silk Sport 3[/COLOR] - [COLOR blue]1080p[/COLOR] ::LISTSOURCE:http://80.77.52.6:3719/udp/226.0.0.9:12345 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Ijshockey: Neman Grodno - Adler Mannheim (18:00)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]Sport1 DE[/COLOR] - [COLOR blue]720p[/COLOR] ::LISTSOURCE:http://80.77.52.6:3719/udp/226.0.0.9:12345 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>FC Groningen - Excelsior (20:00)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 10[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55d48013078f8 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Hertha BSC - Werder Bremen (20:30)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 9[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55d47a705052f ::--#
+sublink:LISTNAME:[COLOR yellow]Sport TV 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://$OPT:rtmp-raw=rtmpe://5.153.233.106:443/share/ playpath=live3-qszlx swfUrl=http://sharecast.to/player/player20.swf live=1 timeout=10 pageUrl=http://sharecast.to/ ::--#
+sublink:LISTNAME:[COLOR yellow]BT Sport Europe[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://$OPT:rtmp-raw=rtmp://80.82.64.140:443/liverepeater playpath=14 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Montpellier - Paris Saint Germain (20:30)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]More Sport[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://188.138.9.228:8023 ::--#
+sublink:LISTNAME:[COLOR yellow]Setana Eurasia[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://80.77.52.6:3719/udp/230.0.4.1:12345 ::--#
+sublink:LISTNAME:[COLOR yellow]Arena Sport 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://www.nasatv.eu:80/live?channelId=18&uid=18&deviceUser=zine&devicePass=zine ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Malaga - Sevilla (20:30)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55919b408e264 ::--#
+sublink:LISTNAME:[COLOR yellow]Sport TV 2[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://$OPT:rtmp-raw=rtmpe://5.153.233.106:443/share/ playpath=live2-bipmr swfUrl=http://sharecast.to/player/player20.swf live=1 timeout=13 pageUrl=http://sharecast.to/ ::--#
+sublink:LISTNAME:[COLOR yellow]Silk Sport 1[/COLOR] - [COLOR blue]1080p[/COLOR] ::LISTSOURCE:http://80.77.52.6:3719/udp/226.0.0.7:12345 ::--#
+sublink:LISTNAME:[COLOR yellow]Sportklub 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://www.nasatv.eu:80/live?channelId=101&uid=18&deviceUser=zine&devicePass=zine ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://$OPT:rtmp-raw=rtmp://80.82.64.140:443/liverepeater playpath=3 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://109.200.1.82:1935/tes/skysp3.stream?e607b5b743e1842ee50e1556bbf3ae42 ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.64.140:443/liverepeater playpath=3 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.78.85:443/liverepeater playpath=3 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.64.140:443/liverepeater%20playpath=3%20swfUrl=http://popeoftheplayers.eu/atdedead.swf%20pageUrl=http://popeoftheplayers.eu/crichd.php?id=9&width=600&height=450%20token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmpe://134.19.185.206:1935/livedge playpath=sskys3  swfUrl=http://player.hdcast.org/_.swf pageUrl=http://www.hdcast.org/embedlive4.php?u=sskysn&vw=640&vh=400&domain=www.streamhd.eu token=Fo5_n0w?U.rA6l3-70w47ch ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 3[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmpe://134.19.185.206:1935/livedge playpath=mamahdsky3 swfUrl=http://player.hdcast.org/_.swf pageUrl=http://www.hdcast.org/embedlive1.php?u=mamahdsky3&vw=680&vh=490&domain=mamahd.com token=Fo5_n0w?U.rA6l3-70w47ch ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Voetbal Inside (20:30)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 6[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55cf3420ed922 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>STVV - Genk (20:30)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 4[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55647925500c3 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Birmingham - Derby County (20:30)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]Sport 1 Voetbal[/COLOR] - [COLOR blue]720p[/COLOR] ::LISTSOURCE:http://ziggo.cdn.sport1.triple-it.nl/sport1voetbalhd.isml/QualityLevels(2896000)/manifest(format=m3u8-aapl).m3u8 ::--#
+sublink:LISTNAME:[COLOR yellow]Sport 1 Voetbal[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://ziggo.cdn.sport1.triple-it.nl/sport1voetbalhd.isml/QualityLevels(696000)/manifest(format=m3u8-aapl).m3u8 ::--#
+sublink:LISTNAME:[COLOR yellow]BVLS 2013 - Stream 2[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:plugin://plugin.video.veetle/?channel=55bbe433277f3 ::--#
+sublink:LISTNAME:[COLOR yellow]Gazzetta TV[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://rcsgazzettatv59-lh.akamaihd.net/i/gazzettaTV59Univ_1@127684/master.m3u8 ::--#
+sublink:LISTNAME:[COLOR yellow]Gazzetta TV[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://rcsgazzettatv59-lh.akamaihd.net/i/gazzettaTV59Univ_1@127684/index_700_av-p.m3u8?sd=10&rebase=on ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 5[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://$OPT:rtmp-raw=rtmp://80.82.64.140:443/liverepeater playpath=5 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 5[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://109.200.1.82:1935/tes/skysp5.stream?e607b5b743e1842ee50e1556bbf3ae42 ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 5[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.64.140:443/liverepeater playpath=5 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 5[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://80.82.78.85:443/liverepeater playpath=5 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 5[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmpe://134.19.185.206:1935/livedge playpath=sskys5  swfUrl=http://player.hdcast.org/_.swf pageUrl=http://www.hdcast.org/embedlive4.php?u=sskysn&vw=640&vh=400&domain=www.streamhd.eu token=Fo5_n0w?U.rA6l3-70w47ch ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 5[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmpe://134.19.185.206:1935/livedge playpath=mamahdsky5 swfUrl=http://player.hdcast.org/_.swf pageUrl=http://www.hdcast.org/embedlive1.php?u=mamahdsky5&vw=680&vh=490&domain=mamahd.com token=Fo5_n0w?U.rA6l3-70w47ch ::--#
+sublink:LISTNAME:[COLOR yellow]Sky Sports 5[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://195.154.227.38:1935/ive/skysports5lsh/playlist.m3u8 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Rio Ave - Sporting Braga (21:30)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]Sport TV 1[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://$OPT:rtmp-raw=rtmpe://5.153.233.106:443/share/ playpath=live1-rbi6c swfUrl=http://sharecast.to/player/player20.swf live=1 timeout=13 pageUrl=http://sharecast.to/ ::--#
+sublink:LISTNAME:[COLOR yellow]Silk Sport 2[/COLOR] - [COLOR blue]1080p[/COLOR] ::LISTSOURCE:http://80.77.52.6:3719/udp/226.0.0.8:12345 ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Fietsen: Tour of Colorado (22:00)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]Eurosport 2 UK[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://$OPT:rtmp-raw=rtmp://80.82.64.140:443/liverepeater playpath=10 pageUrl=http://popeoftheplayers.eu/ token=#atd%#$ZH ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>Banfield - Gimnasia La Plata (02:10)</title>
+<link>
+sublink:LISTNAME:[COLOR yellow]TV Publica[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:rtmp://live-edge01.telecentro.net.ar:1935/live/tvphd-180 ::--#
+sublink:LISTNAME:[COLOR yellow]TV Publica[/COLOR] - [COLOR blue]SD[/COLOR] ::LISTSOURCE:http://live-edge01.telecentro.net.ar:1935/live/tvphd-360/playlist.m3u8? ::--#
+sublink:LISTNAME:[COLOR yellow]TV Publica[/COLOR] - [COLOR blue]720p[/COLOR] ::LISTSOURCE:http://live-edge01.telecentro.net.ar:1935/live/tvphd-720/playlist.m3u8? ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[COLOR red]Later meer...[/COLOR]</title>
+<link>http://ignoreme</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[COLOR green]Mis je een wedstrijd?[/COLOR]</title>
+<link>http://ignoreme</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[COLOR green]Geef het door via het Dutch Cloud TV Forum of Facebook![/COLOR]</title>
+<link>http://ignoreme</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[COLOR green]Forum: http://www.dutchcloudtv.com/[/COLOR]</title>
+<link>http://ignoreme</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<item>
+<title>[COLOR green]Facebook: https://www.facebook.com/DutchCloudTV[/COLOR]</title>
+<link>http://ignoreme</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+<!--
+
+<item>
+<title>[COLOR gold]**** ****[/COLOR]</title>
+<link>http://ignoreme</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+ 
+ 
+<item>
+<title></title>
+<link>
+sublink:LISTNAME:[COLOR yellow][/COLOR] - [COLOR blue][/COLOR] ::LISTSOURCE: ::--#
+</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</item>
+
+Moneysports Live sport:
+http://pastebin.com/2Z7VsJwt
+
+BVLS 2013:
+http://dutchsportstreams.com/xml/dssbvls2013.xml
+
+streamoftheday.com:
+http://dutchsportstreams.com/xml/dsssotd.xml
+-->

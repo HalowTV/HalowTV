@@ -1,0 +1,11 @@
+﻿<settings>
+  <category label="General">
+    <setting id="Updatecommonresolvers" label="Update Resolver" type="bool" default="false"/>
+	<setting label="Enable Auto Play" default="false" type="bool" id="autoplay"/>
+	<setting label="Enable Thumbnail" default="true" type="bool" id="Thumbnail_On"/>
+	<setting id="default_player" type="labelenum" label="Default p2p-player" values="p2p-streams|Plexus" default="Plexus"  />
+  </category>
+  <category label="My List">
+		<setting label="My List" id="My List" type="text" default="c:\\m3u\mylist.m3u" />
+	</category>
+</settings>
