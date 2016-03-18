@@ -43,7 +43,7 @@ class NoRedirection(urllib2.HTTPErrorProcessor):
    https_response = http_response
 
 
-DCTVBase = 'aHR0cDovL3Bhc3RlYmluLmNvbS9yYXcvQk5SMnIweUs='
+DCTVBase = 'aHR0cDovL3Bhc3RlYmluLmNvbS9yYXcva2lBTGhLYm4='
 
 
 
@@ -161,7 +161,7 @@ def findStream(page) :
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.live.Kurd Cinamar3-%s]: %s" %(string))
+        xbmc.log("[addon.live.KURDISH MOVIESr3-%s]: %s" %(string))
 
 
 def Play():
@@ -186,11 +186,11 @@ def makeRequest(url, headers=None):
             addon_log('URL: '+url)
             if hasattr(e, 'code'):
                 addon_log('We failed with error code - %s.' % e.code)
-                xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,We failed with error code - "+str(e.code)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(KURDISH MOVIES,We failed with error code - "+str(e.code)+",10000,"+icon+")")
             elif hasattr(e, 'reason'):
                 addon_log('We failed to reach a server.')
                 addon_log('Reason: %s' %e.reason)
-                xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(KURDISH MOVIES,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
 
 				
 def DCTVIndex():
@@ -200,7 +200,7 @@ def DCTVIndex():
         getData(base64.b64decode(DCTVBase),'')
     except:
         pass
-    addDir('Search','Search',40,'png' ,  FANART,'','','','')
+    #addDir('Search','Search',40,'png' ,  FANART,'','','','')
     #addDir('Listen Paradise Radio','Listen Paradise Radio',4,'%s/paradiseradio.png'% iconpath ,  FANART,'','','','')
     
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
@@ -224,7 +224,7 @@ def Nieuws():
 	    status = status.replace('&amp;','')
 	    dte = '[COLOR blue][B]'+dte+'[/B][/COLOR]'
 	    text = text+dte+'\n'+status+'\n'+'\n'
-	showText('[COLOR blue][B]Kurd Cinama Laaste Nieuws[/B][/COLOR]', text)
+	showText('[COLOR blue][B]KURDISH MOVIES Laaste Nieuws[/B][/COLOR]', text)
 
 
 
@@ -373,7 +373,7 @@ def addSource(url=None):
             b.close()
         addon.setSetting('new_url_source', "")
         addon.setSetting('new_file_source', "")
-        xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,New source added.,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(KURDISH MOVIES,New source added.,5000,"+icon+")")
         addon.openSettings()
 
 
@@ -682,7 +682,7 @@ def GetSublinks(name,url,iconimage,fanart):
             pass
     else:
          dialog=xbmcgui.Dialog()
-         rNo=dialog.select('Kurd Cinama Select A Source', List)
+         rNo=dialog.select('KURDISH MOVIES Select A Source', List)
          if rNo>=0:
              rName=str(List[rNo])
              rURL=str(ListU[rNo])
@@ -704,7 +704,7 @@ def SearchChannels():
     if keyboard.isConfirmed():
        Searchkey = keyboard.getText().replace('\n','').strip()
        if len(Searchkey) == 0: 
-          xbmcgui.Dialog().ok('Kurd Cinama', 'Nothing Entered')
+          xbmcgui.Dialog().ok('KURDISH MOVIES', 'Nothing Entered')
           return	   
     
     Searchkey = Searchkey.lower()
@@ -715,7 +715,7 @@ def SearchChannels():
     ReadChannel = 0
     FoundMatch = 0
     progress = xbmcgui.DialogProgress()
-    progress.create('Kurd Cinama Searching Please wait',' ')
+    progress.create('KURDISH MOVIES Searching Please wait',' ')
 	
     while FoundChannel <> ReadChannel:
         BaseSearch = List[ReadChannel].strip()
@@ -1967,7 +1967,7 @@ def urlsolver(url):
     try:
         import genesisresolvers
     except Exception:
-        xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,Please enable Update Commonresolvers to Play in Settings. - ,10000)")
+        xbmc.executebuiltin("XBMC.Notification(KURDISH MOVIES,Please enable Update Commonresolvers to Play in Settings. - ,10000)")
 
     resolved=genesisresolvers.get(url).result
     if url == resolved or resolved is None:
@@ -2030,12 +2030,12 @@ def play_playlist(name, mu_playlist):
 
 def download_file(name, url):
         if addon.getSetting('save_location') == "":
-            xbmc.executebuiltin("XBMC.Notification('Kurd Cinama','Choose a location to save files.',15000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification('KURDISH MOVIES','Choose a location to save files.',15000,"+icon+")")
             addon.openSettings()
         params = {'url': url, 'download_path': addon.getSetting('save_location')}
         downloader.download(name, params)
         dialog = xbmcgui.Dialog()
-        ret = dialog.yesno('Kurd Cinama', 'Do you want to add this file as a source?')
+        ret = dialog.yesno('KURDISH MOVIES', 'Do you want to add this file as a source?')
         if ret:
             addSource(os.path.join(addon.getSetting('save_location'), name))
 
@@ -2134,7 +2134,7 @@ def search(site_name,search_term=None):
                 SaveToFile(history,page_data,append=True)
                 return url
         else:
-            xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,No IMDB match found ,7000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(KURDISH MOVIES,No IMDB match found ,7000,"+icon+")")
 ## Lunatixz PseudoTV feature
 def ascii(string):
     if isinstance(string, basestring):
@@ -2471,7 +2471,7 @@ elif mode==17:
     if url:
         playsetresolved(url,name,iconimage,setresolved)
     else:
-        xbmc.executebuiltin("XBMC.Notification(Kurd Cinama,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(KURDISH MOVIES,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 
 elif mode==19:
 	addon_log("Genesiscommonresolvers")

@@ -236,8 +236,8 @@
 </addon>
 
 <addon id="plugin.video.kurdcinama"
-       name="[COLOR red]Kurd[COLOR green]Cinama[/COLOR]"
-       version="4.3.12"
+       name="[COLOR red]KURDISH [COLOR green]MOVIES[/COLOR]"
+       version="4.3.13"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -261,8 +261,8 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLOR red]WATCH ENG KUDISH TV SHOW ON KURD CINAMA[/COLOR]</summary>
-    <description lang="en">[COLOR red]WATCH ENG KUDISH TV SHOW ON KURD CINAMA[/COLOR]</description>
+    <summary lang="en">[COLOR red]WATCH ENG KUDISH TV SHOW ON KURDISH MOVIES[/COLOR]</summary>
+    <description lang="en">[COLOR blue]WATCH ENG KUDISH TV SHOW ON KURDISH MOVIES[/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
