@@ -237,7 +237,7 @@
 
 <addon id="plugin.video.kurdcinama"
        name="[COLOR red]KURDISH [COLOR green]MOVIES[/COLOR]"
-       version="4.3.13"
+       version="4.3.14"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
