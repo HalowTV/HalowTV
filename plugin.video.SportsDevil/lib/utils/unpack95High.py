@@ -28,7 +28,11 @@ def detect(source):
 
 def unpack(source):
     """Unpacks P.A.C.K.E.R. packed js code."""
+    print len(source)
     payload, symtab, radix, count = _filterargs(source)
+    
+    modp = r'c%a\+(\d+)'
+    mod = int(re.compile(modp).findall(source)[0])
 
     if count != len(symtab):
         raise UnpackingError('Malformed p.a.c.k.e.r. symtab.')
@@ -37,8 +41,8 @@ def unpack(source):
         """Look up symbols in the synthetic symtab."""
         word = 0 
         for i, char in enumerate(reversed(match.group(0))):
-            word = word + (ord(char)-161)*(95**i)
-
+            word = word + (ord(char)-mod)*(radix**i)
+        
         return symtab[word] or word
     
     source = re.sub(ur'[\xa1-\xff]+', lookup, payload)
@@ -46,8 +50,7 @@ def unpack(source):
 
 def _filterargs(source):
     """Juice from a source file the four args needed by decoder."""
-    argsregex = (r"}\('(.*)', *(\d+), *(\d+), *'(.*)'\."
-                 r"split\('\|'\), *(\d+), *(.*)\)\)")
+    argsregex = (r"}\('(.*)', *(\d+), *(\d+), *'(.*)'\.")
     args = re.search(argsregex, source, re.DOTALL).groups()
 
     try:

@@ -22,17 +22,16 @@ item_info_from=uagent=uagent&pid=' + pid
 item_info_build=%s
 
 item_info_name=pageUrl
-item_info_from=http://www.zoomtv.me/embed.php?v=' + fid + '&vw=660&vh=450|' + postData
+item_info_from=http://www.zoomtv.me/embed.php?v=' + fid + '&vw=650&vh=450|' + postData
 item_info_build=%s
 
 item_info_name=pageUrl2
-item_info_from=http://www.zoomtv.me/embed.php?v=' + fid + '&vw=660&vh=450
+item_info_from=http://www.zoomtv.me/embed.php?v=' + fid + '&vw=650&vh=450
 item_info_build=%s
 
 item_info_name=req
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*file:\s*unescape\(['"]([^'"]+)['"].*','@REFERER@')
-item_info_convert=replace('%s','+','%2B')
+item_info_convert=getInfo('%s','.*file:['"]([^'"]+)['"].*','@REFERER@')
 item_info_build=http://www.zoomtv.me/%s
 
 item_info_name=h0

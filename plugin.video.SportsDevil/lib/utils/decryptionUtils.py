@@ -139,13 +139,13 @@ def doDemystify(data):
                 data = data.replace(g, urllib.unquote(base64_data.decode('base-64')))
                 escape_again=True
     
-    #r = re.compile('(eval\\(function\\(\w+,\w+,\w+,\w+.*?join\\(\'\'\\);*}\\(.*?\\))', flags=re.DOTALL)
-    #for g in r.findall(data):
-        #try:
-            #data = data.replace(g, wdecode(g))
-            #escape_again=True
-        #except:
-            #pass
+    r = re.compile('(eval\\(function\\((?!w)\w+,\w+,\w+,\w+.*?join\\(\'\'\\);*}\\(.*?\\))', flags=re.DOTALL)
+    for g in r.findall(data):
+        try:
+            data = data.replace(g, wdecode(g))
+            escape_again=True
+        except:
+            pass
 
     # n98c4d2c
     if 'function n98c4d2c(' in data:

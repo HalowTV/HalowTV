@@ -95,7 +95,7 @@ class JsUnpacker:
             return in_data
         except: 
             traceback.print_exc(file=sys.stdout)
-            return data.replace(enc_val,'')
+            return in_data
 
     def containsPacked(self, data):
         return 'p,a,c,k,e,d' in data or 'p,a,c,k,e,r' in data
@@ -171,13 +171,8 @@ class JsUnpacker95High:
     def unpackAll(self, data):
         try:
             in_data=data
-            sPattern = '(eval\\(function\\(p,a,c,k,e,d.*)'
+            sPattern = '(eval\\(function\\(p,a,c,k.*)'
             enc_data=re.compile(sPattern).findall(in_data)
-            if len(enc_data)==0:
-                sPattern = '(eval\\(function\\(p,a,c,k,e,r.*)'
-                enc_data=re.compile(sPattern).findall(in_data)
-                
-
             for enc_val in enc_data:
                 unpack_val=unpack95High.unpack(enc_val)
                 in_data=in_data.replace(enc_val,unpack_val)
@@ -185,10 +180,11 @@ class JsUnpacker95High:
             return in_data
         except: 
             traceback.print_exc(file=sys.stdout)
-            return data.replace(enc_val,'')
+            return in_data
+            #return data.replace(enc_val,'')
 
     def containsPacked(self, data):
-        return r'[\xa1-\xff]' in data
+        return r'[\xa1-\xff]' in data or r'RegExp(e(c)' in data
 
 
 class JsUnIonCube:

@@ -1,15 +1,14 @@
-#miss 1
 item_info_name=title
 item_info_from=@PARAM1@
-item_info_build=ESPA - %s
+item_info_build=scity - %s
 
 item_info_name=pageUrl
 item_info_from=@PARAM1@
-item_info_build=http://www.letgo.tv/embed.php?channel=%s&vw=630&vh=450
+item_info_build=http://www.scity.tv/embed.php?channel=%s&vw=630&vh=450
 
 item_info_name=tokenUrl
 item_info_from=@PARAM1@
-item_info_build=http://www.letgo.tv/securetoken.php?id=%s
+item_info_build=http://www.scity.tv/securetoken.php?id=%s
 
 item_info_name=flashvars
 item_info_from=tokenUrl

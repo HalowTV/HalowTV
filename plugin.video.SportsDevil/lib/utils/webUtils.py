@@ -34,8 +34,8 @@ class BaseRequest(object):
         self.s = requests.Session()
         if fileExists(self.cookie_file):
             self.s.cookies = self.load_cookies_from_lwp(self.cookie_file)
-        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'})
-        self.s.headers.update({'Accept-Language' : 'en'})
+        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'})
+        self.s.headers.update({'Accept-Language' : 'en-US,en;q=0.5'})
         self.url = ''
     
     def save_cookies_lwp(self, cookiejar, filename):
@@ -61,7 +61,10 @@ class BaseRequest(object):
         except:
             #quote url if it is unicode
             parsed_link = urlparse.urlsplit(url)
-            parsed_link = parsed_link._replace(netloc=parsed_link.netloc.encode('idna'),path=urllib.quote(parsed_link.path.encode('utf-8')))
+            parsed_link = parsed_link._replace(netloc=parsed_link.netloc.encode('idna'),
+                                               path=urllib.quote(parsed_link.path.encode('utf-8')),
+                                               query=urllib.quote(parsed_link.query.encode('utf-8'),safe='+?=&'),
+                                               fragment=urllib.quote(parsed_link.fragment.encode('utf-8')))
             url = parsed_link.geturl().encode('ascii')
         #url is str (quoted)
         return url
@@ -88,10 +91,13 @@ class BaseRequest(object):
         if 'playerapp1.pw' in urlparse.urlsplit(url).netloc:
             headers['X-Forwarded-For'] = '178.162.222.122'
         
+        if 'cndhlsstream.pw' in urlparse.urlsplit(url).netloc:
+            del self.s.headers['Accept-Encoding']
+        
         if form_data:
             #zo**tv
             if 'uagent' in form_data[0]:
-                form_data[0] = ('uagent',urllib.quote(self.s.headers['User-Agent']))
+                form_data[0] = ('uagent',self.s.headers['User-Agent'])
 
             r = self.s.post(url, headers=headers, data=form_data, timeout=20)
         else:
@@ -105,6 +111,7 @@ class BaseRequest(object):
         if 'streamlive.to' in urlparse.urlsplit(url).netloc \
         or 'sport365.live' in urlparse.urlsplit(url).netloc \
         or 'vipleague' in urlparse.urlsplit(url).netloc \
+        or 'cinestrenostv.tv' in urlparse.urlsplit(url).netloc \
         or 'batmanstream.com' in urlparse.urlsplit(url).netloc \
         or 'sportcategory.com' in urlparse.urlsplit(url).netloc:
             r.encoding = 'utf-8'

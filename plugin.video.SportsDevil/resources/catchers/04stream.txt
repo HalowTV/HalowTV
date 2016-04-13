@@ -5,7 +5,7 @@ item_info_build=04stream - %s
 item_info_name=pageUrl
 item_info_from=@PARAM1@
 item_info_convert=getInfo('http://www.04stream.com/weed.js?stream=%s&width=600&height=460&str=is&link=1&cat=3','.*?src=([^'"><]+).*','@REFERER@')
-item_info_build=%sthefeed2all.eu
+item_info_build=%sfirstrowas.co
 
 item_info_name=file
 item_info_from=pageUrl

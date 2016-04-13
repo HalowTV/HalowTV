@@ -179,7 +179,7 @@ def findVideoFrameLink(page, data):
     if not frames:
         return None
     
-    iframes = regexUtils.findall(data, "(frame(?![^>]*cbox\.ws)(?![^>]*Publi)(?![^>]*dailymotion)(?![^>]*blacktvlive\.)(?![^>]*chat\d*\.\w+)(?![^>]*ad122m)(?![^>]*adshell)(?![^>]*capacanal)(?![^>]*waframedia)(?![^>]*Beba.tv/embed)(?![^>]*maxtags)(?![^>]*s/a1\.php)(?![^>]*right-sidebar)[^>]*\sheight\s*=\s*[\"']*([\%\d]+)(?:px)?[\"']*[^>]*>)")
+    iframes = regexUtils.findall(data, "(frame(?![^>]*cbox\.ws)(?![^>]*Publi)(?![^>]*dailymotion)(?![^>]*guide\.)(?![^>]*chat\d*\.\w+)(?![^>]*ad122m)(?![^>]*adshell)(?![^>]*capacanal)(?![^>]*waframedia)(?![^>]*Beba.tv/embed)(?![^>]*maxtags)(?![^>]*s/a1\.php)(?![^>]*right-sidebar)[^>]*\sheight\s*=\s*[\"']*([\%\d]+)(?:px)?[\"']*[^>]*>)")
 
     if iframes:
         for iframe in iframes:
