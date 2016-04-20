@@ -182,7 +182,7 @@ def HALOWTVIndex():
 
     #addDir('[COLOR gold]Search Me[/COLOR]','Search',40,'http://www.userlogos.org/files/logos/euphonicnight/Search.png' ,  FANART,'http://www.dumblittleman.com/wp-content/uploads/2014/05/Ditch-Google-For-A-Day.png','','','')
     #addDir('add your List','My List',55,'http://www.magicdroidtv.com/wp-content/uploads/2013/06/channel-list.png',  FANART,'','','','')
-    addDir('[COLOR gold]Latest News[/COLOR]','text_online',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
+    #addDir('[COLOR gold]Latest News[/COLOR]','text_online',45,'http://nebula.wsimg.com/5b098eb2d2c19ff3541611d8a3a11a1c?AccessKeyId=4A4A9F36CAFFB6321ECA&disposition=0&alloworigin=1' ,  FANART,'','','','')
 
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
