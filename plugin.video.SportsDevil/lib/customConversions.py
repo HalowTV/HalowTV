@@ -180,6 +180,10 @@ def decodeBase64(src):
     from base64 import b64decode
     return b64decode(src)
 
+def encodeBase64(src):
+    from base64 import b64encode
+    return b64encode(src)
+
 def decodeRawUnicode(src):
     try:
         return src
@@ -192,12 +196,12 @@ def resolve(src):
         tmp_host = parsed_link.netloc.split(':')
         if tmp_host[0] == 'watch4.streamlive.to':
             servers = ['80.82.78.4',
-                       '93.174.93.230',
+                       #'93.174.93.230',
                        '95.211.210.69',
                        '95.211.196.5',
                        '184.173.85.91',
-                       '85.17.31.102',
-                       '169.54.85.69']
+                       '85.17.31.102']
+                       #'169.54.85.69']
             import random
             tmp_host[0] = random.choice(servers)
         elif tmp_host[0] == 'watch3.streamlive.to':

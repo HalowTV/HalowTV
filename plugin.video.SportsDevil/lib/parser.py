@@ -6,6 +6,7 @@ import random
 import re
 import urllib
 import string
+import xbmc
 from string import lower
 
 from entities.CList import CList
@@ -600,6 +601,9 @@ class Parser(object):
 
             elif command == 'decodeBase64':
                 src = cc.decodeBase64(src)
+            
+            elif command == 'encodeBase64':
+                src = cc.encodeBase64(src)
 
             elif command == 'decodeRawUnicode':
                 src = cc.decodeRawUnicode(src)
@@ -652,7 +656,7 @@ class Parser(object):
                 src = dt.getUnixTimestamp()
                 
             elif command == 'rowbalance':
-                src = rb.get()
+                src = rb.get(src)
 
             elif command == 'urlMerge':
                 src = cc.urlMerge(params, src)
@@ -683,6 +687,18 @@ class Parser(object):
 
             elif command == 'debug':
                 common.log('Debug from cfg file: ' + src)
+                
+            elif command == 'startLivestreamerProxy':
+                libPath = os.path.join(common.Paths.rootDir, 'lib')
+                serverPath = os.path.join(libPath, 'livestreamerXBMCLocalProxy.py')
+                try:
+                    import requests
+                    requests.get('http://127.0.0.1:19000/version')
+                    proxyIsRunning = True
+                except:
+                    proxyIsRunning = False
+                if not proxyIsRunning:
+                    xbmc.executebuiltin('RunScript(' + serverPath + ')')
                 
             elif command == 'divide':
                 paramArr = params.split(',')

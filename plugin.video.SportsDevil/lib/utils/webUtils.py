@@ -34,7 +34,7 @@ class BaseRequest(object):
         self.s = requests.Session()
         if fileExists(self.cookie_file):
             self.s.cookies = self.load_cookies_from_lwp(self.cookie_file)
-        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'})
+        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36'})
         self.s.headers.update({'Accept-Language' : 'en-US,en;q=0.5'})
         self.url = ''
     

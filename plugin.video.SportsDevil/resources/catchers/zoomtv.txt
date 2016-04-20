@@ -31,7 +31,7 @@ item_info_build=%s
 
 item_info_name=req
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*file:['"]([^'"]+)['"].*','@REFERER@')
+item_info_convert=getInfo('%s','.*file:\s*['"]([^'"]+)['"].*','@REFERER@')
 item_info_build=http://www.zoomtv.me/%s
 
 item_info_name=h0
@@ -46,7 +46,7 @@ item_info_build=%s
 
 item_info_name=h3
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*?[^\w](\w+)\s*=.(1[0-9]+)\b.*ts["':\+]+(?:eval\(")?[\s\'\+]+\s*\1\s*[\s\'\+]+\s*\w+\s*[\s\'\+]+\s*\w+\s*[\s\'\+]+\s*\w+','@REFERER@','junk|ts')
+item_info_convert=getInfo('%s','.*?[^\w](\w+)\s*=\s*.(1[0-9]+)\b.*ts["':\+]+\s*\1\s*','@REFERER@','junk|ts')
 item_info_build=%s
 
 item_info_name=ts32
@@ -66,7 +66,7 @@ item_info_build=%s
 
 item_info_name=get_sg1
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*?[^\w](\w+)\s*=.([a-z0-9]+)\b.*sg:\1["'\+]+\w+["'\+]+\w+["'\+]+\w+["'\+]+\w+["'\+]+\w+,st','@REFERER@','junk|sg1')
+item_info_convert=getInfo('%s','.*?[^\w](\w+)\s*=\s*.([a-z0-9]+)\b.*sg:\s*\1','@REFERER@','junk|sg1')
 item_info_build=%s
 
 item_info_name=get_sg2
