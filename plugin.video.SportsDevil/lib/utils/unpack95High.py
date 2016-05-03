@@ -31,7 +31,7 @@ def unpack(source):
     print len(source)
     payload, symtab, radix, count = _filterargs(source)
     
-    modp = r'c%a\+(\d+)'
+    modp = r'a\+(\d+)'
     mod = int(re.compile(modp).findall(source)[0])
 
     if count != len(symtab):

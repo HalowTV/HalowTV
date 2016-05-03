@@ -9,6 +9,31 @@ import sys, traceback
 # Time and Date Helpers
 #######################################
 
+def convDateUtil(timestring, newfrmt='default', in_zone='UTC'):
+    import xbmc
+    try: import json
+    except ImportError: import simplejson as json
+    from dateutil.parser import parse
+    from dateutil.tz import gettz
+    try:
+        locale_timezone = json.loads(xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": {"setting": "locale.timezone"}, "id": 1}'))
+        local_tzinfo = gettz(locale_timezone['result']['value'])
+        if local_tzinfo == None:
+            raise ValueError()
+    except ValueError:
+        from dateutil.tz import tzlocal
+        local_tzinfo = tzlocal()
+    if newfrmt == 'default':
+        newfrmt = xbmc.getRegion('time').replace(':%S','')
+    try:
+        in_time = parse(timestring)
+        in_time_with_timezone = in_time.replace(tzinfo=gettz(in_zone))
+        local_time = in_time_with_timezone.astimezone(local_tzinfo)
+        return local_time.strftime(newfrmt)
+    except ValueError:
+        traceback.print_exc(file = sys.stdout)
+        return ''
+
 def timediff(mytime, unit='seconds'):
     dtNow = datetime.datetime.utcnow()
     datePart = mytime.split(' ')[0]

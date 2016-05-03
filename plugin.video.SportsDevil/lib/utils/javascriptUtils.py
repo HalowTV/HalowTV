@@ -239,7 +239,7 @@ class JsUnwiser:
                 unpack_val=self.unwise(wise_val)
                 #print '\nunpack_val',unpack_val
                 in_data=in_data.replace(wise_val,unpack_val)
-            return re.sub("eval\(function\(w,i,s,e\).*?join\(''\);}", "", in_data, count=1, flags=re.DOTALL)
+            return re.sub(re.compile("eval\(function\(w,i,s,e\).*?join\(''\);}", re.DOTALL), "", in_data, count=1)
         except: 
             traceback.print_exc(file=sys.stdout)
             return data
@@ -327,7 +327,7 @@ class JsUnFunc:
         for i,d in enumerate(encData):
             dec_data += chr((int(k[i % len(k)]) ^ ord(d)) + mod)
             
-        data = re.sub("eval\(unescape\('function.*?unescape\(''\)\);'\)\);", dec_data, in_data, count=1, flags=re.DOTALL)
+        data = re.sub(re.compile("eval\(unescape\('function.*?unescape\(''\)\);'\)\);", re.DOTALL), dec_data, in_data, count=1)
         return data
     
     def cointainUnFunc(self,data):

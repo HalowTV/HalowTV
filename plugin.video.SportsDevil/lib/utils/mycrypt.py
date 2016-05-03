@@ -34,7 +34,7 @@ URL: http://projects.joelinoff.com/cipher-1.1/doxydocs/html/
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import argparse
+#import argparse
 import base64
 import os
 import re

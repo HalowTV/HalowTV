@@ -92,6 +92,16 @@ def convTimestamp(params, src):
     else:
         newfrmt = params.strip("'")
         return dt.convTimestamp(src, str(newfrmt))
+    
+def convDateUtil(params, src):
+    if params.find("','") != -1:
+        paramArr = __parseParams(params)
+        newfrmt = paramArr[0]
+        timezone = paramArr[1]
+        return dt.convDateUtil(src, str(newfrmt), timezone)
+    else:
+        newfrmt = params.strip("'")
+        return dt.convDateUtil(src, str(newfrmt))
 
 
 def offset(params, src):
@@ -200,18 +210,21 @@ def resolve(src):
                        '95.211.210.69',
                        '95.211.196.5',
                        '184.173.85.91',
-                       '85.17.31.102']
-                       #'169.54.85.69']
-            import random
-            tmp_host[0] = random.choice(servers)
-        elif tmp_host[0] == 'watch3.streamlive.to':
-            servers = ['184.173.85.91',
                        '85.17.31.102',
                        '169.54.85.69']
             import random
             tmp_host[0] = random.choice(servers)
+        elif tmp_host[0] == 'watch3.streamlive.to':
+            servers = ['80.82.78.4',
+                       '95.211.210.69',
+                       '184.173.85.91',
+                       '85.17.31.102',
+                       '95.211.196.5']
+            import random
+            tmp_host[0] = random.choice(servers)
         elif tmp_host[0] == 'xlive.sportstream365.com':
-            servers = ['185.28.190.158',
+            servers = ['93.189.57.254',
+                       '185.28.190.158',
                        '178.175.132.210',
                        '178.17.168.90',
                        '185.56.137.178',

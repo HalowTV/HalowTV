@@ -520,8 +520,11 @@ class Main:
             os.mkdir(cacheDir, 0777)
             common.log('Cache directory created' + str(cacheDir))
         else:
-            fu.clearDirectory(cacheDir)
-            common.log('Cache directory purged')
+            size, within_limit = fu.checkQuota(cacheDir)
+            if not within_limit:
+                fu.clearDirectory(cacheDir)
+                common.log('Cache directory purged')
+            common.log('Cache Usage:' + str(size))
 
 
     def update(self):

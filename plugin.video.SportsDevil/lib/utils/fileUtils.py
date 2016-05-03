@@ -117,6 +117,15 @@ def setLastModifiedAt(path, date):
     
     return False
 
+def checkQuota(directory, limit=200*1024):
+        total_size = 0
+        for root, dirs, files in os.walk(directory, topdown=False):
+            for name in files:
+                total_size += os.path.getsize(os.path.join(root, name))
+                if total_size > limit:
+                   return limit, False
+        return total_size, True
+
 def clearDirectory(path):
     try:
         for root, _, files in os.walk(path , topdown = False):
