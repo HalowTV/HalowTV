@@ -4,6 +4,7 @@ import urllib
 import re
 from regexUtils import parseTextToGroups
 from javascriptUtils import JsFunctions, JsUnpacker, JsUnpackerV2, JsUnpacker95High, JsUnwiser, JsUnIonCube, JsUnFunc, JsUnPP, JsUnPush
+#from .. import common
 
 def encryptDES_ECB(data, key):
     data = data.encode()
@@ -70,6 +71,7 @@ def ntos(n):
     return urllib.unquote(n)
 
 def doDemystify(data):
+    #common.log('JairoX: ' + data);
     escape_again=False
     
     #init jsFunctions and jsUnpacker
