@@ -110,7 +110,7 @@ class MyHandler(BaseHTTPRequestHandler):
                     while (buf != None and len(buf) > 0):
                         buf = response.read(300 * 1024)
                         fileout.write(buf)
-                        fileout.flush()
+                        #fileout.flush()
                     response.close()
                     fileout.close()
                     #print time.asctime(), "Closing connection"

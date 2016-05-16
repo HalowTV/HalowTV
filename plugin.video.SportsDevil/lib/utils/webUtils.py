@@ -34,7 +34,7 @@ class BaseRequest(object):
         self.s = requests.Session()
         if fileExists(self.cookie_file):
             self.s.cookies = self.load_cookies_from_lwp(self.cookie_file)
-        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'})
+        self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'})
         self.s.headers.update({'Accept-Language' : 'en-US,en;q=0.5'})
         self.url = ''
     
@@ -79,7 +79,7 @@ class BaseRequest(object):
         
         headers = {'Referer': referer}
         if mobile:
-            self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'})
+            self.s.headers.update({'User-Agent' : 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1'})
             
         if xml:
             headers['X-Requested-With'] = 'XMLHttpRequest'

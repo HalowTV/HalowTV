@@ -8,7 +8,7 @@ item_info_build=http://castalba.tv/embed.php?cid=%s&wh=600&ht=380&r=goatd.net
 
 item_info_name=tmp
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*?['"]*file['"]*\s*[:,=]\s*(?:unescape\()?['"](\d+).*?\W(31[^%.'"]+).*','@REFERER@','file|t')
+item_info_convert=getInfo('%s','.*?['"]([12]\d{5}).*?\W(31[^%.'"]+).*','@REFERER@','file|t')
 item_info_build=%s
 
 item_info_name=rtmp

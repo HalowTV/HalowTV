@@ -136,7 +136,7 @@ def findFrames(data):
 
 def findContentRefreshLink(page, data):
     
-    regex = '0;\s*url=([^\'" ]+)'
+    regex = '0;\s*url=((?![^\'" ]+rojadirecta)[^\'" ]+)'
     links = regexUtils.findall(data, regex)
     if links:
         return links[0]
