@@ -37,8 +37,8 @@ def _decode_char(c):
 
 def decode_hls(file_url):
     def K12K(a, typ='b'):
-        codec_a = ["m", "y", "i", "l", "k", "4", "U", "p", "J", "f", "Y", "L", "g", "n", "0", "u", "9", "e", "Q", "w", "s", "V", "a", "T", "2", "="]
-        codec_b = ["M", "D", "7", "c", "X", "I", "Z", "x", "t", "5", "B", "6", "1", "R", "H", "b", "N", "8", "d", "o", "v", "G", "z", "W", "3", "C"]
+        codec_a = ["p", "9", "U", "1", "b", "s", "y", "Z", "I", "H", "f", "8", "Y", "W", "g", "5", "G", "i", "J", "2", "T", "e", "k", "d", "7", "="]
+        codec_b = ["0", "B", "w", "t", "x", "m", "c", "z", "u", "n", "M", "Q", "R", "6", "v", "V", "l", "N", "D", "3", "L", "X", "a", "4", "o", "A"]
         if 'd' == typ:
             tmp = codec_a
             codec_a = codec_b

@@ -249,7 +249,7 @@ def datetimeoffset(date, offsetStr):
 
 
 def getUnixTimestamp():
-    return int(time.time())
+    return str(int(time.time()))
 
 
 def utcToGmt(date):

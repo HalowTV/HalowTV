@@ -204,31 +204,26 @@ def resolve(src):
     try:
         parsed_link = urlparse.urlsplit(src)
         tmp_host = parsed_link.netloc.split(':')
-        if tmp_host[0] == 'watch4.streamlive.to':
+        if 'streamlive.to' in tmp_host[0]:
             servers = ['80.82.78.4',
-                       #'93.174.93.230',
+                       '93.174.93.230',
                        '95.211.210.69',
                        '95.211.196.5',
                        '184.173.85.91',
                        '85.17.31.102',
                        '169.54.85.69']
-            import random
-            tmp_host[0] = random.choice(servers)
-        elif tmp_host[0] == 'watch3.streamlive.to':
-            servers = ['80.82.78.4',
-                       '95.211.210.69',
-                       '184.173.85.91',
-                       '85.17.31.102',
-                       '95.211.196.5']
+                       #'62.210.139.136']
             import random
             tmp_host[0] = random.choice(servers)
         elif tmp_host[0] == 'xlive.sportstream365.com':
-            servers = ['93.189.57.254',
-                       '185.28.190.158',
-                       '178.175.132.210',
-                       '178.17.168.90',
-                       '185.56.137.178',
-                       '94.242.254.72']
+            servers = ["93.189.57.254",
+                       "93.189.62.10",
+                       "185.49.70.58",
+                       "46.28.205.96",
+                       "178.17.168.90",
+                       "185.28.190.69",
+                       "85.114.135.215",
+                       "94.242.254.211"]
             import random
             tmp_host[0] = random.choice(servers)
         elif tmp_host[0] == 'live.pub.stream':

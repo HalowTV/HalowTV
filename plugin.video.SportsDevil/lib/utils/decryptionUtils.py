@@ -182,8 +182,8 @@ def doDemystify(data):
         if gs:
             for g in gs:
                 data = data.replace(g, jsF.ew_dc(g))
-
-    # pbbfa0
+                
+     # pbbfa0
     if 'function pbbfa0(' in data:
         r = re.compile("pbbfa0\(''\).*?'(.+?)'.\+.unescape")
         gs = r.findall(data)
@@ -191,13 +191,13 @@ def doDemystify(data):
             for g in gs:
                 data = data.replace(g, jsF.pbbfa0(g))
     
-    if 'function(d,i,t,s)' in data:
-        data = data.replace('function(d,i,t,s)','function(p,a,c,k)')
-        data = data.replace('(e+0)%i','e%a')
-        data = data.replace('RegExp(e(t)','RegExp(e(c)')
+    if 'eval(function(' in data:
+        data = re.sub(r"""function\(\w\w\w,\w\w\w,\w\w\w,\w\w\w\)""",'function(p,a,c,k)',data)
+        data = re.sub(r"""\(\w\w\w\+0\)%\w\w\w""",'e%a',data)
+        data = re.sub(r"""RegExp\(\w\w\w\(\w\w\w\)""",'RegExp(e(c)',data)
         
     if """.replace(""" in data:
-        r = re.compile(r""".replace\(["']([^"']+)["'],["']([^"']*)["']\)""")
+        r = re.compile(r""".replace\(["']([^"']+)["'],\s*["']([^"']*)["']\)""")
         gs = r.findall(data)
         if gs:
             for g in gs:
