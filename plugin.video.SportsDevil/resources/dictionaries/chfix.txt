@@ -1,33 +1,45 @@
 Sky Sports 1
   Skysports 1
   SkySports1
+  sss1
 Sky Sports 2
   Skysports 2
   SkySports2
+  skyyy2
 Sky Sports 3
   Skysports 3
   SkySports3
+  ss3
 Sky Sports 4
   Skysports 4
   SkySports4
+  ss4
 Sky Sports 5
   Skysports 5
   SkySports5
+  sss5
 Sky Sports News
   Sky News
   SkySportsNews
 Sky Sports F1
   Skysports F1
   SkySports F1
+  ssf1
 BT Sport 1
   Bt Sport 1
+  Bt Sports 1
   BT Sport1
+  bt1
 BT Sport 2
   Bt Sport 2
+  Bt Sports 2
   BT Sport2
+  bt2
 BT Sport Europe
   Bt Sport Europe
+  Bt Sports Europe
   BT Europe
+  bteurope
 Channel 1
   Channel1 Football
 Channel 2
@@ -62,12 +74,17 @@ Eurosport 1
   Euro Sports
   Euro Sport
   Euro Sport 1
+  Euro Sports 1
   Eurosport 1
+  euro1
 Eurosport 2
   Euro Sport 2
+  Euro Sports 2
+  euro2
 Sky Calcio ITA
   Sky Calcio In
 Sky Sport 1 ITA
+  Sky Sport 1
 Sky Sport 2 ITA
   Sky Sport 2
 Sky Sport 3 ITA
@@ -80,8 +97,12 @@ ESPN
 BT Sport ESPN
   Espn
   ESPN UK
+  Espn Uk
+  Bt Sport Espn
+  btsportespn
 ESPN2
   Espn2
+  Espn 2
 TEN Sports
   Tensports
 TEN Action
@@ -113,6 +134,7 @@ PTV Sports
 PTV Sports 2
   Ptv Sports 2
 Premier Sports
+  premiersports
 MUTV
   Mutv
 BBC One

@@ -330,7 +330,7 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="2016.06.06"
+  version="2016.06.20"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
@@ -351,23 +351,6 @@
     <description>Play videos of different sports streaming sites</description>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <platform>all</platform>
-  </extension>
-</addon>
-
-
-<addon id="plugin.video.swefilm" name="swefilm.tv" version="0.5" provider-name="Daniel Lundin/HalowTV">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.xbmcswift2" version="2.4.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <language></language>
-    <summary>Stream from swefilm.tv</summary>
-    <description>Stream from swefilm.tv</description>
   </extension>
 </addon>
 

@@ -11,17 +11,17 @@ item_info_build=%s
 
 item_info_name=_1
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*id="([^'"]+)"\s*value="([^'"]+)".*?(?:S4|TKNE)\s*=\s*document.getElementById\('\1.*','@REFERER@','junk|tk')
+item_info_convert=getInfo('%s','.*var\s*(\w+)\s*=\s*"([^'"]+)".*?url.\s*\1.*','@REFERER@','junk|tk')
 item_info_build=%s
 
 item_info_name=_2
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*id="([^'"]+)"\s*value="([^'"]+)".*?(?:S1|XAF1)\s*=\s*document.getElementById\('\1.*','@REFERER@','junk|ssx1')
+item_info_convert=getInfo('%s','.*var\s*(\w+)\s*=\s*"([^'"]+)".*?cod1.\s*\1.*','@REFERER@','junk|ssx1')
 item_info_build=%s
 
 item_info_name=_3
 item_info_from=pageUrl
-item_info_convert=getInfo('%s','.*id="([^'"]+)"\s*value="([^'"]+)".*?(?:S2|GADA)\s*=\s*document.getElementById\('\1.*','@REFERER@','junk|ssx4')
+item_info_convert=getInfo('%s','.*var\s*(\w+)\s*=\s*"([^'"]+)".*?cod2.\s*\1.*','@REFERER@','junk|ssx4')
 item_info_build=%s
 
 item_info_name=tk1

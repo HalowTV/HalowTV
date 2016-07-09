@@ -10,7 +10,7 @@ item_info_build=%s
 
 item_info_name=p2
 item_info_from=@PARAM1@
-item_info_convert=getInfo('%s','.*?\W(\w{66})\W','@REFERER@')
+item_info_convert=getInfo('%s','.*\W(\w{66})\W','@REFERER@')
 item_info_build=%s
 
 item_info_name=www

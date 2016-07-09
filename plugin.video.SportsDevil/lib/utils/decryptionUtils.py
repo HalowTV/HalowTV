@@ -192,7 +192,7 @@ def doDemystify(data):
                 data = data.replace(g, jsF.pbbfa0(g))
     
     if 'eval(function(' in data:
-        data = re.sub(r"""function\(\w\w\w,\w\w\w,\w\w\w,\w\w\w\)""",'function(p,a,c,k)',data)
+        data = re.sub(r"""function\(\w\w\w,\w\w\w,\w\w\w,\w\w\w""",'function(p,a,c,k)',data)
         data = re.sub(r"""\(\w\w\w\+0\)%\w\w\w""",'e%a',data)
         data = re.sub(r"""RegExp\(\w\w\w\(\w\w\w\)""",'RegExp(e(c)',data)
         

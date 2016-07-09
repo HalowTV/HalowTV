@@ -310,7 +310,7 @@
 
 <addon
   id="plugin.video.SportsDevil"
-  version="2016.06.06"
+  version="2016.06.20"
   name="SportsDevil"
   provider-name="SportsDevil">
   <requires>
