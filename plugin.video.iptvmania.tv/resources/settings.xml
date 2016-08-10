@@ -1,0 +1,13 @@
+<settings>
+<category label="Settings">
+	<setting type="sep"/>
+    <setting id="user" type="text" label="Username" default=""/>
+    <setting id="pass" type="text" label="Password" default=""/>
+    <setting id="favs" type="text" label="Favorites" default="" visible="false" />
+    <setting id="hls" type="bool" label="Use HLS instead of RTMP" default="true"/>
+	<setting type="sep"/>
+	<setting id="timeformat" type="enum" values="12-Hour|24-Hour" label="Time Format" default="0"/>
+	<setting id="timezonesource" type="enum" values="Auto Detect|Custom" label="Time Zone" default="0"/>
+	<setting id="timezone" enable="eq(-1,1)" type="labelenum" values="-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+10|+11|+12" label="     GMT Offset" default="0"/>
+</category>
+</settings>
