@@ -35,11 +35,12 @@ BT Sport 2
   Bt Sports 2
   BT Sport2
   bt2
-BT Sport Europe
+BT Sport 3
   Bt Sport Europe
   Bt Sports Europe
   BT Europe
   bteurope
+  bt3
 Channel 1
   Channel1 Football
 Channel 2
@@ -117,6 +118,8 @@ MLB Network
   Mlb Netowrk
 NBA Network
   Nba Network
+NFL Network
+  Nfl Network
 Golf Channel
 At The Races
 Racing UK
@@ -139,6 +142,7 @@ MUTV
   Mutv
 BBC One
   Bbc One
+  Bbc 1
 BBC Two
   Bbc Two
 WWE Network
@@ -147,3 +151,25 @@ ITV1
   Itv 1
 NBCSN
   Nbc Sports
+Willow Cricket
+  Willow Cricket Hd
+Sport TV1 Portugal
+  sporttv1
+Sport TV2 Portugal
+  sporttv2
+Sport TV3 Portugal
+  sporttv3
+Sport TV4 Portugal
+  sporttv4
+Sport TV5 Portugal
+  sporttv5
+BeIN Sports 1 France
+  bein1
+BeIN Sports 2 France
+  bein2
+NBCSN
+  Nbcsn Ing
+Chelsea TV
+  Chelsea Tv
+Motors TV
+  Motors Tv Uk

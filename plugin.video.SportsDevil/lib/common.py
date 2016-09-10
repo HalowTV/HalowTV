@@ -80,6 +80,8 @@ import cookielib
 def getHTML(url, form_data='', referer='', xml=False, mobile=False, ignoreCache=False, demystify=False):
     if url == 'http://www.streamlive.to':
             url = xbmc.translatePath(os.path.join(Paths.imgDir, 'live.xml'))
+    if url == 'http://www.tvone1.tv':
+            url = xbmc.translatePath(os.path.join(Paths.imgDir, 'tvone.xml'))
             
     cookiePath = xbmc.translatePath(os.path.join(Paths.cacheDir, 'cookies.lwp'))
     request = CachedWebRequest(cookiePath, Paths.cacheDir)

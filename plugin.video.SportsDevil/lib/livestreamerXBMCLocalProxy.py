@@ -28,6 +28,7 @@ import traceback
 import socket
 from SocketServer import ThreadingMixIn
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
+from livestreamer import Livestreamer, StreamError, PluginError, NoPluginError
 
 class MyHandler(BaseHTTPRequestHandler):
     """
@@ -83,13 +84,14 @@ class MyHandler(BaseHTTPRequestHandler):
     Sends the requested file and add additional headers.
     """
     def serveFile(self, fURL, sendData):
-        from livestreamer import Livestreamer, StreamError, PluginError, NoPluginError
         session = Livestreamer()
         if '|' in fURL:
                 sp = fURL.split('|')
                 fURL = sp[0]
                 headers = dict(urlparse.parse_qsl(sp[1]))
                 session.set_option("http-headers", headers)
+                session.set_option("http-ssl-verify",False)
+                session.set_option("hls-segment-threads",2)
         try:
             streams = session.streams(fURL)
         except:
@@ -108,7 +110,7 @@ class MyHandler(BaseHTTPRequestHandler):
                     response = stream.open()
                     buf = 'INIT'
                     while (buf != None and len(buf) > 0):
-                        buf = response.read(300 * 1024)
+                        buf = response.read(200 * 1024)
                         fileout.write(buf)
                         fileout.flush()
                     response.close()

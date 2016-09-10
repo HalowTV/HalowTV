@@ -38,3 +38,7 @@ bt_sport_europe_uk.png
   BT Sport Europe
 bt_sport_uk_espn.png
   BT Sport ESPN
+bein_sports_1_france.png
+  BeIN Sports 1 France
+bein_sports_2_france.png
+  BeIN Sports 2 France

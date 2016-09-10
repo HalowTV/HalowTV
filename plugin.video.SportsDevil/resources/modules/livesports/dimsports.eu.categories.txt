@@ -79,3 +79,7 @@ icon=sports.devil.image|sports/Other.png
 cfg=dimsports.eu.links.cfg
 url=http://www.idimsports.eu/others.html
 ########################################################
+title=Olympics
+icon=sports.devil.image|sports/Other.png
+cfg=dimsports.eu.links.cfg
+url=http://www.idimsports.eu/olympics.html

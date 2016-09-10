@@ -648,7 +648,13 @@ class Parser(object):
                 
             elif command == 'cjsAesDec':
                 src = crypt.cjsAesDec(src,item.infos[params])
-            
+
+            elif command == 'drenchDec':
+                src = crypt.drenchDec(src,item.infos[params])
+                
+            elif command == 'onetv':
+                src = crypt.onetv(src)
+
             elif command == 'getCookies':
                 src = cc.getCookies(params, src)
 

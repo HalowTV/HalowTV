@@ -124,7 +124,7 @@ class JsUnpackerV2:
         
         
     def containsPacked(self, data):
-        return 'String.fromCharCode(c+29)' in data
+        return ('String.fromCharCode(c+29)' in data and 'p,a,c,k' in data)
         
     def unpack(self,sJavascript,iteration=1, totaliterations=1  ):
 

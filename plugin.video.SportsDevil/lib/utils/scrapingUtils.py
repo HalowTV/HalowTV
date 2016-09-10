@@ -15,6 +15,7 @@ def findJS(data):
     jscript = regexUtils.findall(data, regex)
     if jscript:
         jscript = filter(lambda x: x[1].find('twitter') == -1, jscript)
+        jscript = filter(lambda x: x[1].find('pushpublish') == -1, jscript)
         return jscript
     
     return None
@@ -233,12 +234,17 @@ def findVideoFrameLink(page, data):
     if m:
         return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
     
-    m = regexUtils.findall(data, r'playStream\(\'iframe\', \'[^\']*(https*:[^\']+)\'\)')
+    m = regexUtils.findall(data, r'playStream\(\'iframe\',\s*\'[^\']*(https*:[^\']+)\'\)')
     if m:
         return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
     
     #sportsh**tv
     m = regexUtils.findall(data, r'<iframe\s*src="(stream[^"]+)"\s*allowfullscreen>')
+    if m:
+        return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
+
+    #stre***d
+    m = regexUtils.findall(data, r'<iframe\s*class="embed[^"]+"\s*name="video[^"]+"\s*src="([^"]+)"')
     if m:
         return urlparse.urljoin(urllib.unquote(page), m[0]).strip()
 
