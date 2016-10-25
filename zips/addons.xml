@@ -80,10 +80,10 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.f4mTester" version="2.2.4" name="f4mTester" provider-name="Shani">
+<addon id="plugin.video.f4mTester" version="2.6.2" name="f4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.video.F4mProxy" version="2.2.3"/>
+        <import addon="script.video.F4mProxy" version="2.6.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
@@ -167,26 +167,6 @@
     <website>http://www.snagfilms.com/</website>
     <email></email>
     <source></source>
-  </extension>
-</addon>
-
-<addon id="plugin.video.iptvmania.tv" name="IPTVMANIA" version="1.0.9" provider-name="xunitytalk.com">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">IPTVMANIA TV</summary>
-    <description lang="en">IPTVMANIA TV is an IP television over the internet without satellite dish or cable.[CR]For more information, visit [COLOR blue]http://IPTVMANIA.TV[/COLOR]</description>
-    <platform>all</platform>
-	<language></language>
-	<license></license>
-	<forum></forum>
-	<website></website>
-	<source></source>
-	<email></email>
   </extension>
 </addon>
 

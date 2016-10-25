@@ -1,7 +1,0 @@
-v1.0.0
-------
-+ Initial Release
-
-v1.0.1
-------
-+ Channel list fixes
