@@ -14,33 +14,6 @@
   </extension>
 </addon>
 
-<addon id="script.video.F4mProxy" 
-	     name="F4mProxy" 
-	     version="2.6.6" 
-	     provider-name="Shani">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.requests" />
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>executable</provides>
-  </extension>
-
-     <extension point="xbmc.addon.repository" name="shani repository">
-        <info compressed="false">https://offshoregit.com/Shani-08/main/addons.xml</info>
-        <checksum>https://offshoregit.com/Shani-08/main/addons.xml.md5</checksum>
-        <datadir zip="true">https://offshoregit.com/Shani-08/main/zips/</datadir>
-    </extension>
-
-    
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Proxy for f4m</summary>
-    <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
-  </extension>
-</addon>
-
 <addon id="plugin.stream.vaughnlive.tv"
        name="Vaughn Live"
        version="0.1.8"
@@ -204,27 +177,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.iranproud"
-       name="[COLOR red]IRAN[COLOR green]MOVIES[/COLOR]"
-       version="0.0.1"
-       provider-name="HALOW TV TEAM">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests"/>
-	<import addon="script.module.beautifulsoup" version="3.2.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">This is an Addon for Iranproud.net</summary>
-    <language>en</language>
-    <description lang="en"></description>
-     <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.IRAN"
        name="[COLOR red]IRAN LIVE[COLOR green] TV[/COLOR]"
        version="4.0.3"
@@ -257,9 +209,30 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.iranproud"
+       name="[COLOR red]IRAN[COLOR green]MOVIES[/COLOR]"
+       version="0.0.1"
+       provider-name="HALOW TV TEAM">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">This is an Addon for Iranproud.net</summary>
+    <language>en</language>
+    <description lang="en"></description>
+     <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.kurd"
        name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]"
-       version="7.0.3"
+       version="7.0.2"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -287,6 +260,29 @@
     <description lang="en">[COLOR green][B]Kurdistan Livestreams
  HAMO KANAKI KURDI BA FREE BO KURDANI HAMODINE HIWA DARIN SUDI HABET BO HAMWAN[/B][/COLOR]</description>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.kurdsubtitle"
+       name="[COLOR red]Kurd[COLOR green]-Subtitle[/COLOR]"
+       version="0.0.2"
+       provider-name="HalowTV Team">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests"/>
+	<import addon="script.module.t0mm0.common" version="1.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.urlresolver" version="3.0.25" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">An addon for Kurdcinama.com</summary>
+    <language>en</language>
+    <description lang="en">Enjoy</description>
+     <platform>all</platform>
   </extension>
 </addon>
 
@@ -370,29 +366,6 @@
     <language></language>
     <summary>Stream from swefilm.tv</summary>
     <description>Stream from swefilm.tv</description>
-  </extension>
-</addon>
-
-<addon id="plugin.video.kurdsubtitle"
-       name="[COLOR red]Kurd[COLOR green]-Subtitle[/COLOR]"
-       version="0.0.1"
-       provider-name="HalowTV Team">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests"/>
-	<import addon="script.module.t0mm0.common" version="1.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.urlresolver" version="3.0.25" />
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">An addon for Kurdcinama.com</summary>
-    <language>en</language>
-    <description lang="en">Enjoy</description>
-     <platform>all</platform>
   </extension>
 </addon>
 
@@ -508,5 +481,32 @@ http://halowtv.org[/COLOR]</description>
 		<description>Go though the plugins and see what you like</description>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="script.video.F4mProxy"
+	     name="F4mProxy"
+	     version="2.6.6"
+	     provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+  </extension>
+
+     <extension point="xbmc.addon.repository" name="shani repository">
+        <info compressed="false">https://offshoregit.com/Shani-08/main/addons.xml</info>
+        <checksum>https://offshoregit.com/Shani-08/main/addons.xml.md5</checksum>
+        <datadir zip="true">https://offshoregit.com/Shani-08/main/zips/</datadir>
+    </extension>
+
+
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Proxy for f4m</summary>
+    <description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+  </extension>
 </addon>
 </addons>
