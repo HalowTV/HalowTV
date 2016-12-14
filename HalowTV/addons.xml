@@ -204,6 +204,27 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.iranproud"
+       name="[COLOR red]IRAN[COLOR green]MOVIES[/COLOR]"
+       version="0.0.1"
+       provider-name="HALOW TV TEAM">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">This is an Addon for Iranproud.net</summary>
+    <language>en</language>
+    <description lang="en"></description>
+     <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.IRAN"
        name="[COLOR red]IRAN LIVE[COLOR green] TV[/COLOR]"
        version="4.0.3"
@@ -238,7 +259,7 @@
 
 <addon id="plugin.video.kurd"
        name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]"
-       version="7.0.2"
+       version="7.0.3"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -265,38 +286,6 @@
     <summary lang="en"> http://halowtv.org</summary>
     <description lang="en">[COLOR green][B]Kurdistan Livestreams
  HAMO KANAKI KURDI BA FREE BO KURDANI HAMODINE HIWA DARIN SUDI HABET BO HAMWAN[/B][/COLOR]</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.kurdcinama"
-       name="[COLOR red]KURDISH [COLOR green]MOVIES[/COLOR]"
-       version="4.3.14"
-       provider-name="Halow">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.t0mm0.common" version="2.0.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-    <import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />
-    <import addon="script.common.plugin.cache" version="2.5.2"/>
-    <import addon="script.module.metahandler" version="2.5.1"/>
-
-
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="cloudtv.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">[COLOR red]WATCH ENG KUDISH TV SHOW ON KURDISH MOVIES[/COLOR]</summary>
-    <description lang="en">[COLOR blue]WATCH ENG KUDISH TV SHOW ON KURDISH MOVIES[/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -381,6 +370,29 @@
     <language></language>
     <summary>Stream from swefilm.tv</summary>
     <description>Stream from swefilm.tv</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.kurdsubtitle"
+       name="[COLOR red]Kurd[COLOR green]-Subtitle[/COLOR]"
+       version="0.0.1"
+       provider-name="HalowTV Team">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests"/>
+	<import addon="script.module.t0mm0.common" version="1.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.urlresolver" version="3.0.25" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">An addon for Kurdcinama.com</summary>
+    <language>en</language>
+    <description lang="en">Enjoy</description>
+     <platform>all</platform>
   </extension>
 </addon>
 
