@@ -53,6 +53,7 @@ baseurl = 'http://www.kurdsubtitle.net/'
 def home():
     addDir3("Genres", "foo", 5, "", "","")
     addDir3("Years", "foo", 6, "", "","")
+    addDir3("Search", "foo", 9, "", "", "")
 
 def categories():
     r = requests.get(baseurl)
@@ -90,7 +91,11 @@ def years():
 def menu2(url):
     r = requests.get(url)
     html = BeautifulSoup(r.content)
-    items_div = html.findAll("div", attrs={"class": "items"})[0]
+    try:
+        items_div = html.findAll("div", attrs={"class": "items"})[0]
+    except:
+        items_div = html.findAll("div", attrs={"class": "search"})[-1]
+        xbmc.log("items_div: " + repr(items_div))
     movies = items_div.findAll("article")
     for movie in movies:
         poster = movie.findAll("div", attrs={"class": "poster"})[0]
@@ -99,8 +104,14 @@ def menu2(url):
         image = link.findAll("img")[0]
         image_src = image["src"].split("?resize")[0]
         xbmc.log("img_src: " + repr(image_src))
-        name = image["alt"].encode("utf-8")
-        texto = movie.findAll("div", attrs={"class": "texto"})[0].contents[0].encode("utf-8")
+        try:
+            name = image["alt"].encode("utf-8")
+        except:
+            name = movie.findAll("h3")[0].findAll("a")[0].text
+        try:
+            texto = movie.findAll("div", attrs={"class": "texto"})[0].contents[0].encode("utf-8")
+        except:
+            texto = ""
         if "/tvshows" in href:
             addDir3(name, href + '?tab=episodes',7,image_src,'',texto)
         else:
@@ -308,4 +319,8 @@ elif mode==7:
         tvseastit(url)
 elif mode==8:
         tvep(url, name)
+elif mode==9:
+        search_title = xbmcgui.Dialog().input("Search")
+        search_url = "http://www.kurdsubtitle.net/?s=%s" % urllib.quote_plus(search_title)
+        menu2(search_url)
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

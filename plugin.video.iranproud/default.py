@@ -1,5 +1,10 @@
 import xbmcaddon,os,requests,xbmc,xbmcgui,urllib,urllib2,re,xbmcplugin
 from BeautifulSoup import BeautifulSoup
+def CATEGORIES():
+    addDir('list','lisst',4,'')
+
+
+
 
 movlink = "http://www.iranproud.net/irani-best-movies"
 
@@ -238,6 +243,7 @@ elif mode==3:
         lifetvmenu(url)
 elif mode==4:
         tsc(url)
+        #tsc2(url)
 elif mode==5:
         menu4(url)
 elif mode==6:
@@ -254,5 +260,5 @@ elif mode==10:
 elif mode==11:
         livetv(url)
 elif mode==12:
-		menu6(url)
+        menu6(url)
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

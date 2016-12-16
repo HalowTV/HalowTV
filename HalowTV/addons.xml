@@ -211,7 +211,7 @@
 
 <addon id="plugin.video.iranproud"
        name="[COLOR red]IRAN[COLOR green]MOVIES[/COLOR]"
-       version="0.0.1"
+       version="0.0.3"
        provider-name="HALOW TV TEAM">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -265,7 +265,7 @@
 
 <addon id="plugin.video.kurdsubtitle"
        name="[COLOR red]Kurd[COLOR green]-Subtitle[/COLOR]"
-       version="0.0.2"
+       version="0.0.3"
        provider-name="HalowTV Team">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
