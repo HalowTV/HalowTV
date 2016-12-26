@@ -66,7 +66,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.dreamfilm" name="Dreamfilm" provider-name="Daniel Lundin" version="0.1.15">
+<addon id="plugin.video.dreamfilm" name="Dreamfilm" provider-name="Daniel Lundin" version="0.1.16">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -212,7 +212,7 @@
 <addon id="plugin.video.iranproud"
        name="[COLOR red]IRAN[COLOR green]MOVIES[/COLOR]"
        version="0.0.3"
-       provider-name="HALOW TV TEAM">
+       provider-name="HALOW TEAM">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.requests"/>

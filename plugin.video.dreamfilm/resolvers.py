@@ -1,5 +1,6 @@
 import urllib
 import urllib2
+import urlparse
 import json
 import HTMLParser
 import re
@@ -131,15 +132,40 @@ def vkpass_streams(url, recursive_call=False):
     HEADERS = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Referer': 'http://www.dreamfilmhd.org/API/api.php'
     }
+    if "vkpass.com" in urlparse.urlparse(url).netloc:
+        HEADERS['Referer'] = 'http://dreamfilmhd.bz/'
+
 
     req = urllib2.Request(url, headers=HEADERS)
     response = urllib2.urlopen(req)
     html = response.read()
     response.close()
+#    with open("vkpass.html", "w") as f:
+#        f.write(html)
 
-    return _vkpass_streams_from_html(html, recursive_call)
+    streams = []
+    changers = re.findall("<a class='(.*?)'.+?changeSource\('(.+?)'.+?>(.+?)<", html)
+    if not recursive_call and changers:
+        # check for alternatives
+        for changer in changers:
+            if len(changer[0]) == 0: # not active
+                alturl = url + '&' + 'source=' + changer[1]
+                req = urllib2.Request(alturl, headers=HEADERS)
+                response = urllib2.urlopen(req)
+                althtml = response.read()
+                response.close()
+            else:
+                althtml = html
+            more_streams = _vkpass_streams_from_html(althtml, recursive_call)
+            if more_streams and len(more_streams) > 0:
+                streams += [("%s: %s" % (changer[2], stream[0]), stream[1]) for stream in more_streams]
+    else:
+        more_streams = _vkpass_streams_from_html(html, recursive_call)
+        if more_streams and len(more_streams) > 0:
+            streams += more_streams
+            
+    return streams
 
 def _extract_packed_videourls(html):
     eval_start = html.find('eval(function(p,a,c,k,e')
@@ -153,14 +179,17 @@ def _extract_source_tags(html, single_quotes=True):
     if source_tags:
         streams = []
         for source_tag in source_tags:
-            if single_quotes:
-                match = re.search(r"src='(.*?)'.*?label='(.*?)'", source_tag)
-            else:
+            match = re.search(r"src='(.*?)'.*?label='(.*?)'", source_tag)
+            if not match:
                 match = re.search(r'src="(.*?)".*?label="(.*?)"', source_tag)
             if match:
                 streams.append((match.group(2), match.group(1)))
 
         return streams
+
+def _extract_videoz_url(html):
+    url = re.search("<iframe.*? src='(.*?)'", html)
+    return vkpass_streams(url.group(1), recursive_call=True)
 
 def _vkpass_streams_from_html(html, recursive_call):
     HEADERS = {
@@ -168,9 +197,14 @@ def _vkpass_streams_from_html(html, recursive_call):
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     }
 
+    # Look for videoz
+    if re.findall("<iframe.*? src='", html):
+        return _extract_videoz_url(html)
+
     # Look for p,a,c,k,e,d js files
     if html.find('eval(function(p,a,c,k,e') != -1:
-        return _extract_packed_videourls(html);
+        return _extract_packed_videourls(html)
+
 
     # Look for video tag
     source_tags = re.findall(r'(<source.*?\/>)', html)
