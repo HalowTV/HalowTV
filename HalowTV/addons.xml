@@ -232,7 +232,7 @@
 
 <addon id="plugin.video.kurd"
        name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]"
-       version="7.0.2"
+       version="7.0.3"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -256,7 +256,7 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en"> http://halowtv.org</summary>
+    <summary lang="en">http://kurdmovie.net</summary>
     <description lang="en">[COLOR green][B]Kurdistan Livestreams
  HAMO KANAKI KURDI BA FREE BO KURDANI HAMODINE HIWA DARIN SUDI HABET BO HAMWAN[/B][/COLOR]</description>
     <platform>all</platform>
@@ -371,7 +371,7 @@
 
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
-       version="9.0.3"
+       version="9.0.4"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>

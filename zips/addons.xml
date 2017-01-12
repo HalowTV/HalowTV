@@ -256,7 +256,7 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en"> http://halowtv.org</summary>
+    <summary lang="en">http://kurdmovie.net</summary>
     <description lang="en">[COLOR green][B]Kurdistan Livestreams
  HAMO KANAKI KURDI BA FREE BO KURDANI HAMODINE HIWA DARIN SUDI HABET BO HAMWAN[/B][/COLOR]</description>
     <platform>all</platform>
