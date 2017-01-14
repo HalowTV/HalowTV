@@ -42,7 +42,7 @@ class NoRedirection(urllib2.HTTPErrorProcessor):
 
 
 sourceSitebvls = 'http://bvls2016.sc'      
-HALOWTVBase = 'aHR0cDovL2t1cmRtb3ZpZS5uZXQvL0hBTE9XWE1ML2xpdmUuY2hhbm5lbHMueG1s'
+HALOWTVBase = 'aHR0cDovL2hhbG93dHYub3JnL0hBTE9XWE1ML2xpdmUuY2hhbm5lbHMueG1s'
 
 
 
@@ -204,8 +204,6 @@ def text_online():
 	    status = status.replace('&amp;','')
 	    text = status
 	showText('[COLOR royalblue][B]HALOWTV[/B][/COLOR]', text)
-
-
 
 def showText(heading, text):
     id = 10147
