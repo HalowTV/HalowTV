@@ -103,6 +103,10 @@ def menu2(url):
         href = link["href"]
         image = link.findAll("img")[0]
         image_src = image["src"].split("?resize")[0]
+        try:
+            image_src.decode(encoding='UTF-8', errors='strict')
+        except:
+            image_src = iriToUri(image_src)
         xbmc.log("img_src: " + repr(image_src))
         try:
             name = image["alt"].encode("utf-8")
@@ -130,6 +134,15 @@ def menu2(url):
     except:
         pass
 
+def urlEncodeNonAscii(b):
+    return re.sub('[\x80-\xFF]', lambda c: '%%%02x' % ord(c.group(0)), b)
+
+def iriToUri(iri):
+    parts= urlparse.urlparse(iri)
+    return urlparse.urlunparse(
+        part.encode('idna') if parti==1 else urlEncodeNonAscii(part.encode('utf-8'))
+        for parti, part in enumerate(parts)
+    )
 
 def tvseastit(url):
     r = requests.get(url)
@@ -191,6 +204,8 @@ def getStream(url):
     regex = '<iframe src="(.*?)"'
     link = re.compile(regex, re.DOTALL).findall(content)[0]
     xbmc.log("LIIIIINK %s "% link)
+    if link.endswith("/preview"):
+        link = link[:-8]
     try:
         #data = getResolve(link)
         

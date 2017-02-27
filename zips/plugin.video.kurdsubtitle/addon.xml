@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.kurdsubtitle"
        name="[COLOR red]Kurd[COLOR green]-Subtitle[/COLOR]"
-       version="0.0.3"
-       provider-name="HalowTV Team">
+       version="0.0.9"
+       provider-name="HALOWTV TEAM">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.requests"/>
