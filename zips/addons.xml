@@ -232,7 +232,7 @@
 
 <addon id="plugin.video.kurd"
        name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]"
-       version="7.0.7"
+       version="8.1.0"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
