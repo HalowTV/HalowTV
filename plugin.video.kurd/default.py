@@ -1,23 +1,21 @@
 # -*- coding: utf-8 -*-
-# please visit 
+# please visit
 import xbmc,xbmcgui,xbmcplugin,sys
 icons = ""
 icon = xbmc.translatePath("special://home/addons/plugin.video.karwan-kurdtv/icon.png")
 plugin_handle = int(sys.argv[1])
 mode = sys.argv[2]
-	
+
 def add_video_item(url, infolabels, img=''):
-    if 'rtmp://' in url:
+    if 'rtmp://' in url and not ('swfUrl=' in url):
         url = url.replace('<playpath>',' playpath=')
-        #url = url + ' swfUrl=http://onyxvids.stream.onyxservers.com/[[IMPORT]]/karwan.tv/player_file/flowplayer/player.cluster-3.2.9.swf pageUrl=http://karwan.tv/kurdistan-tv.html live=1'
         url = url + ' swfUrl=http://p.jwpcdn.com/6/11/jwplayer.flash.swf pageUrl=http://karwan.tv/sterk-tv.html live=1'
     url = 'plugin://plugin.video.kurd/?playkurd=' + url + '***' + infolabels['title'] + '***' + img
     listitem = xbmcgui.ListItem(infolabels['title'], iconImage=img, thumbnailImage=img)
     listitem.setInfo('video', infolabels)
     listitem.setProperty('IsPlayable', 'false')
     xbmcplugin.addDirectoryItem(plugin_handle, url, listitem)
-    return
-	
+
 def iptvxtra_play():
     xbmcPlayer = xbmc.Player()
     idx = mode.replace("?playkurd=", "").replace("###", "|").replace("#x#", "?").replace("#h#", "http://").split('***')
@@ -36,7 +34,7 @@ def main():
     add_video_item('http://198.100.158.231:1935/kanal10/_definst_/livestream/playlist.m3u8' ,{ 'title': '[COLOR yellow][B]Zagros TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/zagros-tv.png')
     add_video_item('rtmp://prxy-wza-02.iptv-playoutcenter.de/nrt1/_definst_/mp4:nrt1.stream_1'	,{ 'title': '[COLOR yellow][B]NRT TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/nalia-tv.png')
     add_video_item('rtmp://prxy-wza-02.iptv-playoutcenter.de/nrt2/_definst_/mp4:nrt2.stream_1'	,{ 'title': '[COLOR yellow][B]NRT 2 [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/nalia-2-tv.png')
-    add_video_item('rtsp://livestreaming.itworkscdn.net/rudawlive/rudawtv' ,{ 'title': '[COLOR yellow][B]Rudaw TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/rudaw.png')
+    add_video_item('rtmp://livestreaming.itworkscdn.net/rudawlive playpath=rudawtv swfUrl=http://rudaw.net/player/jwplayer.flash.swf live=true timeout=15 pageUrl=http://rudaw.net/english/onair/tv/live' ,{ 'title': '[COLOR yellow][B]Rudaw TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/rudaw.png')
     add_video_item('rtmp://51.254.209.160/live/livestream' ,{ 'title': '[COLOR yellow][B]KNN TV [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/knn-tv.png')
     add_video_item('rtmp://64.150.177.45/live//mp4:myStream',{ 'title': '[COLOR yellow][B]Geli Kurdistan [COLOR red][B][HD][/B][/COLOR]'}, icons + 'http://karwan.tv/images/tvlogo/geli-kurdistan-tv.png')
     add_video_item('http://87.81.198.172:80/hls/mystream.m3u8'       ,{ 'title': '[COLOR yellow][B]ROJIKurd [COLOR red][B][HD][/B][/COLOR]'}, icons + 'https://yt3.ggpht.com/-g9prY3S1fks/AAAAAAAAAAI/AAAAAAAAAAA/S-I2bl14JPc/s900-c-k-no/photo.jpg')
@@ -94,12 +92,6 @@ def main():
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/abn-sat-tv-kurdish/chunks.m3u8?'       ,{ 'title': 'ABN Sat TV '}, icons + 'http://karwan.tv/images/tvlogo/abn-sat-tv.PNG')
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/super-tv/chunks.m3u8'       ,{ 'title': 'Super TV'}, icons + 'http://karwan.tv/images/tvlogo/super-tv.png')
      #add_video_item('http://live4.karwan.tv:8081/karwan.tv/ishtar-tv/chunks.m3u8?'       ,{ 'title': 'ISHTAR TV'}, icons + 'http://karwan.tv/images/tvlogo/ishtar-tv.png')
-
-
-    # add_video_item(''				,{ 'title': ''}, icons + '')
-    # add_video_item(''				,{ 'title': ''}, icons + '')
-    # add_video_item(''				,{ 'title': ''}, icons + '')
-    # add_video_item(''				,{ 'title': ''}, icons + '')
 
     xbmcplugin.endOfDirectory(plugin_handle)
 
