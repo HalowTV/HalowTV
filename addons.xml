@@ -254,7 +254,7 @@
 
 <addon id="plugin.video.kurd"
        name="[COLOR red]KURDISH.[COLOR green]TV[/COLOR]"
-       version="8.1.0"
+       version="8.1.1"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -393,7 +393,7 @@
 
 <addon id="plugin.video.Test"
        name="[COLOR red]Halow[COLOR green] LIVE  TV [/COLOR]"
-       version="9.0.9"
+       version="9.1.1"
        provider-name="Halow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
