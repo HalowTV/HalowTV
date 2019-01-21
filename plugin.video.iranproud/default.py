@@ -6,20 +6,20 @@ def CATEGORIES():
 
 
 
-movlink = "http://www.iranproud.net/irani-best-movies"
+movlink = "http://www.iranproud2.net/irani-best-movies"
 
 
 
 
 def menu1():
-    r = requests.get('http://www.iranproud.net/index.html')
+    r = requests.get('http://www.iranproud2.net/index.html')
     urlshit = ''
     #regex = r'<div id=".*?" class="fluid"><a href=".+?80(.*?)">.+?<div id="divTitrSS2" class="TitrSS">(.*?)</div></a>'
     regex = 'class="fluidButton"><a href.+?"(.*?)".+?(.*?)</a></div>'
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for link,name in match:
         xbmc.log("LINK HERE --->>> %s "% link)
-        addDir3(name.replace('target="_parent">',''),link.replace('http://www.iranproud.net:80','').replace('/','http://www.iranproud.net/'),3,'','','')
+        addDir3(name.replace('target="_parent">',''),link.replace('http://www.iranproud2.net:80','').replace('/','http://www.iranproud2.net/'),3,'','','')
 
 def lifetvmenu(url):
     r = requests.get(url)
@@ -27,7 +27,7 @@ def lifetvmenu(url):
     regex = r'<div id="divTitrGrid2" class="titrGrid2">(.*?)</div>'
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for name2 in match:
-        addDir3(name2.replace('&amp;','&'),'http://www.iranproud.net/livetv',11,'','','')
+        addDir3(name2.replace('&amp;','&'),'http://www.iranproud2.net/livetv',11,'','','')
 
 def recrel(url):
     r = requests.get(url)
@@ -35,25 +35,25 @@ def recrel(url):
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for name2 in match:
         if "musicvideo" in str(url):
-            addDir3(name2.replace('&amp;','&'),'http://www.iranproud.net/musicvideo',9,'','','')
+            addDir3(name2.replace('&amp;','&'),'http://www.iranproud2.net/musicvideo',9,'','','')
 def menu2(url):
     r = requests.get(url)
     regex = r'<div id="divTitrSS2" class="TitrSS">(.*?)</div>.+?<div id="divSutitrSS2" class="sutitrSS"><a href=".+?80(.*?)">VIEW ALL</a></div>'
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for name2,link in match:
         if "musicvideo" in str(url):
-            addDir3(name2.replace('&amp;','&'),"http://www.iranproud.net%s"%link.replace('&amp;','&'),9,'','','')
+            addDir3(name2.replace('&amp;','&'),"http://www.iranproud2.net%s"%link.replace('&amp;','&'),9,'','','')
         elif "iran-best-movies" in str(url):
-            addDir3(name2.replace('&amp;','&'),"http://www.iranproud.net%s"%link.replace('&amp;','&'),10,'','','')
+            addDir3(name2.replace('&amp;','&'),"http://www.iranproud2.net%s"%link.replace('&amp;','&'),10,'','','')
         else:
-            addDir3(name2.replace('&amp;','&'),"http://www.iranproud.net%s"%link.replace('&amp;','&'),4,'','','')
+            addDir3(name2.replace('&amp;','&'),"http://www.iranproud2.net%s"%link.replace('&amp;','&'),4,'','','')
 def tsc(url):
     r = requests.get(url)
     regex = r'<div class="divBorder.*?"><a href=".+?80(.*?)"><img src="(.*?)" alt=""></a></div>.+?">.+?<div class="SSh.*?">(.*?)</div>.+?<'
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for link,image,name3 in match:
         xbmc.log("3rd menu links --->>> %s "% match)
-        addDir3(name3.replace('&amp;','&'),"http://www.iranproud.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),5,image,'','')
+        addDir3(name3.replace('&amp;','&'),"http://www.iranproud2.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),5,image,'','')
    
 def musicvideo(url):
     r = requests.get(url)
@@ -62,7 +62,7 @@ def musicvideo(url):
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for link,image,name3 in match:
         xbmc.log("3rd menu links --->>> %s "% match)
-        addDir2(name3.replace('&amp;','&'),"http://www.iranproud.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),6,image)
+        addDir2(name3.replace('&amp;','&'),"http://www.iranproud2.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),6,image)
 
 def musicvideo2(url):
     r = requests.get(url)
@@ -70,7 +70,7 @@ def musicvideo2(url):
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for image,name3,link in match:
         xbmc.log("3rd menu links --->>> %s "% match)
-        addDir2(name3.replace('&amp;','&'),"http://www.iranproud.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),6,image)
+        addDir2(name3.replace('&amp;','&'),"http://www.iranproud2.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),6,image)
 
 
 def livetv(url):
@@ -79,7 +79,7 @@ def livetv(url):
    match = re.compile(regex,re.DOTALL).findall(r.content)
    for link,image in match:
     xbmc.log('LIVETV NOTICE:%s'%match)
-    addDir2('test',"http://www.iranproud.net%s"%link,6,image) 
+    addDir2('test',"http://www.iranproud2.net%s"%link,6,image) 
 
 #needs fixing nigguh
 def movies(url):
@@ -93,7 +93,7 @@ def movies(url):
         image = divborder.findAll('img')[0]['src'] #find the image src in the div
         ssh3 = item.findAll('div', attrs={'class': 'SSh3'})[0].text #get the text of the first div with class SSh3 in the li item
         xbmc.log('item:' + repr(item))
-        addDir2(ssh3.replace('&amp;','&'),"http://www.iranproud.net%s"%href.replace('" target="_parent','').replace('&amp;','&'),12,image)
+        addDir2(ssh3.replace('&amp;','&'),"http://www.iranproud2.net%s"%href.replace('" target="_parent','').replace('&amp;','&'),12,image)
  
 def menu4(url):
     r = requests.get(url)
@@ -101,7 +101,7 @@ def menu4(url):
     match = re.compile(regex,re.DOTALL).findall(r.content)
     for link,image,name4 in match:
         xbmc.log("4th menu links --->>> %s "% match)
-        addDir2(name4.replace('&amp;','&'),"http://www.iranproud.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),6,image)
+        addDir2(name4.replace('&amp;','&'),"http://www.iranproud2.net%s"%link.replace('" target="_parent','').replace('&amp;','&'),6,image)
 
 def menu5(url):
     r = requests.get(url)
